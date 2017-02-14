@@ -13,11 +13,15 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: 長めの呟き。
-description: 日々進化していくサイトを目指して。 # this means to ignore newlines until "baseurl:"
 
+languagename: 長めの呟き。
+title: 長めの呟き。
+
+author: Smashcat
+description: 日々進化していくサイトを目指して。 # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://naturalclar.com" # the base hostname & protocol for your site, e.g. http://example.com
+
 twitter_username: Smashcat_clar
 github_username:  Naturalclar
 
@@ -29,3 +33,6 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+sass:
+    sass_dir: _sass
+ 

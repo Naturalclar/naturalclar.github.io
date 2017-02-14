@@ -3,7 +3,13 @@ GEM
   specs:
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
+    autoprefixer-rails (6.7.2)
+      execjs
+    bootstrap (4.0.0.alpha6)
+      autoprefixer-rails (>= 6.0.3)
+      sass (>= 3.4.19)
     colorator (1.1.0)
+    execjs (2.7.0)
     ffi (1.9.17)
     ffi (1.9.17-x64-mingw32)
     forwardable-extended (2.6.0)
@@ -52,13 +58,14 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  bootstrap (~> 4.0.0.alpha6)
   jekyll (= 3.4.0)
   jekyll-feed (~> 0.6)
   minima (~> 2.0)
   tzinfo-data
 
 RUBY VERSION
-   ruby 2.3.1p112
+   ruby 2.3.0p0
 
 BUNDLED WITH
    1.14.3
