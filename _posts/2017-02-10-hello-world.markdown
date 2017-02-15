@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "はじめに/HTML"
+title:  "はじめに"
 date:   2017-02-10 05:50:12 -0800
 categories: html
 ---

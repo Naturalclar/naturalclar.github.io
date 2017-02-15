@@ -18,7 +18,7 @@ languagename: 長めの呟き。
 title: 長めの呟き。
 
 author: Smashcat
-description: 日々進化していくサイトを目指して。 # this means to ignore newlines until "baseurl:"
+description: 日々進化していくサイトを目指してます。 # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://naturalclar.com" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -35,4 +35,5 @@ exclude:
   - Gemfile.lock
 sass:
     sass_dir: _sass
+permalink: pretty
  

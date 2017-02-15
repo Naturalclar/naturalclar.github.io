@@ -10,7 +10,7 @@ Github pagesを使うにあたってJekyllは導入して置こうと思った�
 
 <h2>Jekyllとは</h2>
 <a href="https://jekyllrb.com/">Jekyll</a>はGit-hub pagesで無料でホスト出来る静的ブログジェネレータ。
-WordpressやWixは使わないでこれを使う理由が何だと言われたら、こっちの方が自分で作ってる感出るから。
+WordpressやWixは使わないでこれを使う理由が何だと言われたら、こっちの方が自分で作ってる感出るからと言う安直な発想である。
 
 <h2>環境を導入</h2>
 Linux環境があればrubyを導入してjekyllのサイトにも表示されてるコマンドを入力すればもう設定出来る。
