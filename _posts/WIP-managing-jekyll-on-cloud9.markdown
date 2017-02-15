@@ -1,6 +1,5 @@
 ---
 layout: post
-title: "Cloud9でJekyllをどこからでも管理"
 date: 2017-02-11 12:56:00 -0800
 categories: jekyll cloud9
 ---

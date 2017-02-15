@@ -1,6 +1,5 @@
 ---
 layout: post
-title:  "Jekyllの導入"
 date:   2017-02-11 05:50:12 -0800
 categories: jekyll update
 ---
@@ -20,7 +19,6 @@ $ cd my-awesome-site<br>
 $ jekyll serve<br>
 # => Now browse to http://localhost:4000</blockquote>
 
-5分もかからない
 
 今回はWindowsでもやりたいと言う人向けにうちが取った手順を1から記載
 
@@ -52,7 +50,5 @@ $ jekyll serve<br>
 # => Now browse to http://localhost:4000</blockquote>
 
 と入力するだけでWindows環境でもJekyllが建てれる。
-
-所要時間20分くらい
 
 後はゆっくり使い方を学んでいこう。
