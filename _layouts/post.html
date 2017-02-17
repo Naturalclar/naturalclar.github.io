@@ -9,13 +9,28 @@ layout: default
 
 
   <div class="card">
-  <div class="card-block">
-    <h4 class="card-title"><a href="{{ post.url | relative_url }}">{{ page.title | escape }}</a></h4>
-    <h6 class="card-subtitle mb-2 text-muted">{{ page.date | date: "%b %-d, %Y" }}</h6>
-    <hr>
-    <p class="card-text">{{ content }}</p>
-    <hr>
-    {% include share-post.html %}
+    <div class="card-block">
+      <h4 class="card-title"><a href="{{ post.url | relative_url }}">{{ page.title | escape }}</a></h4>
+      <h6 class="card-subtitle mb-2 text-muted">{{ page.date | date: "%b %-d, %Y" }}</h6>
+      <hr>
+      <p class="card-text">{{ content }}</p>
+      <hr>
+      {% include share-post.html %}
+    </div>
+    <div class="card-footer">
+      <div class="row">
+        <div class="col-md-6">
+          {% if page.previous.url %}
+            <a href="{{page.previous.url}}">&laquo;{{page.previous.title}}</a>
+          {% endif %}
+        </div>
+        <div class="col-md-6 text-md-right">
+          {% if page.next.url %}
+            <a href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
   </div>
 
   {% if site.disqus.shortname %}
