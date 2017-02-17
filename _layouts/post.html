@@ -3,18 +3,20 @@ layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-  </header>
-  
 
   
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
+
+
+
+  <div class="card">
+  <div class="card-block">
+    <h4 class="card-title"><a href="{{ post.url | relative_url }}">{{ page.title | escape }}</a></h4>
+    <h6 class="card-subtitle mb-2 text-muted">{{ page.date | date: "%b %-d, %Y" }}</h6>
+    <hr>
+    <p class="card-text">{{ content }}</p>
+    <hr>
+    {% include share-post.html %}
   </div>
-
-    {% include share.html %}
 
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}
