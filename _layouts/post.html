@@ -2,12 +2,6 @@
 layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
-
-  
-
-
-
   <div class="card">
     <div class="card-block">
       <h4 class="card-title"><a href="{{ post.url | relative_url }}">{{ page.title | escape }}</a></h4>
@@ -32,7 +26,6 @@ layout: default
       </div>
     </div>
   </div>
-
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}
   {% endif %}

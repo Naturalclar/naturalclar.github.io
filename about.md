@@ -13,23 +13,10 @@ permalink: /about/
 
 学んでいった事を一つ一つサイトに反映していきます。
 
-<ul class="social-media-list">
-               <li>
-                 Connect to me:
-               </li>
-                {% if site.github_username %}
-                <li>
-                  {% include icon-github.html username=site.github_username %}
-                </li>
-                {% endif %}
-      
-                {% if site.twitter_username %}
-                <li>
-                  {% include icon-twitter.html username=site.twitter_username %}
-                </li>
-                {% endif %}
-              </ul>
+質問、ご意見等は[@Smashcat_clar][twitter_link]まで気軽にどうぞ。
+
 
 
 <img src="/images/smashcat.jpg">
 
+[twitter_link]: https://twitter.com/Smashcat_Clar

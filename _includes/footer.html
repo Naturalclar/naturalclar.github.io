@@ -1,4 +1,4 @@
-<footer class="footer bg-darkgray">
+<footer class="footer">
 
    
     <div class="container">
@@ -30,17 +30,19 @@
                <li>
                  Connect to me:
                </li>
-                {% if site.github_username %}
                 <li>
+                {% if site.github_username %}
+                
                   {% include icon-github.html username=site.github_username %}
-                </li>
+                
                 {% endif %}
       
                 {% if site.twitter_username %}
-                <li>
+                
                   {% include icon-twitter.html username=site.twitter_username %}
-                </li>
+                
                 {% endif %}
+                </li>
               </ul>
           </div>
         </div>
