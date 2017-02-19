@@ -1,9 +1,11 @@
 ---
 layout: post
+date:   2017-02-18 12:00:00 -0800
+title: "自分のホームページを立ち上げる！ 第一回: Github Pagesの作成"
 categories: website
 ---
 
-このサイトをどう立ち上げたかについて、回数に分けて説明して行く。
+このサイトをどう立ち上げたかについて、回数に分けて説明して行きます。
 
 ## 第一回：Github PagesでHPを公開する
 
@@ -29,8 +31,10 @@ Githubから直接ファイルを弄って更新する事も出来るのだが�
 
 ### リポジトリの作成
 
-アカウントが作成できたら、新たなリポジトリ(ファイルを記録する場所)を作成する。<br>
-リポジトリ名を`(ユーザ名).github.io`にして作成。<br>
+アカウントが作成できたら、Start a new Projectをクリックして新たなリポジトリ(ファイルを記録する場所)を作成する。<br>
+![new_repo](/images/building-website/new_repo.png)
+
+リポジトリ名を`(ユーザ名).github.io`にしてCreate Repositoryをクリックして作成。<br>
 *(ユーザ名)が一致していないとうまくいかないので注意。
 
 ### ローカルのPCに作業場所を作成する
@@ -65,10 +69,12 @@ $ git push -u origin master
 ### 実際に確認する
 ブラウザを開いて、URLに(ユーザ名).github.ioと入力すると、先程入力した文字列が表示される。
 
-
+![new_repo](/images/building-website/helloworld.png)
 
 
 ### 参考にしたサイト
+
+[Github Pages公式サイト][github-pages]
 
 [github]: https://pages.github.com/
 [git]: https://git-scm.com/
