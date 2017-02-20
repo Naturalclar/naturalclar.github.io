@@ -5,15 +5,19 @@ title: "自分のホームページを立ち上げる！ 第一回: Github Pages
 categories: website
 ---
 
+- [第一回: Github Pagesの作成][how-to-build-a-website-1]
+- [第二回: Github PagesにJekyllの導入][how-to-build-a-website-2]
+
+## 第一回：Github Pagesの作成
+
 このサイトをどう立ち上げたかについて、回数に分けて説明して行きます。
-
-## 第一回：Github PagesでHPを公開する
-
+第一回は無料で自分のサイトを立ち上げられるGithub Pageの作成
+<hr>
 ### Github Pagesとは
 
 [Github Pages][github-pages]は開発コード共有ウェブサービスである[Github][github]上でサイトを公開出来るサービス。<br>
 自分のコードがオープンソースになってしまうが、無料でアカウントが作成出来る。
-
+<hr>
 ### 必要なツールのインストール
 
 Githubから直接ファイルを弄って更新する事も出来るのだが、更新途中の物がそのまま公開されてしまうので、<br>
@@ -22,21 +26,22 @@ Githubから直接ファイルを弄って更新する事も出来るのだが�
 [Git][git] - ターミナル上で管理出来るオープンソースのバージョンコントロールシステム。詳しい使い方については後日別の記事を書く。<br>
 ここからダウンロード出来る→ [Windows版][git-win] [Mac版][git-mac] [Linux版][git-linux]
 
-
+<hr>
 ### Githubのアカウントの作成
 
 まずは[Github][github]のアカウントを作成する。<br>
 作成するのは無料アカウントで問題無い。<br>
 無料アカウントと有料アカウントの違いは有料アカウントなら自分が作成しているプロジェクトを非公開にできる事。
 
-### リポジトリの作成
+#### リポジトリの作成
 
 アカウントが作成できたら、Start a new Projectをクリックして新たなリポジトリ(ファイルを記録する場所)を作成する。<br>
-![new_repo](/images/building-website/new_repo.png)
+![new_repo](/images/building-website/new_repo.png){:class="img-fluid"}
+
 
 リポジトリ名を`(ユーザ名).github.io`にしてCreate Repositoryをクリックして作成。<br>
 *(ユーザ名)が一致していないとうまくいかないので注意。
-
+<hr>
 ### ローカルのPCに作業場所を作成する
 
 先程インストールしたGitを開き、以下のコマンドを入力する事によって自分のローカルPCにリポジトリのコピー(Clone)を作成する。<br>
@@ -44,7 +49,7 @@ Githubから直接ファイルを弄って更新する事も出来るのだが�
 ```bash
 $ git clone https://github.com/(ユーザ名)/(ユーザ名).github.io
 ```
-
+<hr>
 ### ローカルPCにてHPの内容を更新する
 
 更新すると言ってもそもそも何も入っていないので、適当な文字列が入ったファイルを作成する。<br>
@@ -55,7 +60,7 @@ $ git clone https://github.com/(ユーザ名)/(ユーザ名).github.io
 $ cd ユーザ名.github.io
 $ echo "Hello World!" > index.html
 ```
-
+<hr>
 ### 更新した内容をGithubに反映する
 Gitから以下のコマンドを入力する事で、ローカルPCで更新した内容をGithubに反映(Push)する事が出来る。
 
@@ -65,16 +70,16 @@ $ git commit -m "Initial commit"
 $ git push -u origin master
 
 ```
-
+<hr>
 ### 実際に確認する
 ブラウザを開いて、URLに(ユーザ名).github.ioと入力すると、先程入力した文字列が表示される。
 
-![new_repo](/images/building-website/helloworld.png)
+![hello_world](/images/building-website/helloworld.png){:class="img-fluid"}
 
-
+<hr>
 ### 参考にしたサイト
 
-[Github Pages公式サイト][github-pages]
+- [Github Pages公式サイト][github-pages]
 
 [github]: https://pages.github.com/
 [git]: https://git-scm.com/
@@ -82,3 +87,5 @@ $ git push -u origin master
 [git-mac]: https://git-scm.com/download/mac
 [git-linux]: https://git-scm.com/download/linux
 [github-pages]: https://pages.github.com/
+[how-to-build-a-website-1]: /how-to-build-a-website-1
+[how-to-build-a-website-2]: /how-to-build-a-website-2

@@ -1,11 +1,10 @@
 ---
-layout: default
+layout: page
 title: Blog
 permalink: /blog/
 ---
 
 <div class="home">
-  <h1 class="page-heading">Blog</h1>
   {% for post in site.posts %}
     <div class="card">
       <div class="card-block">
