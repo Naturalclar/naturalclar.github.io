@@ -26,23 +26,17 @@
           </div>
           <!-- SNS -->
           <div class="col col-lg-2">
-             <ul class="social-media-list">
-               <li>
-                 Connect to me:
-               </li>
-                <li>
+             <ul class="nav">
                 {% if site.github_username %}
-                
+                 <li class="nav-item">
                   {% include icon-github.html username=site.github_username %}
-                
+                 </li>
                 {% endif %}
-      
                 {% if site.twitter_username %}
-                
+                 <li class="nav-item">
                   {% include icon-twitter.html username=site.twitter_username %}
-                
+                 </li>
                 {% endif %}
-                </li>
               </ul>
           </div>
         </div>
