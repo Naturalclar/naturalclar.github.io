@@ -2,7 +2,7 @@
 layout: post
 title:  "はじめに"
 date:   2017-02-14 05:50:12 -0800
-categories: idle
+categories: 雑談
 ---
 
 *最終更新日: 2017/02/14

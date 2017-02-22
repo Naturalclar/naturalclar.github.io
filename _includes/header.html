@@ -14,15 +14,17 @@
           <a class="navbar-brand" href="{{ "/" | relative_url}}">{{ site.title | escape }}</a>
       
            <div class="collapse navbar-collapse" id="navbarSupportedContent">  
-  
+                
               <ul class="navbar-nav ml-auto">
                 {% for my_page in site.pages %}
-                {% if my_page.title %}
-                <li class="nav-item">
-                  <a class="nav-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-                </li>
-                {% endif %}
-                {% endfor %}
+                  {% if my_page.title %}
+                    {% if page.url == my_page.url %}
+                      <li class="active"><a href="{{ my_page.url | relative_url }}" class="nav-link">{{ my_page.title | escape }}</a></li>
+                    {% else %}
+                      <li><a href="{{ my_page.url | relative_url }}" class="nav-link">{{ my_page.title | escape }}</a></li>
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}        
         
               </ul>
             </div>

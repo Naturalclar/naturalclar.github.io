@@ -39,7 +39,7 @@ LinuxやMacでの導入方法は需要があれば書くかもしれない。([�
 ![ruby-installer](/images/building-website/ruby-installer.png){:class="img-fluid"}<br>
 
 インストーラを実行してRubyの実行ファイルへの環境変数PATHを設定する。にチェックを入れてインストールする。<br>
-![ruby-setpath](/images/building-website/ruby-setpath.png){:class="img-fluid"}<Br>
+![ruby-setpath](/images/building-website/ruby-setpath.png){:class="img-fluid"}<br>
 
 #### Ruby Dev Kitのインストール
 次に、WindowsのコマンドプロンプトでRubyを動かせるようにするためにRubyDevKitをインストールする。<br>
