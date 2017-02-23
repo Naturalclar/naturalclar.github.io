@@ -3,6 +3,9 @@ layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <div class="card">
+    {% if page.image %}
+    <img class="card-img-top card-img" src="{{page.image}}" alt="Card image cap">
+    {% endif %}
     <div class="card-block">
       <h4 class="card-title"><a href="{{ post.url | relative_url }}">{{ page.title | escape }}</a></h4>
       <h6 class="card-subtitle mb-2 text-muted">{{ page.date | date: "%b %-d, %Y" }}</h6>
