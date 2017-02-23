@@ -5,6 +5,8 @@ title: "Raspberry Pi 3にGo1.8を導入する"
 categories: raspberrypi golang
 ---
 
+*2/23 コマンドに誤記があったので修正
+
 Raspberry Pi 3に[Golang1.8][golang]を入れてみる。<br>
 使用しているOSはRaspbianの4.4.34。<br>
 
@@ -18,7 +20,7 @@ wget https://storage.googleapis.com/golang/go1.8.linux-armv6l.tar.gz
 `/usr/local/`に解凍する。<br>
 
 ```bash
-tar -C /usr/local -xzf go1.8.linux-armv6l.tar.gz
+sudo tar -C /usr/local -xzf go1.8.linux-armv6l.tar.gz
 ```
 
 `PATH`に`/usr/local/go/bin`を追加する。<br>
@@ -30,7 +32,7 @@ export PATH="/usr/local/go/bin:$PATH"
 `PATH`の設定は再起動したら戻ってしまうので、起動時に自動で上記PATHを追加したい場合、`/etc/profile`を編集して上記文を追加する。<br>
 
 ```bash
-sudo nano /etc/profile/
+sudo nano /etc/profile
 ```
 
 `go version`でgoがインストールされている事を確認出来る。<br>
