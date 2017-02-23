@@ -24,7 +24,7 @@ tar -C /usr/local -xzf go1.8.linux-armv6l.tar.gz
 `PATH`に`/usr/local/go/bin`を追加する。<br>
 
 ```bash
-export PATH=$PATH:/usr/local/go/bin
+export PATH="/usr/local/go/bin:$PATH"
 ```
 
 `PATH`の設定は再起動したら戻ってしまうので、起動時に自動で上記PATHを追加したい場合、`/etc/profile`を編集して上記文を追加する。<br>
