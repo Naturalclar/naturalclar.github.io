@@ -29,6 +29,7 @@ markdown: kramdown
 theme: minima
 gems:
   - jekyll-feed
+  - jekyll-paginate
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -36,4 +37,8 @@ sass:
     sass_dir: _sass
     style: compressed
 permalink: /:title/
+paginate_path: /page:num
+paginate: 3
+
+twitter_image: /images/twitter_icon.jpg
  

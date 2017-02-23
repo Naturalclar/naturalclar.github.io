@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2017-02-22 11:00:00 -0800
+date: 2017-02-22 21:00:00 -0800
 title: "ローカルでIPアドレスを調べずにRaspberry PiにSSH接続する"
 categories: raspberrypi
 image: "/images/blog-images/raspberrypi-box.jpg"

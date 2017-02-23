@@ -12,6 +12,7 @@ permalink: /blog/
           <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         </h4>
         <h6 class="card-subtitle mb-2 text-muted">{{ post.date | date: "%b %-d, %Y" }}</h6>
+        <p><span class="text-muted">Category:</span> {{ post.categories | join: ', ' }}</p>
         </div>
     </div>
     <br>
