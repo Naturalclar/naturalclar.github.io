@@ -37,5 +37,5 @@ $on-laptop:        800px;
 
 // Import partials from the `minima` theme.
 @import "minima";
-@import "bootstrap/bootstrap";
-@import "font-awesome/font-awesome";
+@import "bootstrap.min";
+@import "font-awesome.min";
