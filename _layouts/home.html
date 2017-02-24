@@ -3,30 +3,30 @@ layout: default
 ---
 
 <div class="home">
-  <h1 class="page-heading">Posts</h1>
-    <div class="row">
-      <div class="col-lg-8">
-        {% for post in paginator.posts %}
-        <div class="card">
+    {% for post in paginator.posts %}
+      <div class="card">
         {% if post.image %}
           <img class="card-img-top card-img" src="{{post.image}}" alt="Card image cap">
         {% endif %}
-          <div class="card-block">
-            <h4 class="card-title">
-              <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-            </h4>
-            <h6 class="card-subtitle mb-2 text-muted">{{ post.date | date: "%b %-d, %Y" }}</h6>
-            <hr>
-            <p class="card-text">{{ post.content }}</p>
-            <hr>
-            {% include share-home.html %}
-          </div>
-        </div>
+        <div class="card-block">
+          <h4 class="card-title">
+            <a href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </h4>
+          <h6 class="card-subtitle mb-2 text-muted">
+            {{ post.date | date: "%b %-d, %Y" }}
+          </h6>
+          <hr>
+        <p class="card-text">{{ post.content }}</p>
+        <hr>
+        {% include share-home.html %}
+      </div>
+      </div>
         <br>
         {% endfor %}
           <!-- Pagination links -->
           <div class="row">
-     
               <div class="col-4 text-left">
               {% if paginator.previous_page %}
                 <a href="{{ paginator.previous_page_path }}" class="previous">&laquo;Previous</a>
@@ -35,39 +35,15 @@ layout: default
               {% endif %}
               </div>
               <div class="col-4 text-center">
-                <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-              </div>
-              <div class="col-4  text-right">
-                {% if paginator.next_page %}
-                  <a href="{{ paginator.next_page_path }}" class="next">Next&raquo;</a>
-                {% else %}
-                  <span class="next ">Next</span>
-                {% endif %}
-              </div>
-           
-          </div>
-          <br>
-      </div>
-      
-      <div class="col-lg-4">
-        <div class="card">
-          <div class="card-header">
-              Profile
-          </div>
-          <div class="card-block">
-            <div class="d-flex align-items-end">
-              <img class="rounded profile-img" src="{{site.twitter_image}}" alt="Twitter-icon">
-              <h6 class="card-title ">
-                名前: Smashcat
-              </h6>
-            </div>
-            <p class="card-text">
-            独学でWebデザインを勉強中。学んでいった事を一つ一つサイトに反映していきます。
-            </p>
-            {% include follow.html %}
+               <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+              </div>              <div class="col-4  text-right">
+              {% if paginator.next_page %}
+                <a href="{{ paginator.next_page_path }}" class="next">Next&raquo;</a>
+              {% else %}
+                <span class="next ">Next</span>
+              {% endif %}
           </div>
         </div>
-      </div>
-    </div>
+        <br>
  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
 </div>

@@ -8,7 +8,13 @@
     {% include header.html %}
 
     <main class="content container" aria-label="Content">
-        {{ content }}
+      <div class="row">
+        <div class="col-lg-8">
+          {{ content }}
+        </div>
+        <div class="col-lg-4">
+          {% include sidebar.html %}
+        </div>
       </div>
     </main>
     
