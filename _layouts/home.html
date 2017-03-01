@@ -27,16 +27,16 @@ layout: default
         {% endfor %}
           <!-- Pagination links -->
           <div class="row">
-              <div class="col-4 text-left">
+              <div class="col-3 text-left">
               {% if paginator.previous_page %}
                 <a href="{{ paginator.previous_page_path }}" class="previous">&laquo;Previous</a>
               {% else %}
                 <span class="previous">Previous</span>
               {% endif %}
               </div>
-              <div class="col-4 text-center">
+              <div class="col-6 text-center">
                <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-              </div>              <div class="col-4  text-right">
+              </div>              <div class="col-3  text-right">
               {% if paginator.next_page %}
                 <a href="{{ paginator.next_page_path }}" class="next">Next&raquo;</a>
               {% else %}

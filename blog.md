@@ -2,6 +2,7 @@
 layout: default
 title: Blog
 permalink: /blog/
+menu: true
 ---
 
 <div class="home">
@@ -9,13 +10,13 @@ permalink: /blog/
     <div class="card">
       <div class="card-block">
         <h4 class="card-title">
-          <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          <a href="{{ post.url | relative_url }}" >{{ post.title | escape }}</a>
         </h4>
         <h6 class="card-subtitle mb-2 text-muted">{{ post.date | date: "%b %-d, %Y" }}</h6>
         <p>
           <span class="text-muted">Category:</span> 
           {% for category in post.categories %}
-            <span class="badge badge-primary">{{ category }}</span>
+            <span class="badge badge-default">{{ category }}</span>
           {% endfor %}
         </p>
         </div>

@@ -2,6 +2,7 @@
 layout: default
 title: About
 permalink: /about/
+menu: true
 ---
 
 <div class="card">
