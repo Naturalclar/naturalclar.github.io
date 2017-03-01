@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Rasberry Piを使ってMosquittoのMQTTテストテストブローカーにCC2650センサーのデータを投げ込む"
+title: "Rasberry Piを使ってMosquittoのMQTTテストブローカーにCC2650センサーのデータを投げ込む"
 date: 2017-02-28 12:00:00 -0800
 categories: IoT RaspberryPi CC2650 node.js MQTT 
 ---
@@ -16,7 +16,7 @@ IoT殴り書きその2。文章の使いまわしが多いのは気にしない�
 
 ### Raspberry PiにNode.jsをインストールする
 
-(*[前回][prev-post]と同じなので既に実行していない場合実施。)<br>
+(*[前回][prev-post]と同じなので既に実行していない場合のみ実施。)<br>
 [こちら][install-nodejs]のサイトを参照してRaspberry pi3にNode.jsとnpmをインストール
     
 ### npmを使って必要なモジュールのインストール
