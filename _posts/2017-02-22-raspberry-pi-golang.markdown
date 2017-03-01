@@ -59,7 +59,9 @@ func main() {
 やったね。<br>
 
 ### 参考したページ
-<hr>
+
+---
+
 - [Golang公式ホームページ][golang]
 - [Install golang 1.7 on raspberry pi][golang1.7]
 

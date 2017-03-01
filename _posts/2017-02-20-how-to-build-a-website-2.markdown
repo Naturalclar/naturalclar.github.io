@@ -16,12 +16,16 @@ categories: website
 
 ### Jekyllとは
 
+---
+
 [Jekyll][jekyll]とは、Rubyで作成されたブログの様な静的サイトを作成する無料のツールである。
 ベースとなるフォルダのファイルを参照して自動でHTMLが生成されるので、慣れれば非常に楽にページを作る事が出来る。
 各ページに使うテンプレート等を簡単に用意し、それを自動で適応する事が出来るので、わざわざ各ページにてメニューの内容をコピペしたりする手間が省ける。
 
-<hr>
+
 ### WindowsでのJekyllの導入
+
+---
 
 本来、JekyllはLinux, Mac用に作成されており、Windowsでは公式にサポートされていない。
 だが、[公式サイト][jekyll-windows]にて、Windowsでも導入出来る方法が記載されているので、今回はその方法でJekyllを導入していく。
@@ -29,10 +33,14 @@ LinuxやMacでの導入方法は需要があれば書くかもしれない。([�
 <hr>
 ### Rubyの導入
 
+---
+
 なぜJekyllがWindowsでサポートされていないかと言うと早い話、Rubyが標準で導入されていないから。<br>
 なのでRubyさえ入れしまえばあとはこっちのもんだ。
 
 #### Ruby for Windowsのインストール
+
+---
 
 [Ruby Installer for Windows][ruby-windows]のページにいけば、Windows用にRubyをインストール出来る。<br>
 左上の方に最新版のインストーラがあるので、迷った時はそれをダウンロードしておけば良い。<br>
@@ -52,6 +60,8 @@ LinuxやMacでの導入方法は需要があれば書くかもしれない。([�
 
 #### RubyDevKitを使ってRubyのセットアップ
 
+---
+
 Ruby for WindowsとRubyDevKitがインストール出来たら、コマンドプロンプトを開き、先程解凍したRubyDevKitの場所に行く。<br>
 コマンドプロンプトはWinキーでメニューを開いて`cmd`で検索すれば出て来る。<br>
 コマンドプロンプト上で`cd C:\RubyDev\`と入力して先程RubyDevKitを解凍したフォルダに移動する(`C:\RubyDev\`の部分は先程解凍したフォルダ名を入れる)<br>
@@ -65,8 +75,10 @@ Ruby for WindowsとRubyDevKitがインストール出来たら、コマンドプ
 ![cmd-ruby-install](/images/building-website/cmd-ruby-install.png){:class="img-fluid"}<br>
 
 これでWindowsでもRubyを使えるように出来た。<br>
-<hr>
+
 ### Rubyを使ってjekyllを導入
+
+---
 
 無事Rubyを導入することが出来たら、いよいよJekyllを導入する。<br>
 また、Jekyllでサイトを作成する時、複数のRubyファイルを組み合わせるので、それをしてくれる`bundler`というツールも必要になる。<br>

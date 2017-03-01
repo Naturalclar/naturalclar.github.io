@@ -10,6 +10,8 @@ categories: IoT RaspberryPi CC2650 node.js dweet.io
 
 ### 目的
 
+---
+
 [前回][prev-post]Raspberry PiにGolangを入れてテンション上がってたけど、そんな事は無かったかの様にNode.jsを使ってデータを集める事にする。<br>
 センサーとして使用するのはTI製のBluetoothセンサータグ(CC2650)を使用する。これ一つで気温、温湿度、気圧、加速度、輝度等を計測できる優れもの。<br>
 このセンサータグはNode.jsで接続してデータを投げ込めるSDKが[既に存在する][node-sensortag]からUUIDを調べる等、色々な手間が省ける。<br>
@@ -17,9 +19,13 @@ categories: IoT RaspberryPi CC2650 node.js dweet.io
 
 ### Raspberry PiにNode.jsをインストールする
 
+---
+
 [こちら][install-nodejs]のサイトを参照してRaspberry pi3にNode.jsとnpmをインストール
     
 ### npmを使って必要なモジュールのインストール
+
+---
 
 以下のコマンドで今回使用するモジュールをインストール出来る。
 
@@ -28,6 +34,8 @@ npm install async sensortag node-dweetio
 ```
 
 ### 使用したコード
+
+---
 
 [sensortag][node-sensortag]モジュールに含まれているtest.jsや[このブログ記事][ref-blog]を参照してセンサータグの温湿度と輝度を3秒毎にdweet.ioに投げるコードを作成
 
@@ -81,7 +89,7 @@ sensortag.discover(function discovered(tag){
 		console.log('notifyHumidity')
 		tag.notifyHumidity(function(error) {
 		    callback()
-		})
+		    })
 	    })
 	},
 	function(callback){
@@ -94,7 +102,7 @@ sensortag.discover(function discovered(tag){
 		console.log('notifyLuxometer')
 		tag.notifyLuxometer(function(error) {
 		    callback()
-		})
+		    })
 	    })
 	}
     ])
@@ -114,16 +122,24 @@ sensortag.discover(function discovered(tag){
 
 ### dweetにデータが表示される事を確認。
 
+---
+
 上記コードだとdweet.io/follow/センサー名-testingに投げたデータが表示される。今回使ったセンサー名はcc2650なので、[http://dweet.io/follow/cc2650-testing][dweet-db]にデータが表示される。<br>
 
 ![dweet-cc2650](/images/blog-images/dweet-cc2650.png){:class="img-fluid"}<br>
 
 ### TODO
+
+---
+
 Node.jsとnpmのインストール方法はいずれ和訳して書く<br>
 本当はNode.jsを使わずにGolangのみでやれるようにしたいから色々と調べたい。<br>
 Golang用のBLEライブラリは既に[存在してる][paypal-gatt]し、それを使ってセンサータグを接続する為のSDKとか作れないかな？
 
 ### 参考したサイト
+
+---
+
 - [Nodejsのインストール][install-nodejs]
 - [Node: dweetio-client][node-dweet]
 - [Node: node-sensortag][node-sensortag]
