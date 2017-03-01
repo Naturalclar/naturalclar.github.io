@@ -44,19 +44,19 @@ LinuxやMacでの導入方法は需要があれば書くかもしれない。([�
 
 [Ruby Installer for Windows][ruby-windows]のページにいけば、Windows用にRubyをインストール出来る。<br>
 左上の方に最新版のインストーラがあるので、迷った時はそれをダウンロードしておけば良い。<br>
-![ruby-installer](/images/building-website/ruby-installer.png){:class="img-fluid"}<br>
+<a href="/images/building-website/ruby-installer.png" data-fancybox="gallery">![ruby-installer](/images/building-website/ruby-installer.png){:class="img-fluid"}</a><br>
 
 インストーラを実行してRubyの実行ファイルへの環境変数PATHを設定する。にチェックを入れてインストールする。<br>
-![ruby-setpath](/images/building-website/ruby-setpath.png){:class="img-fluid"}<br>
+<a href="/images/building-website/ruby-setpath.png" data-fancybox="gallery">![ruby-setpath](/images/building-website/ruby-setpath.png){:class="img-fluid"}</a><br>
 
 #### Ruby Dev Kitのインストール
 次に、WindowsのコマンドプロンプトでRubyを動かせるようにするためにRubyDevKitをインストールする。<br>
 [先程のRuby Installerのページ][ruby-windows]の下の方に、Ruby2.0以降用のダウンロードリンクがある。<br>
 32bit版と64bit版が用意されているので、ご自分のPCに合わせた物をダウンロードする。<br>
-![rubydev-installer](/images/building-website/rubydev-installer.png){:class="img-fluid"}<br>
+<a href="/images/building-website/rubydev-installer.png" data-fancybox="gallery">![rubydev-installer](/images/building-website/rubydev-installer.png){:class="img-fluid"}</a><br>
 
-インストーラを実行したら解凍先を求められるので、`C:\RubyDev\`等わかりやすい所にしておく。
-![rubydev-setdir](/images/building-website/rubydev-setdir.png){:class="img-fluid"}<br>
+インストーラを実行したら解凍先を求められるので、`C:\RubyDev\`等わかりやすい所にしておく。<br>
+<a href="/images/building-website/rubydev-setdir.png" data-fancybox="gallery">![rubydev-setdir](/images/building-website/rubydev-setdir.png){:class="img-fluid"}</a><br>
 
 #### RubyDevKitを使ってRubyのセットアップ
 
@@ -65,14 +65,14 @@ LinuxやMacでの導入方法は需要があれば書くかもしれない。([�
 Ruby for WindowsとRubyDevKitがインストール出来たら、コマンドプロンプトを開き、先程解凍したRubyDevKitの場所に行く。<br>
 コマンドプロンプトはWinキーでメニューを開いて`cmd`で検索すれば出て来る。<br>
 コマンドプロンプト上で`cd C:\RubyDev\`と入力して先程RubyDevKitを解凍したフォルダに移動する(`C:\RubyDev\`の部分は先程解凍したフォルダ名を入れる)<br>
-![cmd-cd-ruby-dev](/images/building-website/cmd-cd-ruby-dev.png){:class="img-fluid"}<br>
+<a href="/images/building-website/cmd-cd-ruby-dev.png" data-fancybox="gallery">![cmd-cd-ruby-dev](/images/building-website/cmd-cd-ruby-dev.png){:class="img-fluid"}</a><br>
 
 移動したら`ruby dk.rb init`と入力して先程インストールしたRubyを検出する。<br>
-![cmd-ruby-init](/images/building-website/cmd-ruby-init.png){:class="img-fluid"}<br>
+<a href="/images/building-website/cmd-ruby-init.png" data-fancybox="gallery">![cmd-ruby-init](/images/building-website/cmd-ruby-init.png){:class="img-fluid"}</a><br>
 検出結果は`ruby dk.rb review`と入力すれば表示される。<br>
-![cmd-ruby-review](/images/building-website/cmd-ruby-review.png){:class="img-fluid"}<br>
+<a href="/images/building-website/cmd-ruby-review.png" data-fancybox="gallery">![cmd-ruby-review](/images/building-website/cmd-ruby-review.png){:class="img-fluid"}</a><br>
 そして、`ruby dk.rb install`と入力してrubyを使えるようにする。<br>
-![cmd-ruby-install](/images/building-website/cmd-ruby-install.png){:class="img-fluid"}<br>
+<a href="/images/building-website/cmd-ruby-install.png" data-fancybox="gallery">![cmd-ruby-install](/images/building-website/cmd-ruby-install.png){:class="img-fluid"}</a><br>
 
 これでWindowsでもRubyを使えるように出来た。<br>
 
@@ -85,14 +85,14 @@ Ruby for WindowsとRubyDevKitがインストール出来たら、コマンドプ
 
 先程のコマンドプロンプトの画面で`gem install jekyll bundler`と入力すれば`jekyll`と`bundler`がインストール出来る。<br>
 その後、`jekyll new my-awesome-site`と入力する事でmy-awesome-siteと言うフォルダが作成され、そこにjekyllのサイトが作成される。(my-awesome-siteの部分は好きな文字列で良い)<br>
-![cmd-jekyll-new](/images/building-website/cmd-jekyll-new.png){:class="img-fluid"}<br>
+<a href="/images/building-website/cmd-jekyll-new.png" data-fancybox="gallery">![cmd-jekyll-new](/images/building-website/cmd-jekyll-new.png){:class="img-fluid"}</a><br>
 `cd my-awesome-site`のコマンドで作成されたフォルダの中に移動し、以下のコマンドを入力しよう。<br>
 `bundle exec jekyll serve`<br>
-![cmd-jekyll-serve](/images/building-website/cmd-jekyll-serve.png){:class="img-fluid"}<br>
+<a href="/images/building-website/cmd-jekyll-serve.png" data-fancybox="gallery">![cmd-jekyll-serve](/images/building-website/cmd-jekyll-serve.png){:class="img-fluid"}</a><br>
 そうすると、ローカルPCでjekyllのサイトが立ち上がる。<br>
 ブラウザを開いて、URL欄に`http://localhost:4000`と入力してみよう。<br>
 
-![hello-jekyll](/images/building-website/hello-jekyll.png){:class="img-fluid"}<br>
+<a href="/images/building-website/hello-jekyll.png" data-fancybox="gallery">![hello-jekyll](/images/building-website/hello-jekyll.png){:class="img-fluid"}</a><br>
 
 作成されたJekyllのページが開かれる筈。<br>
 
@@ -117,7 +117,7 @@ $ git push -u origin master
 ### 更新された内容を確認する
 前回と同じく、ブラウザを開いて、URLに(ユーザ名).github.ioと入力して更新された事を確認しよう。
 
-![jekyll-blank](/images/building-website/hello-jekyll-online.png){:class="img-fluid"}
+<a href="/images/building-website/hello-jekyll-online.png" data-fancybox="gallery">![jekyll-blank](/images/building-website/hello-jekyll-online.png){:class="img-fluid"}</a>
 
 <hr>
 ### 参考にしたサイト

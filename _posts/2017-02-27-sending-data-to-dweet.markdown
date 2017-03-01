@@ -126,7 +126,7 @@ sensortag.discover(function discovered(tag){
 
 上記コードだとdweet.io/follow/センサー名-testingに投げたデータが表示される。今回使ったセンサー名はcc2650なので、[http://dweet.io/follow/cc2650-testing][dweet-db]にデータが表示される。<br>
 
-![dweet-cc2650](/images/blog-images/dweet-cc2650.png){:class="img-fluid"}<br>
+<a href="/images/blog-images/dweet-cc2650.png" data-fancybox="gallery">![dweet-cc2650](/images/blog-images/dweet-cc2650.png){:class="img-fluid"}</a><br>
 
 ### TODO
 

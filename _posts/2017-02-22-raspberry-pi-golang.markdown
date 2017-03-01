@@ -38,7 +38,7 @@ sudo nano /etc/profile
 `go version`でgoがインストールされている事を確認出来る。<br>
 
 
-![ssh-smashpi](/images/blog-images/go-version.png){:class="img-fluid"}<br>
+<a href="/images/blog-images/go-version.png" data-fancybox="gallery">![go-version](/images/blog-images/go-version.png){:class="img-fluid"}</a><br>
 
 試しにHello worldを起動してみる。<br>
 
@@ -54,7 +54,7 @@ func main() {
 }
 ```
 
-![ssh-smashpi](/images/blog-images/go-helloworld.png){:class="img-fluid"}<br>
+<a href="/images/blog-images/go-helloworld.png" data-fancybox="gallery">![go-helloworld](/images/blog-images/go-helloworld.png){:class="img-fluid"}</a><br>
 
 やったね。<br>
 

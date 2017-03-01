@@ -45,7 +45,7 @@ Githubから直接ファイルを弄って更新する事も出来るのだが�
 ---
 
 アカウントが作成できたら、Start a new Projectをクリックして新たなリポジトリ(ファイルを記録する場所)を作成する。<br>
-![new_repo](/images/building-website/new_repo.png){:class="img-fluid"}
+<a href="/images/building-website/new_repo.png" data-fancybox="gallery">![new_repo](/images/building-website/new_repo.png){:class="img-fluid"}</a>
 
 
 リポジトリ名を`(ユーザ名).github.io`にしてCreate Repositoryをクリックして作成。<br>
@@ -93,7 +93,7 @@ $ git push -u origin master
 
 ブラウザを開いて、URLに(ユーザ名).github.ioと入力すると、先程入力した文字列が表示される。
 
-![hello_world](/images/building-website/helloworld.png){:class="img-fluid"}
+<a href="/images/building-website/helloworld.png" data-fancybox="gallery">![hello_world](/images/building-website/helloworld.png){:class="img-fluid"}</a>
 
 ### 参考にしたサイト
 

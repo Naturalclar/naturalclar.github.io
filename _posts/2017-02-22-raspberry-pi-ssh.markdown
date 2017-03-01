@@ -22,7 +22,7 @@ ssh pi@raspberrypi.local
 ホスト名の変更は`sudo raspi-config`でAdvanced Optionの設定から行える。<br>
 パスワードの変更も`sudo raspi-config`から行える。<br>
 
-![ssh-smashpi](/images/blog-images/ssh-smashpi.png){:class="img-fluid"}<br>
+<a href="/images/blog-images/ssh-smashpi.png" data-fancybox="gallery">![ssh-smashpi](/images/blog-images/ssh-smashpi.png){:class="img-fluid"}</a><br>
 
 raspberrypi改めsmashpiで色々遊んでみようと思う。
 

@@ -126,7 +126,7 @@ sensortag.discover(function discovered(tag){
 このコードではブローカ上にデータが投げ込まれた時、コンソール上でそのデータを表示するようにしている。<br>
 Message: の後に表示されるのがブローカ上で受け取ったメッセージ。<br>
 
-![dweet-cc2650](/images/blog-images/mqtt-cc2650.png){:class="img-fluid"}<br>
+<a href="/images/blog-images/mqtt-cc2650.png" data-fancybox="gallery">![mqtt-cc2650](/images/blog-images/mqtt-cc2650.png){:class="img-fluid"}</a><br>
 
 ### 参考したサイト
 
