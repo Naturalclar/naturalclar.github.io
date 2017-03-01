@@ -46,9 +46,9 @@ sensortag.discover(function discovered(tag){
     console.log('discovered: ' + tag)
 
     tag.on('disconnect', function(){
-	console.log('disconnected');
-	process.exit(0);
-    });
+	console.log('disconnected')
+	process.exit(0)
+    })
 
     var client = mqtt.connect('mqtt://test.mosquitto.org')
 
@@ -89,7 +89,7 @@ sensortag.discover(function discovered(tag){
 		    callback()
 			})
 	    })
-	}
+	},
 	function(callback){
 	    tag.on('luxometerChange', function(lux) {
 		console.log('\tlux = %d', lux.toFixed(1))
