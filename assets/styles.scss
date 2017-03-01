@@ -1,15 +1,25 @@
 ---
 ---
-    .bg-default { background: #F5F8F9;}
-
+  .bg-default { background: #F5F8F9;}
     
   .footer {
-    padding: 30px 0;
+    padding: 15px 0 15px;
     color: white;
     background: #4d4d4d;
   }
+  .footer-copyright{
+    padding: 3px 0 3px ;
+    color: white;
+    background: #000;
+  }
+  
+  .footer-copyright p {
+    padding: 0;
+    margin: 0;
+  }
+  
   .content {
-    padding: 30px;
+    padding: 36px;
   }
   
   .card-img {

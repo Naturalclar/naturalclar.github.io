@@ -1,45 +1,14 @@
 <footer class="footer">
-
-   
-    <div class="container">
-      <div class="row">
-        <h2 class="footer-heading">{{ site.title | escape }}</h2>
-      </div>
-    
+  <div class="container">
       <div class="row">
           <!-- Contact List -->
-          <div class="col col-lg-10">
-            <ul class="contact-list">
-              <li>
-                {% if site.author %}
-                   &copy; 2017 {{ site.author | escape }}
-                {% else %}
-                  {{ site.title | escape }}
-                {% endif %}
-                </li>
-                {% if site.email %}
-                <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-                {% endif %}
-                <li><p>{{ site.description | escape }}</p></li>
-              </ul>
-            
-          </div>
-          <!-- SNS -->
-          <div class="col col-lg-2">
-             <ul class="nav">
-                {% if site.github_username %}
-                 <li class="nav-item">
-                  {% include icon-github.html username=site.github_username %}
-                 </li>
-                {% endif %}
-                {% if site.twitter_username %}
-                 <li class="nav-item">
-                  {% include icon-twitter.html username=site.twitter_username %}
-                 </li>
-                {% endif %}
-              </ul>
+          <div class="col col-lg-4">
+            <h4>Follow Me:</h4>
+            <ul class="list-inline">
+               <li class="list-inline-item">{% include icon-github.html username=site.github_username %}</li>
+               <li class="list-inline-item">{% include icon-twitter.html username=site.twitter_username %}</li>
+            </ul>
           </div>
         </div>
       </div>
-
 </footer>
