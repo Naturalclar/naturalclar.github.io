@@ -23,6 +23,8 @@ categories: IoT RaspberryPi CC2650 node.js dweet.io
 
 [こちら][install-nodejs]のサイトを参照してRaspberry pi3にNode.jsとnpmをインストール
     
+*03/03/17追記：[こちら][post-nodejs]の記事に最新のnode.jsの導入方法を記載しました。    
+    
 ### npmを使って必要なモジュールのインストール
 
 ---
@@ -154,5 +156,5 @@ Golang用のBLEライブラリは既に[存在してる][paypal-gatt]し、そ�
 [paypal-gatt]: https://github.com/paypal/gatt
 [ref-blog]: http://yagitsawa.github.io/2015/12/18/sensortag-bbb-dweetio/
 [dweet-db]: http://dweet.io/follow/cc2650-testing
-
+[post-nodejs]: /updating-nodejs-using-nvm/
 

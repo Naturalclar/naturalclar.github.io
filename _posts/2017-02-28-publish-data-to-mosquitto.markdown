@@ -17,7 +17,9 @@ IoT殴り書きその2。文章の使いまわしが多いのは気にしない�
 ### Raspberry PiにNode.jsをインストールする
 
 (*[前回][prev-post]と同じなので既に実行していない場合のみ実施。)<br>
-[こちら][install-nodejs]のサイトを参照してRaspberry pi3にNode.jsとnpmをインストール
+[こちら][install-nodejs]のサイトを参照してRaspberry pi3にNode.jsとnpmをインストール。
+    
+*03/03/17追記：[こちら][post-nodejs]の記事に最新のnode.jsの導入方法を記載しました。
     
 ### npmを使って必要なモジュールのインストール
 
@@ -141,3 +143,4 @@ Message: の後に表示されるのがブローカ上で受け取ったメッ�
 [node-sensortag]: https://github.com/sandeepmistry/node-sensortag
 [npm-mqtt]: https://www.npmjs.com/package/mqtt
 [prev-post]: {{page.previous.url}}
+[post-nodejs]: /updating-nodejs-using-nvm/
