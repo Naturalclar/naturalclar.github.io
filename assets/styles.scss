@@ -37,3 +37,42 @@
   .wf-nicomoji { font-family: "Nico Moji"; }
   .wf-sawarabigothic { font-family: "Sawarabi Gothic"; }
   
+  //social-media
+.social-media{
+  list-style-type: none;
+  padding: 0px;
+}
+
+.social-media li{
+  display: inline-block;
+}
+
+.social-media li .fa{ 
+  background: #5d5d5d;
+  color: #262626;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align:center;
+  line-height:50px;
+}
+
+.social-media .fa.fa-twitter:hover{
+  background:#2aaae0;
+  color:#fff;
+}
+
+.social-media .fa.fa-github-alt:hover{
+  background:#800080;
+  color:#fff;
+}
+
+.social-media .fa.fa-rss:hover{
+  background:#ee8533;
+  color:#fff;
+}
+
+.social-media .fa.fa-codepen:hover{
+  background:#888;
+  color:#fff;
+}
