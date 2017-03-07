@@ -137,9 +137,9 @@ Font Awesomeの[公式サイト][font-awesome]からfontファイル、及びcss
 
 ---
 
--[BootstrapV4公式サイト][bootstrap]
--[Font-Awesome公式サイト][font-awesome]
--[Assets - Jekyll公式サイト][jekyll-assets]
+- [BootstrapV4公式サイト][bootstrap]
+- [Font Awesome公式サイト][font-awesome]
+- [Assets - Jekyll公式サイト][jekyll-assets]
 
 [font-awesome]: http://fontawesome.io/
 [bootstrap]: https://v4-alpha.getbootstrap.com/
