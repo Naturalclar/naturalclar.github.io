@@ -83,10 +83,55 @@ sass:
 
 そして、jekyllでサイトの生成をすると、`_site`に生成された`assets`フォルダの中に`main.css`というファイルが生成されている。
 
-中身は`bootstrap.min.css`と同じ物である。
+中身は`bootstrap.min.css`と同じ物である。これだけだとあまり意味ない様に思えるが、今後他のcssテンプレート(後述のfont-awesome等)を追加する時にこの方法を使えば、main.cssに全て追加されるので、各cssをhtmlに紐付ける手間が省ける。
 
 
+### font-awesomeとは
 
+----
+
+bootstrapが無事導入出来たら、次はfont-awesomeを導入する。
+
+[font-awesome][font-awesome]はtwitterやfacebook等のSNSアイコンやその他様々な汎用性のあるアイコンが含まれているCSSの無料のツールキットである。
+
+これを導入するだけでこのようなアイコンが簡単に使える様になる→ <i class="fa fa-twitter"></i><i class="fa fa-heart"></i><i class="fa fa-facebook"></i><i class="fa fa-thumbs-up"></i>
+
+サイトのフッターやヘッダー等に各SNSへのリンクを設置したい時や、メールフォームの送信ボタン等にわかりやすいアイコンをつけるのに使用出来る。
+
+### font-awesomeの導入
+
+---
+
+Font Awesomeの[公式サイト][font-awesome]からfontファイル、及びcssファイルがダウンロード出来る。
+
+トップページのダウンロードボタンをクリックすると、色々なアイコンや機能が追加された有料サービスであるFort Awesomeの催促が入るが、無料のFont awesomeを使いたい場合はNo Thanksを選ぼう。
+
+<a href="/images/blog-images/font-awesome-dl.png" data-fancybox="gallery">![font-awesome-dl](/images/blog-images/font-awesome-dl.png){:class="img-fluid"}</a><br>
+
+ダウンロードした物を解凍したら、cssフォルダにfont-awesome.min.cssファイルがあり、fontフォルダに実際に使うfontファイルが含まれている。
+
+### fontファイルをJekyllのフォルダに入れる
+
+---
+
+
+先程bootstrapのjsファイルを入れた時の様にjekyllのフォルダ内に`font`フォルダを作成し、先程ダウンロードしたfont-awesomeのfontフォルダの中身を入れてしまおう。
+
+<a href="/images/blog-images/font-folder.png" data-fancybox="gallery">![font-folder](/images/blog-images/font-folder.png){:class="img-fluid"}</a><br>
+
+これでサイトが生成された時に、fontファイルが含まれる様になる。
+
+### font-awesomeのcssファイルを導入する。
+
+先程`bootstrap.min.css`でやった様に、`_sass_`フォルダに`font-awesome.min.css`を入れ、ファイル名を`font-awesome.min.scss`に変更する。
+
+そして、`assets`フォルダ内の`main.scss`に以下の追記を行う。
+
+```css
+@import "font-awesome.min";
+```
+
+これでfont-awesomeが導入された。詳しい使い方はまた後日。
 
 ### 参考したサイト
 
@@ -98,4 +143,4 @@ sass:
 
 [font-awesome]: http://fontawesome.io/
 [bootstrap]: https://v4-alpha.getbootstrap.com/
-[jekyll-assets]: #
+[jekyll-assets]: https://jekyllrb.com/docs/assets/
