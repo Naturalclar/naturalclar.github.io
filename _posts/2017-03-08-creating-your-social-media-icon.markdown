@@ -47,7 +47,7 @@ Font awesomeの[公式ページ][fa-examples]にその他様々な使用例が�
 ---
 
 今回作成したのはこんな感じのアイコン。マウスを乗せるとそれぞれ色が変わる。<br>
-これら以外のアイコンも作成してみたので良かったら[こちら][codepen-fa-icon]もどうぞ。
+これら以外のアイコンも作成してみたので良かったら[こちら][codepen-fa-icons]もどうぞ。
 
 <ul class="social-media">
   <li><i class="fa fa-twitter fa-2x"></i></li>
