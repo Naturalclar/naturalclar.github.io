@@ -2,7 +2,7 @@
 layout: post
 title: "JekyllにBootstrapとFont Awesomeを導入する"
 date: 2017-03-06 16:00:00 -0800
-categories: font-awesome jekyll css
+categories: font-awesome jekyll css bootstrap
 ---
 
 このサイトは基本的にBootstrapを使って作成している。今更だけど導入した手順を記載する。<br>
