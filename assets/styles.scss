@@ -1,5 +1,12 @@
 ---
 ---
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Sawarabi Gothic";
+}
+p, div {
+    font-family: "Sawarabi Gothic";
+}
   .bg-default { background: #F5F8F9;}
     
   //layout
@@ -31,13 +38,25 @@
     width: 64px;
     height: 64px;
   }
+
+//colors
+.badge a{
+  color: #fff;
+}
+
+.badge a:hover{
+    text-decoration: none;
+}
   
+//side-bar
+  .sidebar-item{
+    margin-bottom: 10px;
+  }
   
-  //fonts
+//fonts
   .wf-nicomoji { font-family: "Nico Moji"; }
-  .wf-sawarabigothic { font-family: "Sawarabi Gothic"; }
   
-  //social-media
+//social-media icons
 .social-media{
   list-style-type: none;
   padding: 0px;

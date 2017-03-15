@@ -2,7 +2,7 @@
 layout: post
 title: "Raspberry Piを使ってMosquittoのMQTTテストブローカーにCC2650センサーのデータを投げ込む"
 date: 2017-02-28 12:00:00 -0800
-categories: IoT RaspberryPi CC2650 node.js MQTT 
+categories: iot raspberrypi cc2650 node.js mqtt 
 ---
 
 IoT殴り書きその2。文章の使いまわしが多いのは気にしない。こちらも時間が出来た時に清書したい。

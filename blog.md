@@ -15,9 +15,7 @@ menu: true
         <h6 class="card-subtitle mb-2 text-muted">{{ post.date | date: "%b %-d, %Y" }}</h6>
         <p>
           <span class="text-muted">Category:</span> 
-          {% for category in post.categories %}
-            <span class="badge badge-default">{{ category }}</span>
-          {% endfor %}
+          {% include post-categories.html %}
         </p>
         </div>
     </div>

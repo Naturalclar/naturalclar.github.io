@@ -2,7 +2,7 @@
 layout: post
 title: "Raspberry Piを通してCC2650センサーのデータをDweet.ioに表示させる"
 date: 2017-02-27 12:00:00 -0800
-categories: IoT RaspberryPi CC2650 node.js dweet.io
+categories: iot raspberrypi cc2650 node.js dweet.io
 ---
 
 最近仕事で勉強しないといけない事が多くなってきたので、頭の中を整理する為にも書き出しておく。

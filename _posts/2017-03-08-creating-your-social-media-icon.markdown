@@ -5,14 +5,15 @@ date: 2017-03-08 12:00:00 -0800
 categories: font-awesome css html
 ---
 
-サイトの下の方にマウスを乗っけたら色の変わるSNSアイコンを作ってみたのでその手順を記載。<br>
+サイトの下の方にマウスを乗っけたら色の変わるSNSアイコンを作ってみたのでその手順を記載。
+
 凄い基本的なCSSしか使ってないです。作成した物はうちの[Code Pen][codepen-fa-icons]に記載したので使いたければご自由に。
 
 ### 目的
 
 ---
 
-Font-awesomeとCSSの:hoverを使って、各SNSアイコンを作成する。
+Font-awesomeとCSSの`:hover`を使って、各SNSアイコンを作成する。
 
 ### Font-awesomeの簡単な使い方
 
@@ -130,10 +131,13 @@ Font awesomeの[公式ページ][fa-examples]にその他様々な使用例が�
 
 ```
 
-先程の紹介したアイコンを`ul`でリスト表示しているだけ。<br>
+先程の紹介したアイコンを`ul`でリスト表示しているだけ。
+
 `ul`に後述の`social-media`のクラスを与えている。
 
 ### CSSの説明
+
+---
 
 ```css
 .social-media{

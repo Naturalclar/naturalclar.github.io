@@ -7,8 +7,9 @@ layout: default
     <img class="card-img-top card-img" src="{{page.image}}" alt="Card image cap">
     {% endif %}
     <div class="card-block">
-      <h4 class="card-title"><a href="{{ post.url | relative_url }}">{{ page.title | escape }}</a></h4>
+      <h4 class="card-title"><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></h4>
       <h6 class="card-subtitle mb-2 text-muted">{{ page.date | date: "%b %-d, %Y" }}</h6>
+      <p><span class="text-muted">Categories:</span> {% include post-categories.html %}</p>
       <hr>
       <p class="card-text">{{ content }}</p>
       <hr>
@@ -29,7 +30,4 @@ layout: default
       </div>
     </div>
   </div>
-  {% if site.disqus.shortname %}
-    {% include disqus_comments.html %}
-  {% endif %}
 </article>
