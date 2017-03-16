@@ -134,8 +134,7 @@ sensortag.discover(function discovered(tag){
 
 ---
 
-Node.jsとnpmのインストール方法はいずれ和訳して書く<br>
-本当はNode.jsを使わずにGolangのみでやれるようにしたいから色々と調べたい。<br>
+Node.jsの代わりにGolangで出来る様にしたいから用研究<br>
 Golang用のBLEライブラリは既に[存在してる][paypal-gatt]し、それを使ってセンサータグを接続する為のSDKとか作れないかな？
 
 ### 参考したサイト
