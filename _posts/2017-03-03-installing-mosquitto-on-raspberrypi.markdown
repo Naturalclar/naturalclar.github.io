@@ -52,7 +52,7 @@ sudo apt-get update
 そしてmosquittoとそのクライアントをインストール
 
 ```bash
-sudo apt-get install mosquitto mosquitto_clients
+sudo apt-get install mosquitto mosquitto-clients
 ```
 
 これでmosquittoが導入出来た筈。mosquittoは自動で走ってる筈だけど、手動で起動させたい場合以下のコマンドで起動出来る
