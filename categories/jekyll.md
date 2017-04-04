@@ -1,5 +1,5 @@
 ---
 layout: archive
-category: udp
-permalink: /udp/
+category: jekyll
+permalink: /jekyll/
 ---
