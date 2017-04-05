@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Node.jsで単純なUDPサーバとクライアントを作成する"
-date: 2017-04-02 12:00:00 -0800
+date: 2017-04-03 12:00:00 -0800
 categories: node.js udp
 ---
 
