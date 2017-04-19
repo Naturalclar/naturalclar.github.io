@@ -42,53 +42,53 @@ npm install async sensortag node-dweetio
 [sensortag][node-sensortag]モジュールに含まれているtest.jsや[このブログ記事][ref-blog]を参照してセンサータグの温湿度と輝度を3秒毎にdweet.ioに投げるコードを作成
 
 ```js
-var util = require('util')
-var async = require('async')
-var sensortag = require('sensortag')
-var dweetclient = require("node-dweetio")
+var util = require('util'),
+	async = require('async'),
+	sensortag = require('sensortag'),
+	dweetclient = require("node-dweetio");
 
-var dweetio = new dweetclient()
+var dweetio = new dweetclient();
 
 sensortag.discover(function discovered(tag){
-    console.log('discovered: ' + tag)
+    console.log('discovered: ' + tag);
 
     tag.on('disconnect', function(){
-	console.log('disconnected')
-	process.exit(0)
+	console.log('disconnected');
+	process.exit(0);
     })
 
-    var url = tag.type + "-testing"
-    console.log("will be sending data to http://dweet.io/follow/" + url)
+    var url = tag.type + "-testing";
+    console.log("will be sending data to http://dweet.io/follow/" + url);
     
     var content = {};
 
     async.series([
 	function(callback){
-	    console.log('connectAndSetUp')
-	    tag.connectAndSetUp(callback)
+	    console.log('connectAndSetUp');
+	    tag.connectAndSetUp(callback);
 	},
 
 	function(callback){
-	    console.log('enableHumidity')
-	    tag.enableHumidity(callback)
+	    console.log('enableHumidity');
+	    tag.enableHumidity(callback);
 	},
 	function(callback){
-	    console.log('enableLuxometer')
-	    tag.enableLuxometer(callback)
+	    console.log('enableLuxometer');
+	    tag.enableLuxometer(callback);
 	},
 	function(callback){
-	    setTimeout(callback, 2000)
+	    setTimeout(callback, 2000);
 	},
 	function(callback){
 	    tag.on('humidityChange', function(temperature, humidity) {
-		console.log('\ttemperature = %d C', temperature.toFixed(1))
-		console.log('\thumidity = %d %', humidity.toFixed(1))
-		content.temperature = Number(temperature.toFixed(1))
-		content.humidity = Number(humidity.toFixed(1))
+		console.log('\ttemperature = %d C', temperature.toFixed(1));
+		console.log('\thumidity = %d %', humidity.toFixed(1));
+		content.temperature = Number(temperature.toFixed(1));
+		content.humidity = Number(humidity.toFixed(1));
 	    })
 	    console.log('sensorHumidityPeriod')
 	    tag.setHumidityPeriod(2000, function(error) {
-		console.log('notifyHumidity')
+		console.log('notifyHumidity');
 		tag.notifyHumidity(function(error) {
 		    callback()
 		    })
@@ -96,14 +96,14 @@ sensortag.discover(function discovered(tag){
 	},
 	function(callback){
 	    tag.on('luxometerChange', function(lux) {
-		console.log('\tlux = %d', lux.toFixed(1))
-		content.lux = Number(lux.toFixed(1))
+		console.log('\tlux = %d', lux.toFixed(1));
+		content.lux = Number(lux.toFixed(1));
 	    });
-	    console.log('setLuxometer')
+	    console.log('setLuxometer');
 	    tag.setLuxometerPeriod(2000, function(error) {
-		console.log('notifyLuxometer')
+		console.log('notifyLuxometer');
 		tag.notifyLuxometer(function(error) {
-		    callback()
+		    callback();
 		    })
 	    })
 	}
@@ -113,9 +113,9 @@ sensortag.discover(function discovered(tag){
     setInterval(function(){
 	if( content.humidity && content.lux) {
 	    dweetio.dweet_for(url, content, function(err, dweet){
-		console.log(dweet.thing)
-		console.log(dweet.content)
-		console.log(dweet.created)
+		console.log(dweet.thing);
+		console.log(dweet.content);
+		console.log(dweet.created);
 	    })
 	}
     }, 3000)
