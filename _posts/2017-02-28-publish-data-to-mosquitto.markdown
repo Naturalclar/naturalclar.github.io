@@ -39,83 +39,83 @@ npm install async sensortag mqtt
 今回はSubsribeとPublishを同じRasberry pi上で行う。もしRasberry piが二つあれば一つをSubscriber,もう一つをPublisherにして、Publisherからデータが投げ込まれた時にSubscriberの方でデータを表示させた方が実用的かもしれない。
 
 ```js
-var util = require('util')
-var async = require('async')
-var sensortag = require('sensortag')
-var mqtt = require('mqtt')
+var util = require('util'),
+async = require('async'),
+sensortag = require('sensortag'),
+mqtt = require('mqtt');
 
-sensortag.discover(function discovered(tag){
-    console.log('discovered: ' + tag)
+sensortag.discover((tag) => {
+    console.log('discovered: ' + tag);
 
-    tag.on('disconnect', function(){
-	console.log('disconnected')
-	process.exit(0)
+    tag.on('disconnect', () =>{
+	console.log('disconnected');
+	process.exit(0);
     })
 
-    var client = mqtt.connect('mqtt://test.mosquitto.org')
+    var client = mqtt.connect('mqtt://test.mosquitto.org');
 
-    client.on('connect', function () {
-	client.subscribe('cc2650test')
+    client.on('connect', () =>{
+	client.subscribe('cc2650test');
     })
 
     var content = {}
 
     async.series([
-	function(callback){
-	    console.log('connectAndSetUp')
-	    tag.connectAndSetUp(callback)
+	(callback) => {
+	    console.log('connectAndSetUp');
+	    tag.connectAndSetUp(callback);
 	},
 
-	function(callback){
-	    console.log('enableHumidity')
-	    tag.enableHumidity(callback)
+	(callback) => {
+	    console.log('enableHumidity');
+	    tag.enableHumidity(callback);
 	},
-	function(callback){
-	    console.log('enableLuxometer')
-	    tag.enableLuxometer(callback)
+	(callback) => {
+	    console.log('enableLuxometer');
+	    tag.enableLuxometer(callback);
 	},
-	function(callback){
-	    setTimeout(callback, 2000)
+	(callback) => {
+	    setTimeout(callback, 2000);
 	},
-	function(callback){
-	    tag.on('humidityChange', function(temperature, humidity) {
-		console.log('\ttemperature = %d C', temperature.toFixed(1))
-		console.log('\thumidity = %d %', humidity.toFixed(1))
-		content.temperature = Number(temperature.toFixed(1))
-		content.humidity = Number(humidity.toFixed(1))
+	(callback) => {
+	    tag.on('humidityChange', (temperature, humidity) => {
+		console.log('\ttemperature = %d C', temperature.toFixed(1));
+		console.log('\thumidity = %d %', humidity.toFixed(1));
+		content.temperature = Number(temperature.toFixed(1));
+		content.humidity = Number(humidity.toFixed(1));
 	    })
-	    console.log('sensorHumidityPeriod')
-	    tag.setHumidityPeriod(2000, function(error) {
-		console.log('notifyHumidity')
-		tag.notifyHumidity(function(error) {
-		    callback()
+	    console.log('sensorHumidityPeriod');
+	    tag.setHumidityPeriod(2000, (error) => {
+		console.log('notifyHumidity');
+		tag.notifyHumidity((error) => {
+		    callback();
 			})
 	    })
 	},
-	function(callback){
-	    tag.on('luxometerChange', function(lux) {
-		console.log('\tlux = %d', lux.toFixed(1))
-		content.lux = Number(lux.toFixed(1))
+	(callback) => {
+	    tag.on('luxometerChange', (lux) => {
+		console.log('\tlux = %d', lux.toFixed(1));
+		content.lux = Number(lux.toFixed(1));
 	    })
-	    console.log('setLuxometer')
-	    tag.setLuxometerPeriod(2000, function(error) {
-		console.log('notifyLuxometer')
-		tag.notifyLuxometer(function(error) {
-		    callback()
+	    console.log('setLuxometer');
+	    tag.setLuxometerPeriod(2000, (error) => {
+		console.log('notifyLuxometer');
+		tag.notifyLuxometer((error) => {
+		    callback();
 			})
 	    })
 	}
     ])
     
 	//publish data every 3 seconds
-    setInterval(function(){
+    setInterval(() => {
 	if( content.humidity && content.lux) {
-	    client.publish('cc2650test', JSON.stringify(content))
+	    client.publish('cc2650test', JSON.stringify(content));
 	}	
-    }, 3000)
+    }, 3000);
 
-    client.on('message', function (topic, message){
-	console.log('Message: ' + message.toString())
+    client.on('message', (topic, message) => {
+	console.log('Message: ' + message.toString());
     })
 })
 

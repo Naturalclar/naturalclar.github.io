@@ -37,53 +37,53 @@ asyncの仕様をうまく理解してなくて、順不同でfunctionが起動�
 ---
 
 ```js
-var util = require('util')
-var async = require('async')
-var sensortag = require('sensortag')
+var util = require('util'),
+async = require('async'),
+sensortag = require('sensortag');
 
 var tags = [];
 var contents = {};
 
 async.series([
-    function(callback){
+    (callback) => {
     	// デバイスのMACアドレスを入力
-        addDevice('xxxxxxxxxxxx')
-        callback()
+        addDevice('xxxxxxxxxxxx');
+        callback();
     },
-    function(callback){
+    (callback) => {
     	// デバイスのMACアドレスを入力
-        addDevice('xxxxxxxxxxxx')
-        callback()
+        addDevice('xxxxxxxxxxxx');
+        callback();
     },
-    function(callback){
-        setTimeout(callback,5000)
+    (callback) => {
+        setTimeout(callback,5000);
     },
-    function(callback){
-        tags.forEach(function(tag){
+    (callback) => {
+        tags.forEach( (tag) => {
             async.series([
-                function(callback){
-                    console.log(tag.id + ' connectAndSetUp')
-                    tag.connectAndSetUp(callback)
+                (callback) => {
+                    console.log(tag.id + ' connectAndSetUp'); 
+                    tag.connectAndSetUp(callback);
                 },
-                function(callback){
-                    console.log(tag.id + ' enableHumidity')
-                    tag.enableHumidity(callback)
+                (callback) => {
+                    console.log(tag.id + ' enableHumidity');
+                    tag.enableHumidity(callback);
                 },
-                function(callback){
-                    setTimeout(callback,2000)
+                (callback) => {
+                    setTimeout(callback,2000);
                 },
-                function(callback){
+                (callback) => {
                     tag.on('humidityChange', function(temperature, humidity){
-                           console.log(tag.id + ' \ttemperature = %d C', temperature.toFixed(1))
-                           console.log(tag.id + ' \thumidity = %d %', humidity.toFixed(1))
-                           contents[tag.id].temperature = Number(temperature.toFixed(1))
-                           contents[tag.id].humidity = Number(humidity.toFixed(1))
+                           console.log(tag.id + ' \ttemperature = %d C', temperature.toFixed(1));
+                           console.log(tag.id + ' \thumidity = %d %', humidity.toFixed(1));
+                           contents[tag.id].temperature = Number(temperature.toFixed(1));
+                           contents[tag.id].humidity = Number(humidity.toFixed(1));
                     })
-                    console.log(tag.id + ' sensorHumidityPeriod')
-                    tag.setHumidityPeriod(3000, function(error) {
-                        console.log('notifyHumidity')
-                        tag.notifyHumidity(function(error){
-                            callback()
+                    console.log(tag.id + ' sensorHumidityPeriod');
+                    tag.setHumidityPeriod(3000, (error) => {
+                        console.log('notifyHumidity');
+                        tag.notifyHumidity((error) => {
+                            callback();
                         })
                     })
                 }
@@ -94,16 +94,16 @@ async.series([
 
 //5秒毎に現在のデータを表示させるだけ。
 //データをどこかに投げたい場合はここにデータ投げ込み用のコードを記入する
-setInterval(function(){
-        console.log(JSON.stringify(contents))
+setInterval(() =>{
+        console.log(JSON.stringify(contents));
 },5000)
 
 //MACアドレス毎にデバイスを識別して、検出したデバイスを配列に投げ込む
 function addDevice(uuid){
-    sensortag.discoverByUuid(uuid, function discovered(tag){
-        console.log('discovered: ' + tag)
-        tags.push(tag)
-        contents[tag.id]= {}
+    sensortag.discoverByUuid(uuid, (tag) => {
+        console.log('discovered: ' + tag);
+        tags.push(tag);
+        contents[tag.id]= {};
     })
 }
 ```

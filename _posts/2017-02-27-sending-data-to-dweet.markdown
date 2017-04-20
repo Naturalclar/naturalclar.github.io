@@ -43,16 +43,16 @@ npm install async sensortag node-dweetio
 
 ```js
 var util = require('util'),
-	async = require('async'),
-	sensortag = require('sensortag'),
-	dweetclient = require("node-dweetio");
+async = require('async'),
+sensortag = require('sensortag'),
+dweetclient = require("node-dweetio");
 
 var dweetio = new dweetclient();
 
-sensortag.discover(function discovered(tag){
+sensortag.discover( (tag) => {
     console.log('discovered: ' + tag);
 
-    tag.on('disconnect', function(){
+    tag.on('disconnect', ()=> {
 	console.log('disconnected');
 	process.exit(0);
     })
@@ -63,46 +63,46 @@ sensortag.discover(function discovered(tag){
     var content = {};
 
     async.series([
-	function(callback){
+	(callback) => {
 	    console.log('connectAndSetUp');
 	    tag.connectAndSetUp(callback);
 	},
 
-	function(callback){
+	(callback) => {
 	    console.log('enableHumidity');
 	    tag.enableHumidity(callback);
 	},
-	function(callback){
+	(callback) => {
 	    console.log('enableLuxometer');
 	    tag.enableLuxometer(callback);
 	},
-	function(callback){
+	(callback) => {
 	    setTimeout(callback, 2000);
 	},
-	function(callback){
-	    tag.on('humidityChange', function(temperature, humidity) {
+	(callback) => {
+	    tag.on('humidityChange', (temperature, humidity) => {
 		console.log('\ttemperature = %d C', temperature.toFixed(1));
 		console.log('\thumidity = %d %', humidity.toFixed(1));
 		content.temperature = Number(temperature.toFixed(1));
 		content.humidity = Number(humidity.toFixed(1));
 	    })
 	    console.log('sensorHumidityPeriod')
-	    tag.setHumidityPeriod(2000, function(error) {
+	    tag.setHumidityPeriod(2000, (error) => {
 		console.log('notifyHumidity');
-		tag.notifyHumidity(function(error) {
+		tag.notifyHumidity((error) => {
 		    callback()
 		    })
 	    })
 	},
-	function(callback){
-	    tag.on('luxometerChange', function(lux) {
+	(callback) => {
+	    tag.on('luxometerChange', (lux) => {
 		console.log('\tlux = %d', lux.toFixed(1));
 		content.lux = Number(lux.toFixed(1));
 	    });
 	    console.log('setLuxometer');
-	    tag.setLuxometerPeriod(2000, function(error) {
+	    tag.setLuxometerPeriod(2000, (error) => {
 		console.log('notifyLuxometer');
-		tag.notifyLuxometer(function(error) {
+		tag.notifyLuxometer((error) => {
 		    callback();
 		    })
 	    })
@@ -110,15 +110,15 @@ sensortag.discover(function discovered(tag){
     ])
 
     //send data every 3 seconds
-    setInterval(function(){
+    setInterval(() => {
 	if( content.humidity && content.lux) {
-	    dweetio.dweet_for(url, content, function(err, dweet){
+	    dweetio.dweet_for(url, content, (err, dweet) => {
 		console.log(dweet.thing);
 		console.log(dweet.content);
 		console.log(dweet.created);
 	    })
 	}
-    }, 3000)
+    }, 3000);
 })
 ```
 
