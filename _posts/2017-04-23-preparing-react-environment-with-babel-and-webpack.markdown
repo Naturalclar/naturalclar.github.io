@@ -81,7 +81,7 @@ Webpackの設定は`webpack.config.js`のファイルで行う。下記内容を
 
 ```js
 module.exports = {
-    entry: __dirname + '/src',
+    entry: __dirname + '/src/',
     output: {
         path: __dirname + '/public/js',
         filename: 'bundle.js'
