@@ -41,4 +41,6 @@ paginate_path: /page:num
 paginate: 3
 
 twitter_image: /images/twitter_icon.jpg
+
+exclude: ['node_modules','src']
  

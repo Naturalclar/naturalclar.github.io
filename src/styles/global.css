@@ -1,0 +1,10 @@
+html {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #222;
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100%;
+}

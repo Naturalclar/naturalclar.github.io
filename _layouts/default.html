@@ -1,25 +1,11 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "jp" }}">
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
   {% include head.html %}
 
-  <body class="bg-default">
+  <body>
+    <div id='root'></div>    
 
-    {% include header.html %}
-
-    <main class="content container" aria-label="Content">
-      <div class="row">
-        <div class="col-lg-9">
-          {{ content }}
-        </div>
-        <div class="col-lg-3">
-          {% include sidebar.html %}
-        </div>
-      </div>
-    </main>
-    
-    {% include footer.html %}
-    {% include footer-copyright.html %}
     {% if jekyll.environment == 'production' %}
        {% include google-analytics.html %}
     {% endif %}
