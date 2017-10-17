@@ -14,8 +14,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-languagename: 長めの呟き。
-title: 長めの呟き。
+languagename: naturalclar
+title: naturalclar
 
 author: Smashcat
 baseurl: "" # the subpath of your site, e.g. /blog

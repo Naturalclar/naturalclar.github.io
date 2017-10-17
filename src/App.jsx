@@ -4,10 +4,12 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Menu from './components/Menu';
 import MenuItem from './components/MenuItem';
+import Color from './utils/Color';
 
 const styles = {
   body: {
-    color: 'white',
+    color: Color.TEXT_PRIMARY,
+    background: Color.BACKGROUND,
     display: 'grid',
     gridTemplateRows: 'auto auto 1fr auto',
     gridTemplateAreas: '"header" "menu" "content" "footer"',
@@ -36,7 +38,7 @@ function App() {
       <Menu style={styles.menu}>
         {menuItems}
       </Menu>
-      <Footer title="naturalclar" style={styles.footer} color="white" name="Jesse K." />
+      <Footer title="naturalclar" style={styles.footer} color={Color.TEXT_PRIMARY} name="Jesse K." />
     </div>
   );
 }

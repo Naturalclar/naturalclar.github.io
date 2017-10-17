@@ -23024,11 +23024,16 @@ var _MenuItem = __webpack_require__(108);
 
 var _MenuItem2 = _interopRequireDefault(_MenuItem);
 
+var _Color = __webpack_require__(109);
+
+var _Color2 = _interopRequireDefault(_Color);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var styles = {
   body: {
-    color: 'white',
+    color: _Color2.default.TEXT_PRIMARY,
+    background: _Color2.default.BACKGROUND,
     display: 'grid',
     gridTemplateRows: 'auto auto 1fr auto',
     gridTemplateAreas: '"header" "menu" "content" "footer"',
@@ -23066,7 +23071,7 @@ function App() {
       { style: styles.menu },
       menuItems
     ),
-    _react2.default.createElement(_Footer2.default, { title: 'naturalclar', style: styles.footer, color: 'white', name: 'Jesse K.' })
+    _react2.default.createElement(_Footer2.default, { title: 'naturalclar', style: styles.footer, color: _Color2.default.TEXT_PRIMARY, name: 'Jesse K.' })
   );
 }
 
@@ -26434,6 +26439,23 @@ MenuItem.propTypes = {
 };
 
 exports.default = (0, _radium2.default)(MenuItem);
+
+/***/ }),
+/* 109 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var Color = {
+  BACKGROUND: '#222',
+  TEXT_PRIMARY: '#fff'
+};
+
+exports.default = Color;
 
 /***/ })
 /******/ ]);
