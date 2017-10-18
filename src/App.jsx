@@ -1,10 +1,14 @@
 import React from 'react';
 import Radium from 'radium';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Menu from './components/Menu';
 import MenuItem from './components/MenuItem';
 import Color from './utils/Color';
+import Home from './components/pages/Home';
+import About from './components/pages/About';
+import Contact from './components/pages/Contact';
 
 const styles = {
   body: {
@@ -26,20 +30,55 @@ const styles = {
   menu: {
     gridArea: 'menu',
   },
+  content: {
+    gridArea: 'content',
+  },
+  link: {
+    color: 'inherit',
+    textDecoration: 'none',
+  },
 };
 
 function App() {
-  const menu = ['Home', 'About me', 'Contact me'];
-  const menuItems = menu.map(val => <MenuItem key={val}>{val}</MenuItem>);
-
+  const menu = [
+    {
+      title: 'Home',
+      path: '/',
+      component: () => <Home />,
+    },
+    {
+      title: 'About me',
+      path: '/about',
+      component: () => <About />,
+    },
+    {
+      title: 'Contact me',
+      path: '/contact',
+      component: () => <Contact />,
+    },
+  ];
+  const menuItems = menu.map(val => (
+    <MenuItem key={val.title}>
+      <Link style={styles.link} key={val.title} to={val.path} href={val.path}>{val.title}</Link>
+    </MenuItem>));
+  const routes = menu.map(val => (
+    <Route key={val.title} path={val.path} component={val.component} />));
+    
   return (
-    <div style={styles.body}>
-      <Header title="naturalclar" style={styles.header} />
-      <Menu style={styles.menu}>
-        {menuItems}
-      </Menu>
-      <Footer title="naturalclar" style={styles.footer} color={Color.TEXT_PRIMARY} name="Jesse K." />
-    </div>
+    <Router>
+      <div style={styles.body}>
+        <Header title="naturalclar" style={styles.header} />
+        <Menu style={styles.menu}>
+          {menuItems}
+        </Menu>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+        </Switch>
+        <Footer title="naturalclar" style={styles.footer} color={Color.TEXT_PRIMARY} name="Jesse K." />
+      </div>
+    </Router>
   );
 }
 
