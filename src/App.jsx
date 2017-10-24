@@ -1,6 +1,6 @@
 import React from 'react';
 import Radium from 'radium';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, NavLink, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Menu from './components/Menu';
@@ -59,7 +59,14 @@ function App() {
   ];
   const menuItems = menu.map(val => (
     <MenuItem key={val.title}>
-      <Link style={styles.link} key={val.title} to={val.path} href={val.path}>{val.title}</Link>
+      <NavLink 
+        style={styles.link}
+        activeStyle={{textShadow: '0 0 1rem red,0 0 0.2rem red'}} 
+        key={val.title} 
+        to={val.path} 
+        href={val.path}
+        exact
+        >{val.title}</NavLink>
     </MenuItem>));
   const routes = menu.map(val => (
     <Route key={val.title} path={val.path} component={val.component} />));

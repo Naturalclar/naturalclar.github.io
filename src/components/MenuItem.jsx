@@ -11,6 +11,7 @@ const styles = {
     transition: 'all .3s ease',
     ':hover': {
       transform: 'scale(1.3)',
+      textShadow: '0 0 1rem red,0 0 0.2rem red',
     },
   },
 };

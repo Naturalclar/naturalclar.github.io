@@ -24425,8 +24425,15 @@ function App() {
       _MenuItem2.default,
       { key: val.title },
       _react2.default.createElement(
-        _reactRouterDom.Link,
-        { style: styles.link, key: val.title, to: val.path, href: val.path },
+        _reactRouterDom.NavLink,
+        {
+          style: styles.link,
+          activeStyle: { textShadow: '0 0 1rem red,0 0 0.2rem red' },
+          key: val.title,
+          to: val.path,
+          href: val.path,
+          exact: true
+        },
         val.title
       )
     );
@@ -30890,7 +30897,8 @@ var styles = {
     fontSize: '1.5rem',
     transition: 'all .3s ease',
     ':hover': {
-      transform: 'scale(1.3)'
+      transform: 'scale(1.3)',
+      textShadow: '0 0 1rem red,0 0 0.2rem red'
     }
   }
 };
