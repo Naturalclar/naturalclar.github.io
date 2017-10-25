@@ -62,6 +62,13 @@ const items = [
     _text:'Github',
     _url: 'https://github.com/Naturalclar',
     _icon: '\uf09b',
+  },
+  {
+    _key:'codepen',
+    _text:'CodePen',
+    _url: 'https://codepen.io/naturalclar',
+    _icon: '\uf1cb',
+
   }
 ]
 

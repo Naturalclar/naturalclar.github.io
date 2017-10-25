@@ -1,5 +1,5 @@
 import React from 'react';
-import Radium from 'radium';
+import Radium, { StyleRoot } from 'radium';
 import { BrowserRouter as Router, Route, NavLink, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -76,20 +76,22 @@ function App() {
     <Route key={val.title} path={val.path} component={val.component} />));
     
   return (
-    <Router>
-      <div style={styles.body}>
-        <Header title="naturalclar" style={styles.header} />
-        <Menu style={styles.menu}>
-          {menuItems}
-        </Menu>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
-        </Switch>
-        <Footer title="naturalclar" style={styles.footer} color={Color.TEXT_PRIMARY} name="Jesse K." />
-      </div>
-    </Router>
+    <StyleRoot>
+      <Router>
+        <div style={styles.body}>
+          <Header title="naturalclar" style={styles.header} />
+          <Menu style={styles.menu}>
+            {menuItems}
+          </Menu>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
+          </Switch>
+          <Footer title="naturalclar" style={styles.footer} color={Color.TEXT_PRIMARY} name="Jesse K." />
+        </div>
+      </Router>
+    </StyleRoot>
   );
 }
 

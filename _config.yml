@@ -30,9 +30,6 @@ theme: minima
 gems:
   - jekyll-feed
   - jekyll-paginate
-exclude:
-  - Gemfile
-  - Gemfile.lock
 sass:
     sass_dir: _sass
     style: compressed
@@ -42,5 +39,15 @@ paginate: 3
 
 twitter_image: /images/twitter_icon.jpg
 
-exclude: ['node_modules','src']
+exclude: [
+  'node_modules',
+  'src',
+  'package.json',
+  'postcss.config.js',
+  'webpack.config.js',
+  'gulpfile.js',
+  'yarn.lock',
+  'Gemfile',
+  'Gemfile.lock',
+  ]
  
