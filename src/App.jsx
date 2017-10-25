@@ -37,6 +37,9 @@ const styles = {
     color: 'inherit',
     textDecoration: 'none',
   },
+  active: {
+    textShadow: `0 0 1rem ${Color.TEXT_SHADOW},0 0 0.2rem ${Color.TEXT_SHADOW}`,    
+  }
 };
 
 function App() {
@@ -61,13 +64,14 @@ function App() {
     <MenuItem key={val.title}>
       <NavLink 
         style={styles.link}
-        activeStyle={{textShadow: '0 0 1rem red,0 0 0.2rem red'}} 
+        activeStyle={styles.active}
         key={val.title} 
         to={val.path} 
         href={val.path}
         exact
         >{val.title}</NavLink>
-    </MenuItem>));
+    </MenuItem>
+    ));
   const routes = menu.map(val => (
     <Route key={val.title} path={val.path} component={val.component} />));
     

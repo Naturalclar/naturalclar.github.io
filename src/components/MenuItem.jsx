@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
+import Color from '../utils/Color';
 
 const styles = {
   menuItem: {
@@ -11,7 +12,7 @@ const styles = {
     transition: 'all .3s ease',
     ':hover': {
       transform: 'scale(1.3)',
-      textShadow: '0 0 1rem red,0 0 0.2rem red',
+      textShadow: `0 0 1rem ${Color.TEXT_SHADOW},0 0 0.2rem ${Color.TEXT_SHADOW}`,
     },
   },
 };

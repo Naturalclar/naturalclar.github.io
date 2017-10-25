@@ -1,6 +1,7 @@
 const Color = {
-  BACKGROUND: '#222',
-  TEXT_PRIMARY: '#fff',
+  BACKGROUND: 'linear-gradient(to bottom, #00ae76, #aaeecc 100%) no-repeat fixed',
+  TEXT_PRIMARY: 'mintcream',
+  TEXT_SHADOW: 'dodgerblue' 
 };
 
 export default Color;

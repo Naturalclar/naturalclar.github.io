@@ -8,25 +8,20 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     transition: 'all 0.3s ease-in-out',
-    fontFamily: '"Indie Flower", cursive',
+    fontFamily: '"Open Sans", cursive',
   },
-  title: {
-    margin: '2rem 0',
-    fontSize: '2.5rem',
-  },
-  subtitle: {
-    fontSize: '1.5rem',
+  text: {
+    fontSize: '1.3rem',
+    lineHeight: '2rem',
+    maxWidth: '80%',
   },
 };
 
 function About(props) {
   return (
     <div style={{ ...styles.home, ...props.style }}>
-      <div style={styles.title}>
-        This is an About Me Page
-      </div>
-      <div style={styles.subtitle}>
-        Hello World!
+      <div style={styles.text}>
+        Hi! My name is Jesse Katsumata, a front-end developer based in Union City, California. I have a degree in computer science &#x1f4bb; and minor in music &#x1f3b9;&#x1f3b6; . I'm also a clarinet player and have a strong passion in classical music!
       </div>
     </div>
   );
