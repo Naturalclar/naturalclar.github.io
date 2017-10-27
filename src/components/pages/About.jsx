@@ -4,6 +4,17 @@ import Radium from 'radium';
 import Color from '../../utils/Color';
 import Viewport from '../../utils/Viewport';
 
+const fadeIn = Radium.keyframes({
+  '0%': {
+    opacity: 0,
+    transform: 'translateY(-20%)',
+  },
+  '100%': {
+    opacity: 1,
+    transform: 'translateY(0)',
+  },
+});
+
 const styles = {
   about: {
     display: 'flex',
@@ -12,6 +23,9 @@ const styles = {
     alignItems: 'center',
     transition: 'all 0.3s ease-in-out',
     marginBottom: '0.5rem',
+    opacity: 0,
+    animation: '0.4s ease both',
+    animationName: fadeIn,
   },
   container: {
     display: 'flex',
@@ -24,7 +38,7 @@ const styles = {
     boxShadow: `4px 4px 4px ${Color.BACKGROUND_SECONDARY_SHADOW}`,
     [Viewport.large]: {
       width: '50%',
-    }
+    },
   },
   header: {
     fontSize: '1.5rem',
@@ -49,7 +63,10 @@ function About(props) {
           About me
         </div>
         <div style={styles.text}>
-          Hi! My name is Jesse Katsumata, a front-end developer based in Union City, California. I will help you make your dream website into reality, as I am on my way to making mine! I have a degree in computer science &#x1f4bb; and minor in music &#x1f3b9;&#x1f3b6; . I'm also a clarinet player and have a strong passion in classical music!
+          Hi! My name is Jesse Katsumata, a front-end developer based in Union City, California.
+          I will help you make your dream website into reality, as I am on my way to making mine!
+          I have a degree in computer science &#x1f4bb; and minor in music &#x1f3b9;&#x1f3b6; .
+          I&apos;m also a clarinet player and have a strong passion in classical music!
         </div>
       </div>
     </div>

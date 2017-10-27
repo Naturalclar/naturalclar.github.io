@@ -435,65 +435,6 @@ module.exports = invariant;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-exports.default = function (prefixedValue, value, keepUnprefixed) {
-  return keepUnprefixed ? [prefixedValue, value] : prefixedValue;
-};
-
-module.exports = exports["default"];
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * 
- */
-
-function makeEmptyFunction(arg) {
-  return function () {
-    return arg;
-  };
-}
-
-/**
- * This function accepts and discards inputs; it has no side effects. This is
- * primarily useful idiomatically for overridable function endpoints which
- * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
- */
-var emptyFunction = function emptyFunction() {};
-
-emptyFunction.thatReturns = makeEmptyFunction;
-emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
-emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
-emptyFunction.thatReturnsNull = makeEmptyFunction(null);
-emptyFunction.thatReturnsThis = function () {
-  return this;
-};
-emptyFunction.thatReturnsArgument = function (arg) {
-  return arg;
-};
-
-module.exports = emptyFunction;
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
 Object.defineProperty(exports, "__esModule", {
@@ -549,6 +490,65 @@ if (process.env.NODE_ENV !== 'production') {
 exports.default = Radium;
 module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (prefixedValue, value, keepUnprefixed) {
+  return keepUnprefixed ? [prefixedValue, value] : prefixedValue;
+};
+
+module.exports = exports["default"];
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ * 
+ */
+
+function makeEmptyFunction(arg) {
+  return function () {
+    return arg;
+  };
+}
+
+/**
+ * This function accepts and discards inputs; it has no side effects. This is
+ * primarily useful idiomatically for overridable function endpoints which
+ * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
+ */
+var emptyFunction = function emptyFunction() {};
+
+emptyFunction.thatReturns = makeEmptyFunction;
+emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
+emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
+emptyFunction.thatReturnsNull = makeEmptyFunction(null);
+emptyFunction.thatReturnsThis = function () {
+  return this;
+};
+emptyFunction.thatReturnsArgument = function (arg) {
+  return arg;
+};
+
+module.exports = emptyFunction;
 
 /***/ }),
 /* 8 */
@@ -884,7 +884,7 @@ module.exports = emptyObject;
 
 
 
-var emptyFunction = __webpack_require__(6);
+var emptyFunction = __webpack_require__(7);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -1057,7 +1057,8 @@ var BACKGROUND_SECONDARY_SHADOW = 'rgb(0,180,225)';
 var TEXT_PRIMARY = 'mintcream';
 var TEXT_SHADOW = 'dodgerblue';
 
-function convertRGB(rgb, ratio) {
+function convertRGB(color, ratio) {
+  var rgb = color;
   rgb.forEach(function (val, index) {
     if (typeof val === 'string') {
       rgb[index] = parseFloat(val, 10);
@@ -1088,10 +1089,9 @@ var Color = function () {
   _createClass(Color, null, [{
     key: 'darken',
     value: function darken(color, ratio) {
-
       if (/^#[0-9a-fA-F]{3}$/.test(color)) {
         var hex = '';
-        color = color.slice(1).split('').forEach(function (val) {
+        color.slice(1).split('').forEach(function (val) {
           return hex += val * 2;
         });
 
@@ -1101,15 +1101,15 @@ var Color = function () {
       }
 
       if (/^#[0-9a-fA-F]{6}$/.test(color)) {
-        color = color.slice(1);
-        var _num = parseInt(color, 16);
+        var c = color.slice(1);
+        var _num = parseInt(c, 16);
         var _rgb = convertRGB([_num >> 16, _num >> 8 & 0x00FF, _num & 0x0000FF], -ratio);
         return '#' + (_rgb[2] | _rgb[1] << 8 | _rgb[0] << 16).toString(16).padStart(6, '0');
       }
 
       if (/^rgb\(\d+,\d+,\d+\)/.test(color)) {
-        color = color.slice(4, -1);
-        var _rgb2 = convertRGB(color.split(','), -ratio);
+        var _c = color.slice(4, -1);
+        var _rgb2 = convertRGB(_c.split(','), -ratio);
         return 'rgb(' + _rgb2.join(',') + ')';
       }
 
@@ -1118,13 +1118,15 @@ var Color = function () {
         var _rgb3 = convertRGB(color.split(','), -ratio);
         return 'rgba(' + _rgb3.join(',') + ')';
       }
+
+      return undefined;
     }
   }, {
     key: 'lighten',
     value: function lighten(color, ratio) {
       if (/^#[0-9a-fA-F]{3}$/.test(color)) {
         var hex = '';
-        color = color.slice(1).split('').forEach(function (val) {
+        color.slice(1).split('').forEach(function (val) {
           return hex += val * 2;
         });
 
@@ -1134,23 +1136,25 @@ var Color = function () {
       }
 
       if (/^#[0-9a-fA-F]{6}$/.test(color)) {
-        color = color.slice(1);
-        var _num2 = parseInt(color, 16);
+        var c = color.slice(1);
+        var _num2 = parseInt(c, 16);
         var _rgb4 = convertRGB([_num2 >> 16, _num2 >> 8 & 0x00FF, _num2 & 0x0000FF], ratio);
         return '#' + (_rgb4[2] | _rgb4[1] << 8 | _rgb4[0] << 16).toString(16).padStart(6, '0');
       }
 
       if (/^rgb\(\d+,\d+,\d+\)/.test(color)) {
-        color = color.slice(4, -1);
-        var _rgb5 = convertRGB(color.split(','), ratio);
+        var _c2 = color.slice(4, -1);
+        var _rgb5 = convertRGB(_c2.split(','), ratio);
         return 'rgb(' + _rgb5.join(',') + ')';
       }
 
       if (/^rgba\(\d+,\d+,\d+,\d+?.?\d+\)/.test(color)) {
-        color = color.slice(5, -1);
-        var _rgb6 = convertRGB(color.split(','), ratio);
+        var _c3 = color.slice(5, -1);
+        var _rgb6 = convertRGB(_c3.split(','), ratio);
         return 'rgba(' + _rgb6.join(',') + ')';
       }
+
+      return undefined;
     }
   }, {
     key: 'BACKGROUND',
@@ -1181,8 +1185,6 @@ var Color = function () {
 
   return Color;
 }();
-
-;
 
 module.exports = Color;
 
@@ -2480,7 +2482,7 @@ var createTransitionManager = function createTransitionManager() {
  * @typechecks
  */
 
-var emptyFunction = __webpack_require__(6);
+var emptyFunction = __webpack_require__(7);
 
 /**
  * Upstream version of event listener. Does not take into account specific
@@ -4128,7 +4130,7 @@ _reactDom2.default.render(_react2.default.createElement(Main, null), document.qu
  This source code is licensed under the MIT license found in the
  LICENSE file in the root directory of this source tree.
 */
-var f=__webpack_require__(9),p=__webpack_require__(12);__webpack_require__(8);var r=__webpack_require__(6);
+var f=__webpack_require__(9),p=__webpack_require__(12);__webpack_require__(8);var r=__webpack_require__(7);
 function t(a){for(var b=arguments.length-1,d="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,e=0;e<b;e++)d+="\x26args[]\x3d"+encodeURIComponent(arguments[e+1]);b=Error(d+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
 var u={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};function v(a,b,d){this.props=a;this.context=b;this.refs=p;this.updater=d||u}v.prototype.isReactComponent={};v.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?t("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};v.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
 function w(a,b,d){this.props=a;this.context=b;this.refs=p;this.updater=d||u}function x(){}x.prototype=v.prototype;var y=w.prototype=new x;y.constructor=w;f(y,v.prototype);y.isPureReactComponent=!0;function z(a,b,d){this.props=a;this.context=b;this.refs=p;this.updater=d||u}var A=z.prototype=new x;A.constructor=z;f(A,v.prototype);A.unstable_isAsyncReactComponent=!0;A.render=function(){return this.props.children};
@@ -4169,7 +4171,7 @@ var objectAssign$1 = __webpack_require__(9);
 var require$$0 = __webpack_require__(13);
 var emptyObject = __webpack_require__(12);
 var invariant = __webpack_require__(8);
-var emptyFunction = __webpack_require__(6);
+var emptyFunction = __webpack_require__(7);
 var checkPropTypes = __webpack_require__(17);
 
 /**
@@ -5911,7 +5913,7 @@ if (process.env.NODE_ENV === 'production') {
  LICENSE file in the root directory of this source tree.
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(0);__webpack_require__(8);var l=__webpack_require__(19),n=__webpack_require__(9),ba=__webpack_require__(33),ca=__webpack_require__(6),da=__webpack_require__(12),ea=__webpack_require__(34),fa=__webpack_require__(35),ha=__webpack_require__(36),ia=__webpack_require__(37);
+var aa=__webpack_require__(0);__webpack_require__(8);var l=__webpack_require__(19),n=__webpack_require__(9),ba=__webpack_require__(33),ca=__webpack_require__(7),da=__webpack_require__(12),ea=__webpack_require__(34),fa=__webpack_require__(35),ha=__webpack_require__(36),ia=__webpack_require__(37);
 function w(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:w("227");
 function ja(a){switch(a){case "svg":return"http://www.w3.org/2000/svg";case "math":return"http://www.w3.org/1998/Math/MathML";default:return"http://www.w3.org/1999/xhtml"}}
 var ka={Namespaces:{html:"http://www.w3.org/1999/xhtml",mathml:"http://www.w3.org/1998/Math/MathML",svg:"http://www.w3.org/2000/svg"},getIntrinsicNamespace:ja,getChildNamespace:function(a,b){return null==a||"http://www.w3.org/1999/xhtml"===a?ja(b):"http://www.w3.org/2000/svg"===a&&"foreignObject"===b?"http://www.w3.org/1999/xhtml":a}},la=null,oa={};
@@ -6243,7 +6245,7 @@ var _assign = __webpack_require__(9);
 var EventListener = __webpack_require__(33);
 var require$$0 = __webpack_require__(13);
 var hyphenateStyleName = __webpack_require__(64);
-var emptyFunction = __webpack_require__(6);
+var emptyFunction = __webpack_require__(7);
 var camelizeStyleName = __webpack_require__(66);
 var performanceNow = __webpack_require__(68);
 var propTypes = __webpack_require__(1);
@@ -23677,7 +23679,7 @@ module.exports = performance || {};
 
 
 
-var emptyFunction = __webpack_require__(6);
+var emptyFunction = __webpack_require__(7);
 var invariant = __webpack_require__(8);
 var warning = __webpack_require__(13);
 var assign = __webpack_require__(9);
@@ -24227,7 +24229,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
 
 
-var emptyFunction = __webpack_require__(6);
+var emptyFunction = __webpack_require__(7);
 var invariant = __webpack_require__(8);
 var ReactPropTypesSecret = __webpack_require__(18);
 
@@ -24560,7 +24562,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _radium = __webpack_require__(7);
+var _radium = __webpack_require__(5);
 
 var _radium2 = _interopRequireDefault(_radium);
 
@@ -24574,11 +24576,11 @@ var _Footer = __webpack_require__(160);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-var _Menu = __webpack_require__(161);
+var _Menu = __webpack_require__(163);
 
 var _Menu2 = _interopRequireDefault(_Menu);
 
-var _MenuItem = __webpack_require__(162);
+var _MenuItem = __webpack_require__(164);
 
 var _MenuItem2 = _interopRequireDefault(_MenuItem);
 
@@ -24586,15 +24588,15 @@ var _Color = __webpack_require__(16);
 
 var _Color2 = _interopRequireDefault(_Color);
 
-var _Home = __webpack_require__(163);
+var _Home = __webpack_require__(165);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _About = __webpack_require__(164);
+var _About = __webpack_require__(166);
 
 var _About2 = _interopRequireDefault(_About);
 
-var _Contact = __webpack_require__(166);
+var _Contact = __webpack_require__(168);
 
 var _Contact2 = _interopRequireDefault(_Contact);
 
@@ -24635,22 +24637,13 @@ var styles = {
 function App() {
   var menu = [{
     title: 'Home',
-    path: '/',
-    component: function component() {
-      return _react2.default.createElement(_Home2.default, null);
-    }
+    path: '/'
   }, {
     title: 'About me',
-    path: '/about',
-    component: function component() {
-      return _react2.default.createElement(_About2.default, null);
-    }
+    path: '/about'
   }, {
     title: 'Contact me',
-    path: '/contact',
-    component: function component() {
-      return _react2.default.createElement(_Contact2.default, null);
-    }
+    path: '/contact'
   }];
   var menuItems = menu.map(function (val) {
     return _react2.default.createElement(
@@ -24670,10 +24663,6 @@ function App() {
       )
     );
   });
-  var routes = menu.map(function (val) {
-    return _react2.default.createElement(_reactRouterDom.Route, { key: val.title, path: val.path, component: val.component });
-  });
-
   return _react2.default.createElement(
     _radium.StyleRoot,
     null,
@@ -24696,7 +24685,12 @@ function App() {
           _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: _About2.default }),
           _react2.default.createElement(_reactRouterDom.Route, { path: '/contact', component: _Contact2.default })
         ),
-        _react2.default.createElement(_Footer2.default, { title: 'naturalclar', style: styles.footer, color: _Color2.default.TEXT_PRIMARY, name: 'Jesse K.' })
+        _react2.default.createElement(_Footer2.default, {
+          title: 'naturalclar',
+          style: styles.footer,
+          color: _Color2.default.TEXT_PRIMARY,
+          name: 'Jesse K.'
+        })
       )
     )
   );
@@ -26311,7 +26305,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = position;
 
-var _getPrefixedValue = __webpack_require__(5);
+var _getPrefixedValue = __webpack_require__(6);
 
 var _getPrefixedValue2 = _interopRequireDefault(_getPrefixedValue);
 
@@ -26344,7 +26338,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = calc;
 
-var _getPrefixedValue = __webpack_require__(5);
+var _getPrefixedValue = __webpack_require__(6);
 
 var _getPrefixedValue2 = _interopRequireDefault(_getPrefixedValue);
 
@@ -26379,7 +26373,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = zoomCursor;
 
-var _getPrefixedValue = __webpack_require__(5);
+var _getPrefixedValue = __webpack_require__(6);
 
 var _getPrefixedValue2 = _interopRequireDefault(_getPrefixedValue);
 
@@ -26416,7 +26410,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = grabCursor;
 
-var _getPrefixedValue = __webpack_require__(5);
+var _getPrefixedValue = __webpack_require__(6);
 
 var _getPrefixedValue2 = _interopRequireDefault(_getPrefixedValue);
 
@@ -26452,7 +26446,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = flex;
 
-var _getPrefixedValue = __webpack_require__(5);
+var _getPrefixedValue = __webpack_require__(6);
 
 var _getPrefixedValue2 = _interopRequireDefault(_getPrefixedValue);
 
@@ -26489,7 +26483,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = sizing;
 
-var _getPrefixedValue = __webpack_require__(5);
+var _getPrefixedValue = __webpack_require__(6);
 
 var _getPrefixedValue2 = _interopRequireDefault(_getPrefixedValue);
 
@@ -26540,7 +26534,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = gradient;
 
-var _getPrefixedValue = __webpack_require__(5);
+var _getPrefixedValue = __webpack_require__(6);
 
 var _getPrefixedValue2 = _interopRequireDefault(_getPrefixedValue);
 
@@ -26662,7 +26656,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = flexboxIE;
 
-var _getPrefixedValue = __webpack_require__(5);
+var _getPrefixedValue = __webpack_require__(6);
 
 var _getPrefixedValue2 = _interopRequireDefault(_getPrefixedValue);
 
@@ -26727,7 +26721,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = flexboxOld;
 
-var _getPrefixedValue = __webpack_require__(5);
+var _getPrefixedValue = __webpack_require__(6);
 
 var _getPrefixedValue2 = _interopRequireDefault(_getPrefixedValue);
 
@@ -30929,7 +30923,7 @@ var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _radium = __webpack_require__(7);
+var _radium = __webpack_require__(5);
 
 var _radium2 = _interopRequireDefault(_radium);
 
@@ -30988,9 +30982,13 @@ var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _radium = __webpack_require__(7);
+var _radium = __webpack_require__(5);
 
 var _radium2 = _interopRequireDefault(_radium);
+
+var _Icon = __webpack_require__(161);
+
+var _Icon2 = _interopRequireDefault(_Icon);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31009,14 +31007,59 @@ var styles = {
   },
   text: {
     padding: '1rem 0'
+  },
+  links: {
+    display: 'flex',
+    marginTop: '0.5rem'
   }
 };
+
+var items = [{
+  key: 'email',
+  text: 'jesse.katsumata@gmail.com',
+  url: 'mailto:jesse.katsumata@gmail.com',
+  icon: '\uF0E0'
+}, {
+  key: 'linkedin',
+  text: 'LinkedIn',
+  url: 'https://www.linkedin.com/in/jesse-katsumata-1a686462/',
+  icon: '\uF0E1'
+}, {
+  key: 'twitter',
+  text: '@Smashcat_clar',
+  url: 'https://twitter.com/smashcat_clar',
+  icon: '\uF099'
+}, {
+  key: 'github',
+  text: 'Github',
+  url: 'https://github.com/Naturalclar',
+  icon: '\uF09B'
+}, {
+  key: 'codepen',
+  text: 'CodePen',
+  url: 'https://codepen.io/naturalclar',
+  icon: '\uF1CB'
+}];
+
+var listItems = items.map(function (val) {
+  return _react2.default.createElement(_Icon2.default, {
+    key: val.key,
+    href: val.url,
+    icon: val.icon,
+    text: val.text
+  });
+});
 
 function Footer(props) {
   return _react2.default.createElement(
     'div',
     { style: _extends({}, styles.footer, props.style, { color: props.color }) },
     _react2.default.createElement('div', { style: _extends({}, styles.line, { background: props.color }) }),
+    _react2.default.createElement(
+      'div',
+      { style: styles.links },
+      listItems
+    ),
     _react2.default.createElement(
       'div',
       { style: _extends({}, styles.text) },
@@ -31055,6 +31098,216 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(1);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _radium = __webpack_require__(5);
+
+var _radium2 = _interopRequireDefault(_radium);
+
+var _Tooltip = __webpack_require__(162);
+
+var _Tooltip2 = _interopRequireDefault(_Tooltip);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var styles = {
+  icon: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontFamily: 'FontAwesome',
+    padding: '0.3rem',
+    margin: '0.3rem',
+    color: 'rgba(255,255,255,0.8)',
+    background: 'rgba(0,0,0,.1)',
+    textDecoration: 'none',
+    borderRadius: '50%',
+    transition: 'all 0.3s ease-in-out',
+    ':hover': {
+      boxShadow: '2px 2px 2px rgba(0,0,0,.3)',
+      background: 'rgba(0,0,0,.2)',
+      color: 'white'
+    }
+  }
+};
+
+var Icon = function (_Component) {
+  _inherits(Icon, _Component);
+
+  function Icon(props) {
+    _classCallCheck(this, Icon);
+
+    var _this = _possibleConstructorReturn(this, (Icon.__proto__ || Object.getPrototypeOf(Icon)).call(this, props));
+
+    _this.state = {
+      hover: false
+    };
+    return _this;
+  }
+
+  _createClass(Icon, [{
+    key: 'handleMouseEnter',
+    value: function handleMouseEnter() {
+      this.setState({ hover: true });
+    }
+  }, {
+    key: 'handleMouseLeave',
+    value: function handleMouseLeave() {
+      this.setState({ hover: false });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      return _react2.default.createElement(
+        'div',
+        { style: { position: 'relative' } },
+        this.state.hover ? _react2.default.createElement(_Tooltip2.default, { text: this.props.text }) : null,
+        _react2.default.createElement(
+          'a',
+          {
+            href: this.props.href,
+            style: styles.icon,
+            target: '_blank',
+            onMouseEnter: function onMouseEnter() {
+              return _this2.handleMouseEnter();
+            },
+            onMouseLeave: function onMouseLeave() {
+              return _this2.handleMouseLeave();
+            }
+          },
+          this.props.icon
+        )
+      );
+    }
+  }]);
+
+  return Icon;
+}(_react.Component);
+
+Icon.propTypes = {
+  href: _propTypes2.default.string.isRequired,
+  icon: _propTypes2.default.string.isRequired,
+  text: _propTypes2.default.string.isRequired
+};
+
+exports.default = (0, _radium2.default)(Icon);
+
+/***/ }),
+/* 162 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(1);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _radium = __webpack_require__(5);
+
+var _radium2 = _interopRequireDefault(_radium);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var appear = _radium2.default.keyframes({
+  '0%': {
+    opacity: 0
+  },
+  '100%': {
+    opacity: 0.8
+  }
+});
+
+var styles = {
+  top: {
+    position: 'absolute',
+    bottom: '105%',
+    left: '-7.5rem',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '15rem',
+    marginLeft: '50%',
+    opacity: 0,
+    animation: '0.3s both',
+    animationName: appear
+  },
+  topArrow: {
+    position: 'absolute',
+    top: '100%',
+    left: '50%',
+    marginLeft: '-5px',
+    borderWidth: '5px',
+    borderStyle: 'solid',
+    borderColor: '#444 transparent transparent transparent'
+  },
+  text: {
+    width: 'auto',
+    background: '#444',
+    padding: '0.3rem',
+    borderRadius: '2px'
+  }
+};
+
+function Tooltip(props) {
+  return _react2.default.createElement(
+    'div',
+    { style: styles[props.orientation] },
+    _react2.default.createElement('div', { style: styles[props.orientation + 'Arrow'] }),
+    _react2.default.createElement(
+      'div',
+      { style: styles.text },
+      props.text
+    )
+  );
+}
+
+Tooltip.defaultProps = {
+  orientation: 'top'
+};
+
+Tooltip.propTypes = {
+  orientation: _propTypes2.default.string,
+  text: _propTypes2.default.string.isRequired
+};
+
+exports.default = (0, _radium2.default)(Tooltip);
+
+/***/ }),
+/* 163 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = __webpack_require__(0);
@@ -31065,7 +31318,7 @@ var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _radium = __webpack_require__(7);
+var _radium = __webpack_require__(5);
 
 var _radium2 = _interopRequireDefault(_radium);
 
@@ -31099,7 +31352,7 @@ Menu.propTypes = {
 exports.default = (0, _radium2.default)(Menu);
 
 /***/ }),
-/* 162 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31119,7 +31372,7 @@ var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _radium = __webpack_require__(7);
+var _radium = __webpack_require__(5);
 
 var _radium2 = _interopRequireDefault(_radium);
 
@@ -31163,7 +31416,7 @@ MenuItem.propTypes = {
 exports.default = (0, _radium2.default)(MenuItem);
 
 /***/ }),
-/* 163 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31183,15 +31436,21 @@ var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _radium = __webpack_require__(7);
+var _radium = __webpack_require__(5);
 
 var _radium2 = _interopRequireDefault(_radium);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var fadeIn = _radium2.default.keyframes({
-  '0%': { opacity: 0 },
-  '100%': { opacity: 1 }
+  '0%': {
+    opacity: 0,
+    transform: 'translateY(-20%)'
+  },
+  '100%': {
+    opacity: 1,
+    transform: 'translateY(0)'
+  }
 });
 
 var styles = {
@@ -31202,8 +31461,9 @@ var styles = {
     alignItems: 'center',
     transition: 'all 0.3s ease-in-out',
     fontFamily: '"Indie Flower", cursive',
-    animation: '2s ease-in-out',
-    animatiuonName: fadeIn
+    opacity: 0,
+    animation: '0.4s ease both',
+    animationName: fadeIn
   },
   title: {
     margin: '2rem 0',
@@ -31242,7 +31502,7 @@ Home.propTypes = {
 exports.default = (0, _radium2.default)(Home);
 
 /***/ }),
-/* 164 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31262,7 +31522,7 @@ var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _radium = __webpack_require__(7);
+var _radium = __webpack_require__(5);
 
 var _radium2 = _interopRequireDefault(_radium);
 
@@ -31270,13 +31530,24 @@ var _Color = __webpack_require__(16);
 
 var _Color2 = _interopRequireDefault(_Color);
 
-var _Viewport = __webpack_require__(165);
+var _Viewport = __webpack_require__(167);
 
 var _Viewport2 = _interopRequireDefault(_Viewport);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var fadeIn = _radium2.default.keyframes({
+  '0%': {
+    opacity: 0,
+    transform: 'translateY(-20%)'
+  },
+  '100%': {
+    opacity: 1,
+    transform: 'translateY(0)'
+  }
+});
 
 var styles = {
   about: {
@@ -31285,7 +31556,10 @@ var styles = {
     justifyContent: 'center',
     alignItems: 'center',
     transition: 'all 0.3s ease-in-out',
-    marginBottom: '0.5rem'
+    marginBottom: '0.5rem',
+    opacity: 0,
+    animation: '0.4s ease both',
+    animationName: fadeIn
   },
   container: _defineProperty({
     display: 'flex',
@@ -31346,24 +31620,24 @@ About.propTypes = {
 exports.default = (0, _radium2.default)(About);
 
 /***/ }),
-/* 165 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 var Viewport = {
-    medium: '@media (min-width: 640px)',
-    large: '@media (min-width: 920px)'
+  medium: '@media (min-width: 640px)',
+  large: '@media (min-width: 920px)'
 };
 
 exports.default = Viewport;
 
 /***/ }),
-/* 166 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31383,7 +31657,7 @@ var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _radium = __webpack_require__(7);
+var _radium = __webpack_require__(5);
 
 var _radium2 = _interopRequireDefault(_radium);
 
@@ -31392,6 +31666,17 @@ var _Color = __webpack_require__(16);
 var _Color2 = _interopRequireDefault(_Color);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var fadeIn = _radium2.default.keyframes({
+  '0%': {
+    opacity: 0,
+    transform: 'translateX(-30%)'
+  },
+  '100%': {
+    opacity: 1,
+    transform: 'translateX(0)'
+  }
+});
 
 var styles = {
   list: {
@@ -31408,7 +31693,10 @@ var styles = {
     textDecoration: 'none',
     color: _Color2.default.TEXT_PRIMARY,
     margin: '0.5rem',
+    opacity: 0,
     transition: 'all .3s ease',
+    animation: '0.4s ease both',
+    animationName: fadeIn,
     ':hover': {
       textShadow: '0 0 1rem ' + _Color2.default.TEXT_SHADOW + ',0 0 0.2rem ' + _Color2.default.TEXT_SHADOW
     }
@@ -31428,49 +31716,47 @@ var styles = {
 };
 
 var items = [{
-  _key: 'email',
-  _text: 'jesse.katsumata@gmail.com',
-  _url: 'mailto:jesse.katsumata@gmail.com',
-  _icon: '\uF0E0'
+  key: 'email',
+  text: 'jesse.katsumata@gmail.com',
+  url: 'mailto:jesse.katsumata@gmail.com',
+  icon: '\uF0E0'
 }, {
-  _key: 'linkedin',
-  _text: 'LinkedIn',
-  _url: 'https://www.linkedin.com/in/jesse-katsumata-1a686462/',
-  _icon: '\uF0E1'
-
+  key: 'linkedin',
+  text: 'LinkedIn',
+  url: 'https://www.linkedin.com/in/jesse-katsumata-1a686462/',
+  icon: '\uF0E1'
 }, {
-  _key: 'twitter',
-  _text: '@Smashcat_clar',
-  _url: 'https://twitter.com/smashcat_clar',
-  _icon: '\uF099'
+  key: 'twitter',
+  text: '@Smashcat_clar',
+  url: 'https://twitter.com/smashcat_clar',
+  icon: '\uF099'
 }, {
-  _key: 'github',
-  _text: 'Github',
-  _url: 'https://github.com/Naturalclar',
-  _icon: '\uF09B'
+  key: 'github',
+  text: 'Github',
+  url: 'https://github.com/Naturalclar',
+  icon: '\uF09B'
 }, {
-  _key: 'codepen',
-  _text: 'CodePen',
-  _url: 'https://codepen.io/naturalclar',
-  _icon: '\uF1CB'
-
+  key: 'codepen',
+  text: 'CodePen',
+  url: 'https://codepen.io/naturalclar',
+  icon: '\uF1CB'
 }];
 
-var listItems = items.map(function (val) {
+var listItems = items.map(function (val, index) {
   return _react2.default.createElement(
     'a',
     {
-      href: val._url,
+      href: val.url,
       target: '_blank',
-      key: val._key,
-      style: styles.link
+      key: val.key,
+      style: _extends({}, styles.link, { animationDelay: index * 0.1 + 's' })
     },
     _react2.default.createElement(
       'span',
       { style: styles.icon },
-      val._icon
+      val.icon
     ),
-    val._text
+    val.text
   );
 });
 

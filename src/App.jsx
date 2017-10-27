@@ -38,8 +38,8 @@ const styles = {
     textDecoration: 'none',
   },
   active: {
-    textShadow: `0 0 1rem ${Color.TEXT_SHADOW},0 0 0.2rem ${Color.TEXT_SHADOW}`,    
-  }
+    textShadow: `0 0 1rem ${Color.TEXT_SHADOW},0 0 0.2rem ${Color.TEXT_SHADOW}`,
+  },
 };
 
 function App() {
@@ -47,34 +47,29 @@ function App() {
     {
       title: 'Home',
       path: '/',
-      component: () => <Home />,
     },
     {
       title: 'About me',
       path: '/about',
-      component: () => <About />,
     },
     {
       title: 'Contact me',
       path: '/contact',
-      component: () => <Contact />,
     },
   ];
   const menuItems = menu.map(val => (
     <MenuItem key={val.title}>
-      <NavLink 
+      <NavLink
         style={styles.link}
         activeStyle={styles.active}
-        key={val.title} 
-        to={val.path} 
+        key={val.title}
+        to={val.path}
         href={val.path}
         exact
-        >{val.title}</NavLink>
+      >{val.title}
+      </NavLink>
     </MenuItem>
-    ));
-  const routes = menu.map(val => (
-    <Route key={val.title} path={val.path} component={val.component} />));
-    
+  ));
   return (
     <StyleRoot>
       <Router>
@@ -88,7 +83,12 @@ function App() {
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
           </Switch>
-          <Footer title="naturalclar" style={styles.footer} color={Color.TEXT_PRIMARY} name="Jesse K." />
+          <Footer
+            title="naturalclar"
+            style={styles.footer}
+            color={Color.TEXT_PRIMARY}
+            name="Jesse K."
+          />
         </div>
       </Router>
     </StyleRoot>

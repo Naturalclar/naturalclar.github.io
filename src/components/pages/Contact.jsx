@@ -3,6 +3,17 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import Color from '../../utils/Color';
 
+const fadeIn = Radium.keyframes({
+  '0%': {
+    opacity: 0,
+    transform: 'translateX(-30%)',
+  },
+  '100%': {
+    opacity: 1,
+    transform: 'translateX(0)',
+  },
+});
+
 const styles = {
   list: {
     display: 'flex',
@@ -13,12 +24,15 @@ const styles = {
     fontFamily: '"Open Sans", sans-serif',
   },
   link: {
-    display:'flex',
-    alignItems:'center',
+    display: 'flex',
+    alignItems: 'center',
     textDecoration: 'none',
     color: Color.TEXT_PRIMARY,
     margin: '0.5rem',
+    opacity: 0,
     transition: 'all .3s ease',
+    animation: '0.4s ease both',
+    animationName: fadeIn,
     ':hover': {
       textShadow: `0 0 1rem ${Color.TEXT_SHADOW},0 0 0.2rem ${Color.TEXT_SHADOW}`,
     },
@@ -26,71 +40,67 @@ const styles = {
   contact: {
     display: 'flex',
     justifyContent: 'center',
-    alignItems:'center',
+    alignItems: 'center',
   },
   icon: {
-    fontFamily:'FontAwesome',
-    display:'flex',
-    justifyContent:'center',
-    alignItems:'center',
+    fontFamily: 'FontAwesome',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     marginRight: '0.5rem',
-  }
+  },
 };
 
 const items = [
   {
-    _key:'email',
-    _text:'jesse.katsumata@gmail.com',
-    _url:'mailto:jesse.katsumata@gmail.com',
-    _icon:'\uf0e0',
+    key: 'email',
+    text: 'jesse.katsumata@gmail.com',
+    url: 'mailto:jesse.katsumata@gmail.com',
+    icon: '\uf0e0',
   },
   {
-    _key:'linkedin',
-    _text:'LinkedIn',
-    _url:'https://www.linkedin.com/in/jesse-katsumata-1a686462/',
-    _icon:'\uf0e1',
-  
+    key: 'linkedin',
+    text: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/jesse-katsumata-1a686462/',
+    icon: '\uf0e1',
   },
   {
-    _key:'twitter',
-    _text:'@Smashcat_clar',
-    _url:'https://twitter.com/smashcat_clar',
-    _icon:'\uf099',
+    key: 'twitter',
+    text: '@Smashcat_clar',
+    url: 'https://twitter.com/smashcat_clar',
+    icon: '\uf099',
   },
   {
-    _key:'github',
-    _text:'Github',
-    _url: 'https://github.com/Naturalclar',
-    _icon: '\uf09b',
+    key: 'github',
+    text: 'Github',
+    url: 'https://github.com/Naturalclar',
+    icon: '\uf09b',
   },
   {
-    _key:'codepen',
-    _text:'CodePen',
-    _url: 'https://codepen.io/naturalclar',
-    _icon: '\uf1cb',
+    key: 'codepen',
+    text: 'CodePen',
+    url: 'https://codepen.io/naturalclar',
+    icon: '\uf1cb',
+  },
+];
 
-  }
-]
-
-const listItems = items.map((val) => {
-  return(
-    <a 
-      href={val._url} 
-      target="_blank" 
-      key={val._key}
-      style={styles.link}
-      >
-      <span style={styles.icon}>
-        {val._icon}
-      </span>
-      {val._text}
-    </a>
-  );
-});
+const listItems = items.map((val, index) => (
+  <a
+    href={val.url}
+    target="_blank"
+    key={val.key}
+    style={{ ...styles.link, animationDelay: `${index * 0.1}s` }}
+  >
+    <span style={styles.icon}>
+      {val.icon}
+    </span>
+    {val.text}
+  </a>
+));
 
 function Contact(props) {
   return (
-    <div style={{...styles.contact , ...props.style}}>
+    <div style={{ ...styles.contact, ...props.style }}>
       <div style={styles.list}>
         {listItems}
       </div>

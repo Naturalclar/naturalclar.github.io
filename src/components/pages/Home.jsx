@@ -3,8 +3,14 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 
 const fadeIn = Radium.keyframes({
-  '0%': { opacity: 0 },
-  '100%': { opacity: 1 },
+  '0%': {
+    opacity: 0,
+    transform: 'translateY(-20%)',
+  },
+  '100%': {
+    opacity: 1,
+    transform: 'translateY(0)',
+  },
 });
 
 const styles = {
@@ -15,8 +21,9 @@ const styles = {
     alignItems: 'center',
     transition: 'all 0.3s ease-in-out',
     fontFamily: '"Indie Flower", cursive',
-    animation: '2s ease-in-out',
-    animatiuonName: fadeIn,
+    opacity: 0,
+    animation: '0.4s ease both',
+    animationName: fadeIn,
   },
   title: {
     margin: '2rem 0',
