@@ -1051,35 +1051,11 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var BACKGROUND = 'linear-gradient(to bottom, #00ae76, #aaeecc 100%) no-repeat fixed';
+var BACKGROUND = 'linear-gradient(to bottom, #00ae76, #aaeecc 100%) fixed';
 var BACKGROUND_SECONDARY = 'rgba(30,210,255,.50)';
 var BACKGROUND_SECONDARY_SHADOW = 'rgb(0,180,225)';
 var TEXT_PRIMARY = 'mintcream';
 var TEXT_SHADOW = 'dodgerblue';
-
-function convertRGB(color, ratio) {
-  var rgb = color;
-  rgb.forEach(function (val, index) {
-    if (typeof val === 'string') {
-      rgb[index] = parseFloat(val, 10);
-    }
-  });
-
-  var amount = Math.round(ratio * 2.55);
-  rgb[0] = Math.floor(rgb[0] + amount);
-  if (rgb[0] > 255) rgb[0] = 255;
-  if (rgb[0] < 0) rgb[0] = 0;
-
-  rgb[1] = Math.floor(rgb[1] + amount);
-  if (rgb[1] > 255) rgb[1] = 255;
-  if (rgb[1] < 0) rgb[1] = 0;
-
-  rgb[2] = Math.floor(rgb[2] + amount);
-  if (rgb[2] > 255) rgb[2] = 255;
-  if (rgb[2] < 0) rgb[2] = 0;
-
-  return rgb;
-}
 
 var Color = function () {
   function Color() {
@@ -1087,76 +1063,6 @@ var Color = function () {
   }
 
   _createClass(Color, null, [{
-    key: 'darken',
-    value: function darken(color, ratio) {
-      if (/^#[0-9a-fA-F]{3}$/.test(color)) {
-        var hex = '';
-        color.slice(1).split('').forEach(function (val) {
-          return hex += val * 2;
-        });
-
-        var num = parseInt(hex, 16);
-        var rgb = convertRGB([num >> 16, num >> 8 & 0x00FF, num & 0x0000FF], -ratio);
-        return '#' + (rgb[2] | rgb[1] << 8 | rgb[0] << 16).toString(16).padStart(6, '0');
-      }
-
-      if (/^#[0-9a-fA-F]{6}$/.test(color)) {
-        var c = color.slice(1);
-        var _num = parseInt(c, 16);
-        var _rgb = convertRGB([_num >> 16, _num >> 8 & 0x00FF, _num & 0x0000FF], -ratio);
-        return '#' + (_rgb[2] | _rgb[1] << 8 | _rgb[0] << 16).toString(16).padStart(6, '0');
-      }
-
-      if (/^rgb\(\d+,\d+,\d+\)/.test(color)) {
-        var _c = color.slice(4, -1);
-        var _rgb2 = convertRGB(_c.split(','), -ratio);
-        return 'rgb(' + _rgb2.join(',') + ')';
-      }
-
-      if (/^rgba\(\d+,\d+,\d+,\d+?.?\d+\)/.test(color)) {
-        color = color.slice(5, -1);
-        var _rgb3 = convertRGB(color.split(','), -ratio);
-        return 'rgba(' + _rgb3.join(',') + ')';
-      }
-
-      return undefined;
-    }
-  }, {
-    key: 'lighten',
-    value: function lighten(color, ratio) {
-      if (/^#[0-9a-fA-F]{3}$/.test(color)) {
-        var hex = '';
-        color.slice(1).split('').forEach(function (val) {
-          return hex += val * 2;
-        });
-
-        var num = parseInt(hex, 16);
-        var rgb = convertRGB([num >> 16, num >> 8 & 0x00FF, num & 0x0000FF], ratio);
-        return '#' + (rgb[2] | rgb[1] << 8 | rgb[0] << 16).toString(16).padStart(6, '0');
-      }
-
-      if (/^#[0-9a-fA-F]{6}$/.test(color)) {
-        var c = color.slice(1);
-        var _num2 = parseInt(c, 16);
-        var _rgb4 = convertRGB([_num2 >> 16, _num2 >> 8 & 0x00FF, _num2 & 0x0000FF], ratio);
-        return '#' + (_rgb4[2] | _rgb4[1] << 8 | _rgb4[0] << 16).toString(16).padStart(6, '0');
-      }
-
-      if (/^rgb\(\d+,\d+,\d+\)/.test(color)) {
-        var _c2 = color.slice(4, -1);
-        var _rgb5 = convertRGB(_c2.split(','), ratio);
-        return 'rgb(' + _rgb5.join(',') + ')';
-      }
-
-      if (/^rgba\(\d+,\d+,\d+,\d+?.?\d+\)/.test(color)) {
-        var _c3 = color.slice(5, -1);
-        var _rgb6 = convertRGB(_c3.split(','), ratio);
-        return 'rgba(' + _rgb6.join(',') + ')';
-      }
-
-      return undefined;
-    }
-  }, {
     key: 'BACKGROUND',
     get: function get() {
       return BACKGROUND;
@@ -24542,7 +24448,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Ind
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Open+Sans);", ""]);
 
 // module
-exports.push([module.i, "html {\n  position: relative;\n  height: 100%;\n}\nbody {\n  background: #222;\n  font-family: 'Open Sans', sans-serif;\n  min-height: 100%;\n}", ""]);
+exports.push([module.i, "html {\n  position: relative;\n  height: 100%;\n}\nbody {\n  background: -webkit-gradient(linear, left top, left bottom, from(#00ae76), to(#aaeecc)) fixed;\n  background: linear-gradient(to bottom, #00ae76, #aaeecc 100%) fixed;\n  font-family: 'Open Sans', sans-serif;\n  height: 100%;\n}\n", ""]);
 
 // exports
 
@@ -24605,7 +24511,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var styles = {
   body: {
     color: _Color2.default.TEXT_PRIMARY,
-    background: _Color2.default.BACKGROUND,
     display: 'grid',
     gridTemplateRows: 'auto auto 1fr auto',
     gridTemplateAreas: '"header" "menu" "content" "footer"',
@@ -30999,7 +30904,8 @@ var styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    marginTop: '2rem'
   },
   line: {
     width: '90%',

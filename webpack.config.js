@@ -4,28 +4,28 @@ module.exports = {
   entry: __dirname + '/src/main.jsx',
   output: {
     path: __dirname + '/assets/',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   resolve: {
-    extensions: ['.js','.jsx']
+    extensions: ['.js', '.jsx'],
   },
   module: {
     loaders: [
       {
-        test: /\jsx?$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader:'babel-loader',
+        loader: 'babel-loader',
         options: {
           presets: ['es2015', 'react'],
           plugins: ['transform-object-rest-spread'],
           cacheDirectory: true,
-        }
+        },
       },
       {
         test: /\.css$/,
         use: [
           'style-loader',
-          { loader: 'css-loader', options: { importLoaders:1 } },
+          { loader: 'css-loader', options: { importLoaders: 1 } },
           'postcss-loader',
         ],
       },
@@ -39,8 +39,8 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: 'static/media/[name].[hash:8].[ext]',
-        }
-      }
-    ]
-  }
-}
+        },
+      },
+    ],
+  },
+};

@@ -13,7 +13,6 @@ import Contact from './components/pages/Contact';
 const styles = {
   body: {
     color: Color.TEXT_PRIMARY,
-    background: Color.BACKGROUND,
     display: 'grid',
     gridTemplateRows: 'auto auto 1fr auto',
     gridTemplateAreas: '"header" "menu" "content" "footer"',

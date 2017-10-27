@@ -17,16 +17,16 @@
 languagename: naturalclar
 title: naturalclar
 
-author: Smashcat
+author: Jesse Katsumata
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://naturalclar.com" # the base hostname & protocol for your site, e.g. http://example.com
 
+description: Jesse Katsumata, Front-End Developer
 twitter_username: Smashcat_clar
 github_username:  Naturalclar
 
 # Build settings
 markdown: kramdown
-theme: minima
 gems:
   - jekyll-feed
   - jekyll-paginate
@@ -36,8 +36,6 @@ sass:
 permalink: /:title/
 paginate_path: /page:num
 paginate: 3
-
-twitter_image: /images/twitter_icon.jpg
 
 exclude: [
   'node_modules',

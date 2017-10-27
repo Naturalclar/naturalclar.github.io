@@ -11,6 +11,7 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
+    marginTop: '2rem',
   },
   line: {
     width: '90%',
