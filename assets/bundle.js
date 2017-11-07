@@ -24474,19 +24474,13 @@ var _radium2 = _interopRequireDefault(_radium);
 
 var _reactRouterDom = __webpack_require__(132);
 
-var _Header = __webpack_require__(159);
+var _components = __webpack_require__(159);
 
-var _Header2 = _interopRequireDefault(_Header);
-
-var _Footer = __webpack_require__(160);
-
-var _Footer2 = _interopRequireDefault(_Footer);
-
-var _Menu = __webpack_require__(163);
+var _Menu = __webpack_require__(165);
 
 var _Menu2 = _interopRequireDefault(_Menu);
 
-var _MenuItem = __webpack_require__(164);
+var _MenuItem = __webpack_require__(166);
 
 var _MenuItem2 = _interopRequireDefault(_MenuItem);
 
@@ -24494,15 +24488,15 @@ var _Color = __webpack_require__(16);
 
 var _Color2 = _interopRequireDefault(_Color);
 
-var _Home = __webpack_require__(165);
+var _Home = __webpack_require__(167);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _About = __webpack_require__(166);
+var _About = __webpack_require__(168);
 
 var _About2 = _interopRequireDefault(_About);
 
-var _Contact = __webpack_require__(168);
+var _Contact = __webpack_require__(170);
 
 var _Contact2 = _interopRequireDefault(_Contact);
 
@@ -24577,7 +24571,7 @@ function App() {
       _react2.default.createElement(
         'div',
         { style: styles.body },
-        _react2.default.createElement(_Header2.default, { title: 'naturalclar', style: styles.header }),
+        _react2.default.createElement(_components.Header, { title: 'naturalclar', style: styles.header }),
         _react2.default.createElement(
           _Menu2.default,
           { style: styles.menu },
@@ -24588,9 +24582,10 @@ function App() {
           null,
           _react2.default.createElement(_reactRouterDom.Route, { path: '/', exact: true, component: _Home2.default }),
           _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: _About2.default }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/contact', component: _Contact2.default })
+          _react2.default.createElement(_reactRouterDom.Route, { path: '/contact', component: _Contact2.default }),
+          _react2.default.createElement(_reactRouterDom.Route, { path: '*', component: _components.NotFound })
         ),
-        _react2.default.createElement(_Footer2.default, {
+        _react2.default.createElement(_components.Footer, {
           title: 'naturalclar',
           style: styles.footer,
           color: _Color2.default.TEXT_PRIMARY,
@@ -30818,56 +30813,83 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+var _NotFound = __webpack_require__(160);
+
+Object.defineProperty(exports, 'NotFound', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_NotFound).default;
+  }
+});
+
+var _Footer = __webpack_require__(161);
+
+Object.defineProperty(exports, 'Footer', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Footer).default;
+  }
+});
+
+var _Header = __webpack_require__(164);
+
+Object.defineProperty(exports, 'Header', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Header).default;
+  }
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 160 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(1);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _radium = __webpack_require__(5);
-
-var _radium2 = _interopRequireDefault(_radium);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var styles = {
-  header: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    fontFamily: '"Indie Flower", cursive',
-    fontSize: '2rem',
-    color: 'white',
-    padding: '1rem 0'
-  }
-};
-
-function Header(props) {
+function NotFound() {
   return _react2.default.createElement(
-    'div',
-    { style: _extends({}, styles.header, props.style) },
-    props.title
+    'section',
+    { style: { textAlign: 'center' } },
+    _react2.default.createElement(
+      'h1',
+      null,
+      'Oops!'
+    ),
+    _react2.default.createElement(
+      'h3',
+      null,
+      '404 page not found'
+    ),
+    _react2.default.createElement(
+      'p',
+      null,
+      'The page you tried to access was not found!'
+    ),
+    _react2.default.createElement(
+      'p',
+      null,
+      'Double check the URL you have entered and try again!'
+    )
   );
 }
 
-Header.defaultProps = {
-  title: 'Hello World!',
-  style: {}
-};
-
-Header.propTypes = {
-  title: _propTypes2.default.string,
-  style: _propTypes2.default.objectOf(_propTypes2.default.string)
-};
-
-exports.default = (0, _radium2.default)(Header);
+exports.default = NotFound;
 
 /***/ }),
-/* 160 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30891,7 +30913,7 @@ var _radium = __webpack_require__(5);
 
 var _radium2 = _interopRequireDefault(_radium);
 
-var _Icon = __webpack_require__(161);
+var _Icon = __webpack_require__(162);
 
 var _Icon2 = _interopRequireDefault(_Icon);
 
@@ -30958,7 +30980,7 @@ var listItems = items.map(function (val) {
 
 function Footer(props) {
   return _react2.default.createElement(
-    'div',
+    'footer',
     { style: _extends({}, styles.footer, props.style, { color: props.color }) },
     _react2.default.createElement('div', { style: _extends({}, styles.line, { background: props.color }) }),
     _react2.default.createElement(
@@ -30994,7 +31016,7 @@ Footer.propTypes = {
 exports.default = (0, _radium2.default)(Footer);
 
 /***/ }),
-/* 161 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31018,7 +31040,7 @@ var _radium = __webpack_require__(5);
 
 var _radium2 = _interopRequireDefault(_radium);
 
-var _Tooltip = __webpack_require__(162);
+var _Tooltip = __webpack_require__(163);
 
 var _Tooltip2 = _interopRequireDefault(_Tooltip);
 
@@ -31090,6 +31112,7 @@ var Icon = function (_Component) {
             href: this.props.href,
             style: styles.icon,
             target: '_blank',
+            rel: 'nooperner noreferrer',
             onMouseEnter: function onMouseEnter() {
               return _this2.handleMouseEnter();
             },
@@ -31115,7 +31138,7 @@ Icon.propTypes = {
 exports.default = (0, _radium2.default)(Icon);
 
 /***/ }),
-/* 162 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31204,7 +31227,66 @@ Tooltip.propTypes = {
 exports.default = (0, _radium2.default)(Tooltip);
 
 /***/ }),
-/* 163 */
+/* 164 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(1);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _radium = __webpack_require__(5);
+
+var _radium2 = _interopRequireDefault(_radium);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var styles = {
+  header: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontFamily: '"Indie Flower", cursive',
+    fontSize: '2rem',
+    color: 'white',
+    padding: '1rem 0'
+  }
+};
+
+function Header(props) {
+  return _react2.default.createElement(
+    'header',
+    { style: _extends({}, styles.header, props.style) },
+    props.title
+  );
+}
+
+Header.defaultProps = {
+  title: 'Hello World!',
+  style: {}
+};
+
+Header.propTypes = {
+  title: _propTypes2.default.string,
+  style: _propTypes2.default.objectOf(_propTypes2.default.string)
+};
+
+exports.default = (0, _radium2.default)(Header);
+
+/***/ }),
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31258,7 +31340,7 @@ Menu.propTypes = {
 exports.default = (0, _radium2.default)(Menu);
 
 /***/ }),
-/* 164 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31322,7 +31404,7 @@ MenuItem.propTypes = {
 exports.default = (0, _radium2.default)(MenuItem);
 
 /***/ }),
-/* 165 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31408,7 +31490,7 @@ Home.propTypes = {
 exports.default = (0, _radium2.default)(Home);
 
 /***/ }),
-/* 166 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31436,7 +31518,7 @@ var _Color = __webpack_require__(16);
 
 var _Color2 = _interopRequireDefault(_Color);
 
-var _Viewport = __webpack_require__(167);
+var _Viewport = __webpack_require__(169);
 
 var _Viewport2 = _interopRequireDefault(_Viewport);
 
@@ -31526,7 +31608,7 @@ About.propTypes = {
 exports.default = (0, _radium2.default)(About);
 
 /***/ }),
-/* 167 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31543,7 +31625,7 @@ var Viewport = {
 exports.default = Viewport;
 
 /***/ }),
-/* 168 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

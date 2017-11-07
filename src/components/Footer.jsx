@@ -71,13 +71,13 @@ const listItems = items.map(val => (
 
 function Footer(props) {
   return (
-    <div style={{ ...styles.footer, ...props.style, color: props.color }}>
+    <footer style={{ ...styles.footer, ...props.style, color: props.color }}>
       <div style={{ ...styles.line, background: props.color }} />
       <div style={styles.links}>
         {listItems}
       </div>
       <div style={{ ...styles.text }}>{props.title} - Created by {props.name} &copy; 2017</div>
-    </div>
+    </footer>
   );
 }
 

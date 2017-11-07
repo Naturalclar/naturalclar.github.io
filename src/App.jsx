@@ -1,8 +1,7 @@
 import React from 'react';
 import Radium, { StyleRoot } from 'radium';
 import { BrowserRouter as Router, Route, NavLink, Switch } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import { Footer, Header, NotFound } from './components';
 import Menu from './components/Menu';
 import MenuItem from './components/MenuItem';
 import Color from './utils/Color';
@@ -81,6 +80,7 @@ function App() {
             <Route path="/" exact component={Home} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
+            <Route path="*" component={NotFound} />
           </Switch>
           <Footer
             title="naturalclar"

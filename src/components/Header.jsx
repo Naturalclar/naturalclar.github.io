@@ -16,9 +16,9 @@ const styles = {
 
 function Header(props) {
   return (
-    <div style={{ ...styles.header, ...props.style }}>
+    <header style={{ ...styles.header, ...props.style }}>
       {props.title}
-    </div>
+    </header>
   );
 }
 
