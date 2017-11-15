@@ -57,7 +57,7 @@ const styles = {
 
 function About(props) {
   return (
-    <div style={{ ...styles.about, ...props.style }}>
+    <main style={{ ...styles.about, ...props.style }}>
       <div style={styles.container}>
         <div style={styles.header}>
           About me
@@ -69,7 +69,7 @@ function About(props) {
           I&apos;m also a clarinet player and have a strong passion in classical music!
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 

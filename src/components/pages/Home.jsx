@@ -36,14 +36,14 @@ const styles = {
 
 function Home(props) {
   return (
-    <div style={{ ...styles.home, ...props.style }}>
+    <main style={{ ...styles.home, ...props.style }}>
       <div style={styles.title}>
         Jesse K.
       </div>
       <div style={styles.subtitle}>
         Front-End Developer
       </div>
-    </div>
+    </main>
   );
 }
 

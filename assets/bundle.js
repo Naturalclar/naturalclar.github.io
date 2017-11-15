@@ -31464,7 +31464,7 @@ var styles = {
 
 function Home(props) {
   return _react2.default.createElement(
-    'div',
+    'main',
     { style: _extends({}, styles.home, props.style) },
     _react2.default.createElement(
       'div',
@@ -31578,7 +31578,7 @@ var styles = {
 
 function About(props) {
   return _react2.default.createElement(
-    'div',
+    'main',
     { style: _extends({}, styles.about, props.style) },
     _react2.default.createElement(
       'div',
@@ -31736,6 +31736,7 @@ var listItems = items.map(function (val, index) {
     {
       href: val.url,
       target: '_blank',
+      rel: 'noopener noreferrer',
       key: val.key,
       style: _extends({}, styles.link, { animationDelay: index * 0.1 + 's' })
     },
@@ -31750,7 +31751,7 @@ var listItems = items.map(function (val, index) {
 
 function Contact(props) {
   return _react2.default.createElement(
-    'div',
+    'main',
     { style: _extends({}, styles.contact, props.style) },
     _react2.default.createElement(
       'div',

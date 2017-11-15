@@ -88,6 +88,7 @@ const listItems = items.map((val, index) => (
   <a
     href={val.url}
     target="_blank"
+    rel="noopener noreferrer"
     key={val.key}
     style={{ ...styles.link, animationDelay: `${index * 0.1}s` }}
   >
@@ -100,11 +101,11 @@ const listItems = items.map((val, index) => (
 
 function Contact(props) {
   return (
-    <div style={{ ...styles.contact, ...props.style }}>
+    <main style={{ ...styles.contact, ...props.style }}>
       <div style={styles.list}>
         {listItems}
       </div>
-    </div>
+    </main>
   );
 }
 
