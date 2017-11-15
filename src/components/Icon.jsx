@@ -47,7 +47,7 @@ class Icon extends Component {
           href={this.props.href}
           style={styles.icon}
           target="_blank"
-          rel="nooperner noreferrer"
+          rel="noopener noreferrer"
           onMouseEnter={() => this.handleMouseEnter()}
           onMouseLeave={() => this.handleMouseLeave()}
         >

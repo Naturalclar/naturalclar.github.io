@@ -5,4 +5,5 @@
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <link rel="shortcut icon" type="image/png" href="/favicon.png">
+  <link rel="manifest" href="/manifest.json">
 </head>

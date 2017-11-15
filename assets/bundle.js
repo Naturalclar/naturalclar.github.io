@@ -31112,7 +31112,7 @@ var Icon = function (_Component) {
             href: this.props.href,
             style: styles.icon,
             target: '_blank',
-            rel: 'nooperner noreferrer',
+            rel: 'noopener noreferrer',
             onMouseEnter: function onMouseEnter() {
               return _this2.handleMouseEnter();
             },
