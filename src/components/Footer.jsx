@@ -2,64 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import Icon from './Icon';
+import { footer } from '../styles';
+import { links } from '../utils';
 
-const styles = {
-  footer: {
-    gridArea: 'footer',
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'column',
-    marginTop: '2rem',
-  },
-  line: {
-    width: '90%',
-    height: '1px',
-  },
-  text: {
-    padding: '1rem 0',
-  },
-  links: {
-    display: 'flex',
-    marginTop: '0.5rem',
-  },
-};
-
-const items = [
-  {
-    key: 'email',
-    text: 'jesse.katsumata@gmail.com',
-    url: 'mailto:jesse.katsumata@gmail.com',
-    icon: '\uf0e0',
-  },
-  {
-    key: 'linkedin',
-    text: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/jesse-katsumata-1a686462/',
-    icon: '\uf0e1',
-  },
-  {
-    key: 'twitter',
-    text: '@Smashcat_clar',
-    url: 'https://twitter.com/smashcat_clar',
-    icon: '\uf099',
-  },
-  {
-    key: 'github',
-    text: 'Github',
-    url: 'https://github.com/Naturalclar',
-    icon: '\uf09b',
-  },
-  {
-    key: 'codepen',
-    text: 'CodePen',
-    url: 'https://codepen.io/naturalclar',
-    icon: '\uf1cb',
-  },
-];
-
-const listItems = items.map(val => (
+const listItems = links.map(val => (
   <Icon
     key={val.key}
     href={val.url}
@@ -68,31 +14,19 @@ const listItems = items.map(val => (
   />
 ));
 
-
-function Footer(props) {
-  return (
-    <footer style={{ ...styles.footer, ...props.style, color: props.color }}>
-      <div style={{ ...styles.line, background: props.color }} />
-      <div style={styles.links}>
-        {listItems}
-      </div>
-      <div style={{ ...styles.text }}>{props.title} - Created by {props.name} &copy; 2017</div>
-    </footer>
-  );
-}
-
-Footer.defaultProps = {
-  title: 'Hello World!',
-  name: 'Smashcat',
-  color: 'black',
-  style: {},
-};
+const Footer = ({ title, name }) => (
+  <footer style={footer.main}>
+    <div style={footer.line} />
+    <div style={footer.links}>
+      {listItems}
+    </div>
+    <div style={footer.text}>{title} - Created by {name} &copy; 2017</div>
+  </footer>
+);
 
 Footer.propTypes = {
-  title: PropTypes.string,
-  name: PropTypes.string,
-  color: PropTypes.string,
-  style: PropTypes.objectOf(PropTypes.string),
+  title: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default Radium(Footer);

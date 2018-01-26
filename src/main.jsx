@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'normalize.css/normalize.css';
@@ -9,4 +10,7 @@ function Main() {
   return <App />;
 }
 
-ReactDOM.render(<Main />, document.querySelector('#root'));
+ReactDOM.render(
+  <Main />,
+  document.querySelector('#root'),// eslint-disable-line
+);

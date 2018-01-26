@@ -1,35 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
+import { header } from '../styles';
 
-const styles = {
-  header: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    fontFamily: '"Indie Flower", cursive',
-    fontSize: '2rem',
-    color: 'white',
-    padding: '1rem 0',
-  },
-};
-
-function Header(props) {
-  return (
-    <header style={{ ...styles.header, ...props.style }}>
-      {props.title}
-    </header>
-  );
-}
-
-Header.defaultProps = {
-  title: 'Hello World!',
-  style: {},
-};
+const Header = ({ title }) => (
+  <header style={header.main}>
+    {title}
+  </header>
+);
 
 Header.propTypes = {
-  title: PropTypes.string,
-  style: PropTypes.objectOf(PropTypes.string),
+  title: PropTypes.string.isRequired,
 };
 
 export default Radium(Header);

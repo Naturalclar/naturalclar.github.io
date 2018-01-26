@@ -1,2 +1,18 @@
-@import './styles/import.css';
-@import './styles/global.css';
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+*, *:before, *:after {
+  box-sizing: border-box;
+
+}
+
+html {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to bottom, #00ae76, #aaeecc 100%) fixed;
+  font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+  height: 100%;
+}

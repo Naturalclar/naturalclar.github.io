@@ -1,44 +1,9 @@
 import React from 'react';
 import Radium, { StyleRoot } from 'radium';
 import { BrowserRouter as Router, Route, NavLink, Switch } from 'react-router-dom';
-import { Footer, Header, NotFound } from './components';
-import Menu from './components/Menu';
-import MenuItem from './components/MenuItem';
-import Color from './utils/Color';
-import Home from './components/pages/Home';
-import About from './components/pages/About';
-import Contact from './components/pages/Contact';
-
-const styles = {
-  body: {
-    color: Color.TEXT_PRIMARY,
-    display: 'grid',
-    gridTemplateRows: 'auto auto 1fr auto',
-    gridTemplateAreas: '"header" "menu" "content" "footer"',
-    height: '100%',
-    width: '100%',
-    position: 'absolute',
-  },
-  header: {
-    gridArea: 'header',
-  },
-  footer: {
-    gridArea: 'footer',
-  },
-  menu: {
-    gridArea: 'menu',
-  },
-  content: {
-    gridArea: 'content',
-  },
-  link: {
-    color: 'inherit',
-    textDecoration: 'none',
-  },
-  active: {
-    textShadow: `0 0 1rem ${Color.TEXT_SHADOW},0 0 0.2rem ${Color.TEXT_SHADOW}`,
-  },
-};
+import { Footer, Header, Menu, MenuItem } from './components';
+import { Home, About, Contact, NotFound } from './views';
+import { app } from './styles';
 
 function App() {
   const menu = [
@@ -58,8 +23,8 @@ function App() {
   const menuItems = menu.map(val => (
     <MenuItem key={val.title}>
       <NavLink
-        style={styles.link}
-        activeStyle={styles.active}
+        style={app.link}
+        activeStyle={app.active}
         key={val.title}
         to={val.path}
         href={val.path}
@@ -71,9 +36,9 @@ function App() {
   return (
     <StyleRoot>
       <Router>
-        <div style={styles.body}>
-          <Header title="naturalclar" style={styles.header} />
-          <Menu style={styles.menu}>
+        <div style={app.body}>
+          <Header title="naturalclar" />
+          <Menu>
             {menuItems}
           </Menu>
           <Switch>
@@ -84,8 +49,6 @@ function App() {
           </Switch>
           <Footer
             title="naturalclar"
-            style={styles.footer}
-            color={Color.TEXT_PRIMARY}
             name="Jesse K."
           />
         </div>
