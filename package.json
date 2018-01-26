@@ -6,7 +6,8 @@
   "scripts": {
     "test": "eslint src/ --ext .js --ext .jsx",
     "watch": "gulp watch",
-    "start": "jekyll serve"
+    "start": "jekyll serve",
+    "build": "webpack -p"
   },
   "repository": {
     "type": "git",
