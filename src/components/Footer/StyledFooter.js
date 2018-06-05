@@ -8,10 +8,10 @@ export const StyledFooter = styled.footer`
   align-items: center;
   flex-direction: column;
   margin-top: 2rem;
-  color: inherit;
+  color: white;
 `;
 
-export const Line = styled.div`
+export const FooterLine = styled.div`
   width: 90%;
   height: 1px;
   background: white;

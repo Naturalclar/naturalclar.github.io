@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack'); // eslint-disable-line no-unused-vars
 
 module.exports = {
+  mode: 'development',
   entry: path.join(__dirname, '/src/main.jsx'),
   output: {
     path: path.join(__dirname, '/assets/'),
