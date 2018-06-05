@@ -1,5 +1,22 @@
+import styled from 'styled-components';
+import { fadeInLeft } from 'Utils/keyframes';
 import { color } from '../abstracts';
-import { fadeInLeft } from '../base/keyframes';
+
+export const ContactWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transition: all 0.3 ease-in-out;
+    list-style-type: none;
+  }
+`;
 
 const contactStyle = {
   main: {

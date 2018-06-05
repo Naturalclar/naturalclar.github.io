@@ -1,27 +1,37 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Radium from 'radium';
-import { home } from '../styles';
+import styled from 'styled-components';
+import { fadeInTop } from 'Utils/keyframes';
 
-function Home(props) {
-  return (
-    <main style={{ ...home.main, ...props.style }}>
-      <div style={home.title}>
-        Jesse K.
-      </div>
-      <div style={home.subtitle}>
-        Front-End Developer
-      </div>
-    </main>
-  );
-}
+const HomeWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transition: all 0.3 ease-in-out;
+  font-family: 'Indie Flower', cursive;
+  opacity: 0;
+  animation ${fadeInTop} 0.4s ease both;
 
-Home.defaultProps = {
-  style: {},
-};
+  h1 {
+    margin: 2rem 0
+    font-size: 2.5rem;
+  }
 
-Home.propTypes = {
-  style: PropTypes.objectOf(PropTypes.string),
-};
+  h2 {
+    font-size: 1.5rem;
+  }
+`;
 
-export default Radium(Home);
+const Home = () => (
+  <HomeWrapper>
+    <h1>
+      Jesse K.
+    </h1>
+    <h2>
+      Front-End Developer
+    </h2>
+  </HomeWrapper>
+);
+
+export default Home;

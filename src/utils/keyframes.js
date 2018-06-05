@@ -14,7 +14,7 @@ export const fadeInLeft = keyframes`
 export const fadeInTop = keyframes`
   0% {
     opacity: 0;
-    translateY(-20%);
+    transform: translateY(-20%);
   }
   100% {
     opacity: 1;

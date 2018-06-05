@@ -9,16 +9,16 @@ export const StyledFooter = styled.footer`
   flex-direction: column;
   margin-top: 2rem;
   color: white;
+
+  p {
+    padding: 1rem 0;
+  }
 `;
 
 export const FooterLine = styled.div`
   width: 90%;
   height: 1px;
   background: white;
-`;
-
-export const FooterText = styled.p`
-  padding: 1rem 0;
 `;
 
 export const FooterLink = styled.ul`

@@ -5,7 +5,6 @@ import links from '../../utils/links';
 import {
   StyledFooter,
   FooterLine,
-  FooterText,
   FooterLink,
 } from './StyledFooter';
 
@@ -24,9 +23,9 @@ const Footer = ({ title, name }) => (
     <FooterLink>
       {listItems}
     </FooterLink>
-    <FooterText>
+    <p>
       {title} - Created by {name} &copy; 2017
-    </FooterText>
+    </p>
   </StyledFooter>
 );
 

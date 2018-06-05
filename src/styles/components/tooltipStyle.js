@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { fadeIn } from '../base/keyframes';
+import { fadeIn } from 'Utils/keyframes';
 
 export const StyledTooltip = styled.div`
   position: absolute;
