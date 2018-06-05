@@ -2,8 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import Icon from '../Icon';
-import { footer } from '../../styles';
 import links from '../../utils/links';
+import {
+  StyledFooter,
+  FooterLine,
+  FooterText,
+  FooterLink } from './StyledFooter';
 
 const listItems = links.map(val => (
   <Icon
@@ -15,13 +19,15 @@ const listItems = links.map(val => (
 ));
 
 const Footer = ({ title, name }) => (
-  <footer style={footer.main}>
-    <div style={footer.line} />
-    <div style={footer.links}>
+  <StyledFooter>
+    <FooterLine />
+    <FooterLink>
       {listItems}
-    </div>
-    <div style={footer.text}>{title} - Created by {name} &copy; 2017</div>
-  </footer>
+    </FooterLink>
+    <FooterText>
+      {title} - Created by {name} &copy; 2017
+    </FooterText>
+  </StyledFooter>
 );
 
 Footer.propTypes = {

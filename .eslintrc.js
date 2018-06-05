@@ -9,6 +9,12 @@ module.exports = {
                     './',
                 ]
             }
-        ]    
+        ],
+        'no-unused-expressions': [
+            'error',
+            {
+                allowTaggedTemplates: true,
+            }
+        ]
     }
 };

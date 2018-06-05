@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
-import { header } from '../../styles';
+import StyledHeader from './StyledHeader';
 
 const Header = ({ title }) => (
-  <header style={header.main}>
+  <StyledHeader>
     {title}
-  </header>
+  </StyledHeader>
 );
 
 Header.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-export default Radium(Header);
+export default Header;
