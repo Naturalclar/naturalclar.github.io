@@ -6,9 +6,9 @@ const config = require('./webpack.config.js');
 gulp.task('scripts', (callback) => {
   webpack(config, (err, stats) => {
     if (err) {
-      console.log(err.toString());
+      console.log(err.toString()); // eslint-disable-line no-console
     }
-    console.log(stats.toString());
+    console.log(stats.toString()); // eslint-disable-line no-console
     callback();
   });
 });

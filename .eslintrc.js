@@ -1,3 +1,14 @@
 module.exports = {
-    "extends": "airbnb"
+    'extends': 'airbnb',
+    'rules': {
+        'import/no-extraneous-dependencies': [
+            'error',
+            {
+                devDependencies: true,
+                packageDir: [
+                    './',
+                ]
+            }
+        ]    
+    }
 };
