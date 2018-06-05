@@ -1,4 +1,4 @@
-import { fadeIn } from './keyframes';
+import { fadeIn } from '../base/keyframes';
 
 const tooltipStyle = {
   top: {

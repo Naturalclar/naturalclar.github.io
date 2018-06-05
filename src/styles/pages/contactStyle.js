@@ -1,5 +1,5 @@
-import { color } from '../utils';
-import { fadeInLeft } from './keyframes';
+import { color } from '../abstracts';
+import { fadeInLeft } from '../base/keyframes';
 
 const contactStyle = {
   main: {

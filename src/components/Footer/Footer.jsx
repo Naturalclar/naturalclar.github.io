@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
-import Icon from './Icon';
-import { footer } from '../styles';
-import { links } from '../utils';
+import Icon from '../Icon';
+import { footer } from '../../styles';
+import links from '../../utils/links';
 
 const listItems = links.map(val => (
   <Icon

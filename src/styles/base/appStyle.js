@@ -1,4 +1,4 @@
-import { color } from '../utils';
+import color from '../abstracts/color';
 
 const appStyle = {
   body: {

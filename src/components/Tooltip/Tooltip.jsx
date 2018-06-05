@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
-import { tooltip } from '../styles';
+import { tooltip } from '../../styles';
 
 const Tooltip = ({ orientation, text }) => (
   <div style={tooltip[orientation]}>

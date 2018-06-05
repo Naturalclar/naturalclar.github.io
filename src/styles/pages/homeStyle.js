@@ -1,4 +1,4 @@
-import { fadeInTop } from './keyframes';
+import { fadeInTop } from '../base/keyframes';
 
 const homeStyle = {
   main: {

@@ -1,5 +1,5 @@
-import { fadeInTop } from './keyframes';
-import { color, viewport } from '../utils';
+import { fadeInTop } from '../base/keyframes';
+import { color, viewport } from '../abstracts';
 
 const aboutStyle = {
   main: {

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
-import { links } from '../utils/';
+import links from '../utils/links';
 import { contact } from '../styles';
 
 const listItems = links.map((val, index) => (

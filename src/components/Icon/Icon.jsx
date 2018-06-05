@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
-import Tooltip from './Tooltip';
-import { icon } from '../styles';
+import Tooltip from '../Tooltip';
+import { icon } from '../../styles';
 
 class Icon extends Component {
   constructor(props) {
