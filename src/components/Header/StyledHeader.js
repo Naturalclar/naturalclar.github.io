@@ -7,7 +7,7 @@ const StyledHeader = styled.header`
   align-items: center;
   font-family: "Indie Flower", cursive;
   font-size: 2rem;
-  color: white;
+  color: inherit;
   padding: 1rem 0;
 `;
 

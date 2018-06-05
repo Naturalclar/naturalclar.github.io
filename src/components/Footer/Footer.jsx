@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import Icon from '../Icon';
 import links from '../../utils/links';
 import {
@@ -35,5 +34,5 @@ Footer.propTypes = {
   name: PropTypes.string.isRequired,
 };
 
-export default Radium(Footer);
+export default Footer;
 

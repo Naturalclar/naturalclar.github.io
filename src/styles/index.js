@@ -1,5 +1,3 @@
-export { default as header } from './layouts/headerStyle';
-export { default as footer } from './layouts/footerStyle';
 export { default as menu } from './layouts/menuStyle';
 
 export { default as icon } from './components/iconStyle';

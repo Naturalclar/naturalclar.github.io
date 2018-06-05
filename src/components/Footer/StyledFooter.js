@@ -8,7 +8,7 @@ export const StyledFooter = styled.footer`
   align-items: center;
   flex-direction: column;
   margin-top: 2rem;
-  color: white;
+  color: inherit;
 `;
 
 export const Line = styled.div`
