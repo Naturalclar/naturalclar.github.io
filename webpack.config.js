@@ -10,6 +10,10 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
+    alias: {
+      Utils: path.join(__dirname, '/src/utils/'),
+      Styles: path.join(__dirname, '/src/styles/'),
+    },
   },
   module: {
     rules: [

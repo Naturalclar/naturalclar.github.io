@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import Tooltip from '../Tooltip';
-import { icon } from '../../styles';
+import { StyledIcon } from '../../styles';
 
 class Icon extends Component {
   constructor(props) {
@@ -22,16 +22,15 @@ class Icon extends Component {
     return (
       <div style={{ position: 'relative' }}>
         {this.state.hover ? <Tooltip text={this.props.text} /> : null}
-        <a
+        <StyledIcon
           href={this.props.href}
-          style={icon.main}
           target="_blank"
           rel="noopener noreferrer"
           onMouseEnter={() => this.handleMouseEnter()}
           onMouseLeave={() => this.handleMouseLeave()}
         >
           {this.props.icon}
-        </a>
+        </StyledIcon>
       </div>
     );
   }

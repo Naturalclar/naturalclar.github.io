@@ -9,13 +9,13 @@ injectGlobal`
   @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
   *, *:before, *:after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 
   html {
     position: relative;
     height: 100%;
-    margin: 0;
-    padding: 0;
   }
 
   body {

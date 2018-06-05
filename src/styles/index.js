@@ -1,7 +1,7 @@
-export { default as menu } from './layouts/menuStyle';
+export { StyledMenuItem, StyledMenu } from './layouts/menuStyle';
 
-export { default as icon } from './components/iconStyle';
-export { default as tooltip } from './components/tooltipStyle';
+export { StyledIcon } from './components/iconStyle';
+export { TooltipText, StyledTooltip, TooltipArrow } from './components/tooltipStyle';
 
 export { default as contact } from './pages/contactStyle';
 export { default as home } from './pages/homeStyle';

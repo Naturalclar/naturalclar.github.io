@@ -1,22 +1,22 @@
-import { color } from '../abstracts/';
+import styled from 'styled-components';
+import { color } from 'Styles/abstracts/';
 
-const menuStyle = {
-  main: {
-    gridArea: 'menu',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  item: {
-    margin: '1rem',
-    cursor: 'pointer',
-    fontSize: '1.5rem',
-    transition: 'all .3s ease',
-    ':hover': {
-      transform: 'scale(1.3)',
-      textShadow: `0 0 1rem ${color.TEXT_SHADOW},0 0 0.2rem ${color.TEXT_SHADOW}`,
-    },
-  },
-};
+export const StyledMenuItem = styled.li`
+  margin: 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: all .3s ease;
+  &:hover {
+    transform: scale(1.3);
+    text-shadow: 0 0 1rem ${color.TEXT_SHADOW}, 0 0 0.2rem ${color.TEXT_SHADOW};
+  }
+`;
 
-export default menuStyle;
+export const StyledMenu = styled.ul`
+  text-align: center;
+  list-style-type: none;
+  grid-area: menu;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;

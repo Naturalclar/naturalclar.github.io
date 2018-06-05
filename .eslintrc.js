@@ -15,6 +15,11 @@ module.exports = {
             {
                 allowTaggedTemplates: true,
             }
-        ]
+        ],
+        'import/extensions': 'off',
+        'import/no-unresolved': 'off',
+    },
+    'settings': {
+        'import/resolver': 'webpack'
     }
 };

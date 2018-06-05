@@ -1,21 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
-import { menu } from '../../styles';
+import { StyledMenuItem } from 'Styles';
 
-const MenuItem = ({ children, style }) => (
-  <div style={{ ...menu.item, ...style }}>
+const MenuItem = ({ children }) => (
+  <StyledMenuItem>
     {children}
-  </div>
+  </StyledMenuItem>
 );
 
-MenuItem.defaultProps = {
-  style: {},
-};
-
 MenuItem.propTypes = {
-  style: PropTypes.objectOf(PropTypes.string),
   children: PropTypes.node.isRequired,
 };
 
-export default Radium(MenuItem);
+export default MenuItem;

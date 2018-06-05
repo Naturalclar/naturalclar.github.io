@@ -6,7 +6,8 @@ import {
   StyledFooter,
   FooterLine,
   FooterText,
-  FooterLink } from './StyledFooter';
+  FooterLink,
+} from './StyledFooter';
 
 const listItems = links.map(val => (
   <Icon

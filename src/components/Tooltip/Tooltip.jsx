@@ -1,24 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
-import { tooltip } from '../../styles';
+import {
+  StyledTooltip,
+  TooltipText,
+  TooltipArrow,
+} from 'Styles';
 
-const Tooltip = ({ orientation, text }) => (
-  <div style={tooltip[orientation]}>
-    <div style={tooltip[`${orientation}Arrow`]} />
-    <div style={tooltip.text}>
+const Tooltip = ({ text }) => (
+  <StyledTooltip>
+    <TooltipArrow />
+    <TooltipText>
       {text}
-    </div>
-  </div>
+    </TooltipText>
+  </StyledTooltip>
 );
 
-Tooltip.defaultProps = {
-  orientation: 'top',
-};
-
 Tooltip.propTypes = {
-  orientation: PropTypes.string,
   text: PropTypes.string.isRequired,
 };
 
-export default Radium(Tooltip);
+export default Tooltip;

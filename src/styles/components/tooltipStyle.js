@@ -1,19 +1,37 @@
+import styled from 'styled-components';
 import { fadeIn } from '../base/keyframes';
 
+export const StyledTooltip = styled.div`
+  position: absolute;
+  bottom: 105%;
+  left: -7.5rem;
+  width: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50%;
+  opacity: 0;
+  animation: ${fadeIn} 0.3s both;
+`;
+
+export const TooltipArrow = styled.span`
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style:solid;
+  border-color: #444 transparent transparent transparent;
+`;
+
+export const TooltipText = styled.p`
+  width: auto;
+  background: #444;
+  padding: 0.3rem;
+  border-radius: 2px;
+`;
+
 const tooltipStyle = {
-  top: {
-    position: 'absolute',
-    bottom: '105%',
-    left: '-7.5rem',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '15rem',
-    marginLeft: '50%',
-    opacity: 0,
-    animation: '0.3s both',
-    animationName: fadeIn,
-  },
   topArrow: {
     position: 'absolute',
     top: '100%',

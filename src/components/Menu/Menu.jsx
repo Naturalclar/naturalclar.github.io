@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
-import { menu } from '../../styles';
+import { StyledMenu } from 'Styles';
 
 const Menu = ({ children }) => (
-  <div style={menu.main}>
+  <StyledMenu>
     {children}
-  </div>
+  </StyledMenu>
 );
 
 
@@ -14,4 +13,4 @@ Menu.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default Radium(Menu);
+export default Menu;

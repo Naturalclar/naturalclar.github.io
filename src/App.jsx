@@ -1,9 +1,10 @@
 import React from 'react';
-import Radium, { StyleRoot } from 'radium';
+import { StyleRoot } from 'radium';
 import { BrowserRouter as Router, Route, NavLink, Switch } from 'react-router-dom';
+import { app } from 'Styles';
 import { Footer, Header, Menu, MenuItem } from './components';
 import { Home, About, Contact, NotFound } from './views';
-import { app } from './styles';
+
 
 function App() {
   const menu = [
@@ -58,4 +59,4 @@ function App() {
 }
 
 
-export default Radium(App);
+export default App;
