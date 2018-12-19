@@ -6,7 +6,8 @@
       {
         "root": ["./src"],
         "alias": {
-          "Styles": "./src/styles"
+          "Styles": "./src/styles",
+          "Utils": "./src/utils"
         }
       }
     ]
