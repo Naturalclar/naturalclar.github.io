@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    className="sc-jTzLTM kFpqgH"
+  >
+    <header
+      className="sc-htoDjs jpKUfy"
+    >
+      naturalclar
+    </header>
+    <ul
+      className="sc-dnqmqq gMFbyp"
+    >
+      <li
+        className="sc-iwsKbI bKEsfO"
+      >
+        <a
+          aria-current="page"
+          className="sc-jzJRlG dOauKK active"
+          href="/"
+          onClick={[Function]}
+          style={Object {}}
+        >
+          Home
+        </a>
+      </li>
+      <li
+        className="sc-iwsKbI bKEsfO"
+      >
+        <a
+          aria-current={null}
+          className="sc-jzJRlG dOauKK"
+          href="/about"
+          onClick={[Function]}
+        >
+          About me
+        </a>
+      </li>
+      <li
+        className="sc-iwsKbI bKEsfO"
+      >
+        <a
+          aria-current={null}
+          className="sc-jzJRlG dOauKK"
+          href="/contact"
+          onClick={[Function]}
+        >
+          Contact me
+        </a>
+      </li>
+    </ul>
+    <main
+      className="sc-fjdhpX fttyHl"
+    >
+      <div
+        className="sc-VigVT eTpBav"
+      >
+        <h1>
+          Jesse K.
+        </h1>
+        <h2>
+          Front-End Developer
+        </h2>
+      </div>
+    </main>
+    <footer
+      className="sc-EHOje fOpmWf"
+    >
+      <div
+        className="sc-bZQynM eBfGZY"
+      />
+      <ul
+        className="sc-gzVnrw jNCucF"
+      >
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "position": "relative",
+            }
+          }
+        >
+          <a
+            className="sc-bdVaJa GMNUu"
+            href="mailto:jesse.katsumata@gmail.com"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            
+          </a>
+        </div>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "position": "relative",
+            }
+          }
+        >
+          <a
+            className="sc-bdVaJa GMNUu"
+            href="https://www.linkedin.com/in/jesse-katsumata-1a686462/"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            
+          </a>
+        </div>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "position": "relative",
+            }
+          }
+        >
+          <a
+            className="sc-bdVaJa GMNUu"
+            href="https://twitter.com/natural_clar"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            
+          </a>
+        </div>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "position": "relative",
+            }
+          }
+        >
+          <a
+            className="sc-bdVaJa GMNUu"
+            href="https://github.com/Naturalclar"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            
+          </a>
+        </div>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "position": "relative",
+            }
+          }
+        >
+          <a
+            className="sc-bdVaJa GMNUu"
+            href="https://codepen.io/naturalclar"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            
+          </a>
+        </div>
+      </ul>
+      <p>
+        naturalclar
+         - Created by 
+        Jesse K.
+         © 2017
+      </p>
+    </footer>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
