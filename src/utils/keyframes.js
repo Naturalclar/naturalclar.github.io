@@ -1,4 +1,4 @@
-import { keyframes } from 'styled-components';
+import { keyframes } from 'styled-components'
 
 export const fadeInLeft = keyframes`
   0% {
@@ -9,7 +9,7 @@ export const fadeInLeft = keyframes`
     opacity: 1;
     transform: translateX(0);
   }
-`;
+`
 
 export const fadeInTop = keyframes`
   0% {
@@ -20,7 +20,7 @@ export const fadeInTop = keyframes`
     opacity: 1;
     transform: translateY(0);
   }
-`;
+`
 
 export const fadeIn = keyframes`
   0% {
@@ -29,4 +29,4 @@ export const fadeIn = keyframes`
   100% {
     opacity: 1;
   }
-`;
+`

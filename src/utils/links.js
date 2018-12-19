@@ -1,4 +1,3 @@
-
 const links = [
   {
     key: 'email',
@@ -30,6 +29,6 @@ const links = [
     url: 'https://codepen.io/naturalclar',
     icon: '\uf1cb',
   },
-];
+]
 
-export default links;
+export default links
