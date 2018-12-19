@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const StyledFooter = styled.footer`
   grid-area: footer;
@@ -13,15 +13,15 @@ export const StyledFooter = styled.footer`
   p {
     padding: 1rem 0;
   }
-`;
+`
 
 export const FooterLine = styled.div`
   width: 90%;
   height: 1px;
   background: white;
-`;
+`
 
 export const FooterLink = styled.ul`
   display: flex;
   margin-top: 0.5rem;
-`;
+`

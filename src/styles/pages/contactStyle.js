@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { fadeInLeft } from 'Utils/keyframes';
-import { color } from '../abstracts';
+import styled from 'styled-components'
+import { fadeInLeft } from 'Utils/keyframes'
+import { color } from '../abstracts'
 
 export const ContactWrapper = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ export const ContactWrapper = styled.div`
     transition: all 0.3 ease-in-out;
     list-style-type: none;
   }
-`;
+`
 
 const contactStyle = {
   main: {
@@ -42,7 +42,9 @@ const contactStyle = {
     animation: '0.4s ease both',
     animationName: fadeInLeft,
     ':hover': {
-      textShadow: `0 0 1rem ${color.TEXT_SHADOW},0 0 0.2rem ${color.TEXT_SHADOW}`,
+      textShadow: `0 0 1rem ${color.TEXT_SHADOW},0 0 0.2rem ${
+        color.TEXT_SHADOW
+      }`,
     },
   },
   icon: {
@@ -52,6 +54,6 @@ const contactStyle = {
     alignItems: 'center',
     marginRight: '0.5rem',
   },
-};
+}
 
-export default contactStyle;
+export default contactStyle
