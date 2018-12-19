@@ -1,0 +1,15 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "package.json",
+        "src/components/Footer/package.json",
+        "src/components/Header/package.json",
+        "src/components/Icon/package.json",
+        "src/components/Menu/package.json",
+        "src/components/MenuItem/package.json",
+        "src/components/Tooltip/package.json"
+      ]
+    }
+  }
+}
