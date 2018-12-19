@@ -1,12 +1,15 @@
 {
-  "presets": ["env", "react"],
+  "presets": ["@babel/preset-env", "@babel/preset-react"],
   "plugins": [
-    "transform-object-rest-spread",
-    ["module-resolver", {
-      "root": ["./src"],
-      "alias": {
-        "Styles": "./src/styles"
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "Styles": "./src/styles",
+          "Utils": "./src/utils"
+        }
       }
-    }]
+    ]
   ]
 }

@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { fadeIn } from 'Utils/keyframes';
+import styled from "styled-components";
+import { fadeIn } from "Utils/keyframes";
 
 export const StyledTooltip = styled.div`
   position: absolute;
@@ -20,7 +20,7 @@ export const TooltipArrow = styled.span`
   left: 50%;
   margin-left: -5px;
   border-width: 5px;
-  border-style:solid;
+  border-style: solid;
   border-color: #444 transparent transparent transparent;
 `;
 
@@ -33,20 +33,20 @@ export const TooltipText = styled.p`
 
 const tooltipStyle = {
   topArrow: {
-    position: 'absolute',
-    top: '100%',
-    left: '50%',
-    marginLeft: '-5px',
-    borderWidth: '5px',
-    borderStyle: 'solid',
-    borderColor: '#444 transparent transparent transparent',
+    position: "absolute",
+    top: "100%",
+    left: "50%",
+    marginLeft: "-5px",
+    borderWidth: "5px",
+    borderStyle: "solid",
+    borderColor: "#444 transparent transparent transparent"
   },
   text: {
-    width: 'auto',
-    background: '#444',
-    padding: '0.3rem',
-    borderRadius: '2px',
-  },
+    width: "auto",
+    background: "#444",
+    padding: "0.3rem",
+    borderRadius: "2px"
+  }
 };
 
 export default tooltipStyle;
