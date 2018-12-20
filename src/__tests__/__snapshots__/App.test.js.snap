@@ -1,26 +1,213 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`matches snapshot 1`] = `
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: FontAwesome;
+  padding: 0.3rem;
+  margin: 0.3rem;
+  color: rgba(255,255,255,0.8);
+  background: rgba(0,0,0,0.1);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.c10:hover {
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.2);
+  color: white;
+}
+
+.c7 {
+  grid-area: footer;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 2rem;
+  color: white;
+}
+
+.c7 p {
+  padding: 1rem 0;
+}
+
+.c8 {
+  width: 90%;
+  height: 1px;
+  background: white;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "Indie Flower",cursive;
+  color: inherit;
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+.c2 {
+  text-align: center;
+  list-style-type: none;
+  grid-area: menu;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  margin: 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.c3:hover {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+  text-shadow: 0 0 1rem dodgerblue,0 0 0.2rem dodgerblue;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  -webkit-transition: all 0.3 ease-in-out;
+  transition: all 0.3 ease-in-out;
+  font-family: 'Indie Flower',cursive;
+  opacity: 0;
+  -webkit-animation: kVINEQ 0.4s ease both;
+  animation: kVINEQ 0.4s ease both;
+}
+
+.c6 h1 {
+  margin: 2rem 0 font-size:2.5rem;
+}
+
+.c6 h2 {
+  font-size: 1.5rem;
+}
+
+.c0 {
+  color: mintcream;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.c5 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c4 {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: 'Indie Flower',none;
+}
+
+.c4.active {
+  text-shadow: 0 0 1rem dodgerblue,0 0 0.2rem dodgerblue;
+}
+
 <div
   data-radium={true}
 >
   <div
-    className="sc-jTzLTM kFpqgH"
+    className="c0"
   >
     <header
-      className="sc-htoDjs jpKUfy"
+      className="c1"
     >
       naturalclar
     </header>
     <ul
-      className="sc-dnqmqq gMFbyp"
+      className="c2"
     >
       <li
-        className="sc-iwsKbI bKEsfO"
+        className="c3"
       >
         <a
           aria-current="page"
-          className="sc-jzJRlG dOauKK active"
+          className="c4 active"
           href="/"
           onClick={[Function]}
           style={Object {}}
@@ -29,11 +216,11 @@ exports[`matches snapshot 1`] = `
         </a>
       </li>
       <li
-        className="sc-iwsKbI bKEsfO"
+        className="c3"
       >
         <a
           aria-current={null}
-          className="sc-jzJRlG dOauKK"
+          className="c4"
           href="/about"
           onClick={[Function]}
         >
@@ -41,11 +228,11 @@ exports[`matches snapshot 1`] = `
         </a>
       </li>
       <li
-        className="sc-iwsKbI bKEsfO"
+        className="c3"
       >
         <a
           aria-current={null}
-          className="sc-jzJRlG dOauKK"
+          className="c4"
           href="/contact"
           onClick={[Function]}
         >
@@ -54,10 +241,10 @@ exports[`matches snapshot 1`] = `
       </li>
     </ul>
     <main
-      className="sc-fjdhpX fttyHl"
+      className="c5"
     >
       <div
-        className="sc-VigVT eTpBav"
+        className="c6"
       >
         <h1>
           Jesse K.
@@ -68,13 +255,13 @@ exports[`matches snapshot 1`] = `
       </div>
     </main>
     <footer
-      className="sc-EHOje fOpmWf"
+      className="c7"
     >
       <div
-        className="sc-bZQynM eBfGZY"
+        className="c8"
       />
       <ul
-        className="sc-gzVnrw jNCucF"
+        className="c9"
       >
         <div
           data-radium={true}
@@ -85,7 +272,7 @@ exports[`matches snapshot 1`] = `
           }
         >
           <a
-            className="sc-bdVaJa GMNUu"
+            className="c10"
             href="mailto:jesse.katsumata@gmail.com"
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
@@ -104,7 +291,7 @@ exports[`matches snapshot 1`] = `
           }
         >
           <a
-            className="sc-bdVaJa GMNUu"
+            className="c10"
             href="https://www.linkedin.com/in/jesse-katsumata-1a686462/"
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
@@ -123,7 +310,7 @@ exports[`matches snapshot 1`] = `
           }
         >
           <a
-            className="sc-bdVaJa GMNUu"
+            className="c10"
             href="https://twitter.com/natural_clar"
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
@@ -142,7 +329,7 @@ exports[`matches snapshot 1`] = `
           }
         >
           <a
-            className="sc-bdVaJa GMNUu"
+            className="c10"
             href="https://github.com/Naturalclar"
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
@@ -161,7 +348,7 @@ exports[`matches snapshot 1`] = `
           }
         >
           <a
-            className="sc-bdVaJa GMNUu"
+            className="c10"
             href="https://codepen.io/naturalclar"
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
