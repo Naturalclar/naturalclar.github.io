@@ -3,32 +3,7 @@ jobs:
   build:
     working_direction: ~/naturalclar.github.io
     docker:
-      - image: circleci/node:8
-    steps: 
-      - checkout
-
-      - restore_cache:
-          key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
-
-      - restore_cache:
-          key: node-v1-{{ checksum "package.json" }}-{{ arch }}
-
-      - run: yarn install
-
-      - save_cache:
-          key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
-          paths:
-            - ~/.cache/yarn
-
-      - save_cache:
-          key: node-v1-{{ checksum "package.json" }}-{{ arch }}
-          paths:
-            - node_modules
-      - run: yarn build
-  test: 
-    working_directory: ~/react-native-ble-test
-    docker:
-      - image: circleci/node:8
+      - image: circleci/node:10
     steps:
       - checkout
 
@@ -49,7 +24,32 @@ jobs:
           key: node-v1-{{ checksum "package.json" }}-{{ arch }}
           paths:
             - node_modules
-      
+      - run: yarn build
+  test:
+    working_directory: ~/naturalclar.github.io
+    docker:
+      - image: circleci/node:10
+    steps:
+      - checkout
+
+      - restore_cache:
+          key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
+
+      - restore_cache:
+          key: node-v1-{{ checksum "package.json" }}-{{ arch }}
+
+      - run: yarn install
+
+      - save_cache:
+          key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
+          paths:
+            - ~/.cache/yarn
+
+      - save_cache:
+          key: node-v1-{{ checksum "package.json" }}-{{ arch }}
+          paths:
+            - node_modules
+
       - run: yarn build
       - run: yarn lint
       - run: yarn test
