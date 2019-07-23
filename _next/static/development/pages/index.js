@@ -117,7 +117,8 @@ var Heading = function Heading(_ref) {
   return href ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: href,
     style: {
-      color: "gray"
+      color: "gray",
+      padding: 4
     },
     "aria-label": description,
     __source: {
@@ -129,17 +130,18 @@ var Heading = function Heading(_ref) {
     className: "fa fa-".concat(name, " fa-2x"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 16
     },
     __self: this
   })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     style: {
-      color: "gray"
+      color: "gray",
+      padding: 4
     },
     className: "fa fa-".concat(name, " fa-2x"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 19
     },
     __self: this
   });
@@ -2047,9 +2049,7 @@ var Index = function Index() {
     __self: this
   }, "Node.js, TypeScript, React, React-Native"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
-      display: "flex",
-      padding: 12,
-      justifyContent: "space-between"
+      display: "flex"
     },
     __source: {
       fileName: _jsxFileName,
@@ -2058,20 +2058,20 @@ var Index = function Index() {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_atoms__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
     name: "twitter",
-    href: "http://www.google.com",
+    href: "https://twitter.com/natural_clar",
     description: "Link to Naturalclar's twitter account",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 30
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_atoms__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
     name: "github",
-    href: "http://www.google.com",
+    href: "https://github.com/Naturalclar",
     description: "Link to Naturalclar's github account",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 35
     },
     __self: this
   }))));
