@@ -1,486 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
-
-/***/ "./components/atoms/Avatar.tsx":
-/*!*************************************!*\
-  !*** ./components/atoms/Avatar.tsx ***!
-  \*************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/jessekatsumata/.ghq/github.com/Naturalclar/naturalclar.dev/components/atoms/Avatar.tsx";
-
-
-var Avatar = function Avatar(_ref) {
-  var _ref$alt = _ref.alt,
-      alt = _ref$alt === void 0 ? "" : _ref$alt,
-      src = _ref.src,
-      _ref$size = _ref.size,
-      size = _ref$size === void 0 ? 100 : _ref$size,
-      _ref$isAmp = _ref.isAmp,
-      isAmp = _ref$isAmp === void 0 ? false : _ref$isAmp;
-  var style = {
-    width: size,
-    height: size,
-    borderRadius: size / 2
-  };
-  return isAmp ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("amp-img", {
-    style: style,
-    src: src,
-    width: size,
-    height: size,
-    alt: alt,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    style: style,
-    src: src,
-    alt: alt,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  });
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Avatar);
-
-/***/ }),
-
-/***/ "./components/atoms/Heading.tsx":
-/*!**************************************!*\
-  !*** ./components/atoms/Heading.tsx ***!
-  \**************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/jessekatsumata/.ghq/github.com/Naturalclar/naturalclar.dev/components/atoms/Heading.tsx";
-
-
-var Heading = function Heading(_ref) {
-  var children = _ref.children,
-      _ref$color = _ref.color,
-      color = _ref$color === void 0 ? "#222" : _ref$color,
-      _ref$bold = _ref.bold,
-      bold = _ref$bold === void 0 ? false : _ref$bold,
-      _ref$size = _ref.size,
-      size = _ref$size === void 0 ? 24 : _ref$size;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    style: {
-      color: color,
-      fontWeight: bold ? "bold" : "normal",
-      fontSize: size,
-      padding: 0,
-      margin: 0
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  }, children);
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Heading);
-
-/***/ }),
-
-/***/ "./components/atoms/Icon.tsx":
-/*!***********************************!*\
-  !*** ./components/atoms/Icon.tsx ***!
-  \***********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/jessekatsumata/.ghq/github.com/Naturalclar/naturalclar.dev/components/atoms/Icon.tsx";
-
-
-var Heading = function Heading(_ref) {
-  var name = _ref.name,
-      href = _ref.href,
-      description = _ref.description;
-  return href ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: href,
-    style: {
-      color: "gray",
-      padding: 4
-    },
-    "aria-label": description,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "fa fa-".concat(name, " fa-2x"),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    style: {
-      color: "gray",
-      padding: 4
-    },
-    className: "fa fa-".concat(name, " fa-2x"),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: this
-  });
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Heading);
-
-/***/ }),
-
-/***/ "./components/atoms/Paragraph.tsx":
-/*!****************************************!*\
-  !*** ./components/atoms/Paragraph.tsx ***!
-  \****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/jessekatsumata/.ghq/github.com/Naturalclar/naturalclar.dev/components/atoms/Paragraph.tsx";
-
-
-var Paragraph = function Paragraph(_ref) {
-  var children = _ref.children,
-      _ref$color = _ref.color,
-      color = _ref$color === void 0 ? "#666" : _ref$color,
-      _ref$bold = _ref.bold,
-      bold = _ref$bold === void 0 ? false : _ref$bold,
-      _ref$size = _ref.size,
-      size = _ref$size === void 0 ? 16 : _ref$size;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    style: {
-      color: color,
-      fontWeight: bold ? "bold" : "normal",
-      fontSize: size,
-      padding: 0,
-      margin: 0
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  }, children);
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Paragraph);
-
-/***/ }),
-
-/***/ "./components/atoms/index.ts":
-/*!***********************************!*\
-  !*** ./components/atoms/index.ts ***!
-  \***********************************/
-/*! exports provided: Avatar, Heading, Icon, Paragraph */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Avatar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Avatar */ "./components/atoms/Avatar.tsx");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Avatar", function() { return _Avatar__WEBPACK_IMPORTED_MODULE_0__["default"]; });
-
-/* harmony import */ var _Heading__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Heading */ "./components/atoms/Heading.tsx");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Heading", function() { return _Heading__WEBPACK_IMPORTED_MODULE_1__["default"]; });
-
-/* harmony import */ var _Icon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Icon */ "./components/atoms/Icon.tsx");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Icon", function() { return _Icon__WEBPACK_IMPORTED_MODULE_2__["default"]; });
-
-/* harmony import */ var _Paragraph__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Paragraph */ "./components/atoms/Paragraph.tsx");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Paragraph", function() { return _Paragraph__WEBPACK_IMPORTED_MODULE_3__["default"]; });
-
-
-
-
-
-
-/***/ }),
-
-/***/ "./components/templates/Page.tsx":
-/*!***************************************!*\
-  !*** ./components/templates/Page.tsx ***!
-  \***************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectSpread */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-
-var _jsxFileName = "/Users/jessekatsumata/.ghq/github.com/Naturalclar/naturalclar.dev/components/templates/Page.tsx";
-
-var style = {
-  container: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    fontFamily: "Source Sans Pro"
-  }
-};
-
-var Page = function Page(_ref) {
-  var children = _ref.children,
-      _ref$color = _ref.color,
-      color = _ref$color === void 0 ? "aliceblue" : _ref$color;
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("main", {
-    style: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, style.container, {
-      backgroundColor: color
-    }),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: this
-  }, children);
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Page);
-
-/***/ }),
-
-/***/ "./components/templates/index.ts":
-/*!***************************************!*\
-  !*** ./components/templates/index.ts ***!
-  \***************************************/
-/*! exports provided: Page */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Page */ "./components/templates/Page.tsx");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Page", function() { return _Page__WEBPACK_IMPORTED_MODULE_0__["default"]; });
-
-
-
-/***/ }),
-
-/***/ "./head/Meta.tsx":
-/*!***********************!*\
-  !*** ./head/Meta.tsx ***!
-  \***********************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "./node_modules/next-server/dist/lib/head.js");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/jessekatsumata/.ghq/github.com/Naturalclar/naturalclar.dev/head/Meta.tsx";
-
-
-
-var Meta = function Meta() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 4
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: this
-  }, "Naturalclar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-    name: "Description",
-    content: "Naturalclar's portfolio site",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-    charSet: "utf-8",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-    name: "twitter:description",
-    content: "Naturalclar's portfolio site",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-    property: "og:description",
-    content: "Naturalclar's portfolio site",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-    property: "og:locale",
-    content: "en_US",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-    property: "og:title",
-    content: "Naturalclar",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-    property: "og:type",
-    content: "article",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-    property: "og:url",
-    content: "https://naturalclar.dev/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-    property: "og:image",
-    content: "https://naturalclar.dev/static/cat_square.jpg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-    property: "article:published_time",
-    content: new Date("2019/07/20").toISOString(),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-    property: "article:author",
-    content: "naturalclar",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-    name: "twitter:card",
-    content: "summary",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-    name: "twitter:title",
-    content: "NaturalClar",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-    name: "twitter:image",
-    content: "https://naturalclar.dev/static/cat_square.jpg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
-    rel: "alternate",
-    type: "application/json+oembed",
-    href: "https://naturalclar.dev/",
-    title: "Naturalclar",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
-    href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
-    rel: "stylesheet",
-    integrity: "sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN",
-    crossOrigin: "anonymous",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
-    href: "https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap",
-    rel: "stylesheet",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("style", {
-    "amp-custom": true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 48
-    },
-    __self: this
-  }, "\n      body {\n        background-color: aliceblue;\n        font-family:'Source Sans Pro', sans-serif\n      }\n    "));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Meta);
-
-/***/ }),
-
-/***/ "./head/index.ts":
-/*!***********************!*\
-  !*** ./head/index.ts ***!
-  \***********************/
-/*! exports provided: Meta */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Meta__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Meta */ "./head/Meta.tsx");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Meta", function() { return _Meta__WEBPACK_IMPORTED_MODULE_0__["default"]; });
-
-
-
-/***/ }),
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/next/dist/pages/_error.js"],{
 
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/array/from.js":
 /*!*******************************************************************!*\
@@ -537,28 +55,6 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/define-proper
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js":
-/*!*******************************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js ***!
-  \*******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-descriptor */ "./node_modules/core-js/library/fn/object/get-own-property-descriptor.js");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js":
-/*!****************************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js ***!
-  \****************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-symbols */ "./node_modules/core-js/library/fn/object/get-own-property-symbols.js");
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/object/get-prototype-of.js":
 /*!********************************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/object/get-prototype-of.js ***!
@@ -567,17 +63,6 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-prope
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/object/get-prototype-of */ "./node_modules/core-js/library/fn/object/get-prototype-of.js");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/keys.js ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/keys */ "./node_modules/core-js/library/fn/object/keys.js");
 
 /***/ }),
 
@@ -721,36 +206,6 @@ function _createClass(Constructor, protoProps, staticProps) {
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js ***!
-  \***************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _defineProperty; });
-/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__);
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js":
 /*!***************************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js ***!
@@ -842,49 +297,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _nonIterableSpread; });
 function _nonIterableSpread() {
   throw new TypeError("Invalid attempt to spread non-iterable instance");
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js":
-/*!*************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js ***!
-  \*************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _objectSpread; });
-/* harmony import */ var _core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/get-own-property-descriptor */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js");
-/* harmony import */ var _core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core-js/object/get-own-property-symbols */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js");
-/* harmony import */ var _core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _core_js_object_keys__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
-/* harmony import */ var _core_js_object_keys__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_keys__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _defineProperty__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-
-
-
-
-function _objectSpread(target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i] != null ? arguments[i] : {};
-
-    var ownKeys = _core_js_object_keys__WEBPACK_IMPORTED_MODULE_2___default()(source);
-
-    if (typeof _core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_1___default.a === 'function') {
-      ownKeys = ownKeys.concat(_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_1___default()(source).filter(function (sym) {
-        return _core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_0___default()(source, sym).enumerable;
-      }));
-    }
-
-    ownKeys.forEach(function (key) {
-      Object(_defineProperty__WEBPACK_IMPORTED_MODULE_3__["default"])(target, key, source[key]);
-    });
-  }
-
-  return target;
 }
 
 /***/ }),
@@ -1084,35 +496,6 @@ module.exports = function defineProperty(it, key, desc) {
 
 /***/ }),
 
-/***/ "./node_modules/core-js/library/fn/object/get-own-property-descriptor.js":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/core-js/library/fn/object/get-own-property-descriptor.js ***!
-  \*******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! ../../modules/es6.object.get-own-property-descriptor */ "./node_modules/core-js/library/modules/es6.object.get-own-property-descriptor.js");
-var $Object = __webpack_require__(/*! ../../modules/_core */ "./node_modules/core-js/library/modules/_core.js").Object;
-module.exports = function getOwnPropertyDescriptor(it, key) {
-  return $Object.getOwnPropertyDescriptor(it, key);
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/fn/object/get-own-property-symbols.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/core-js/library/fn/object/get-own-property-symbols.js ***!
-  \****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! ../../modules/es6.symbol */ "./node_modules/core-js/library/modules/es6.symbol.js");
-module.exports = __webpack_require__(/*! ../../modules/_core */ "./node_modules/core-js/library/modules/_core.js").Object.getOwnPropertySymbols;
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/library/fn/object/get-prototype-of.js":
 /*!********************************************************************!*\
   !*** ./node_modules/core-js/library/fn/object/get-prototype-of.js ***!
@@ -1122,19 +505,6 @@ module.exports = __webpack_require__(/*! ../../modules/_core */ "./node_modules/
 
 __webpack_require__(/*! ../../modules/es6.object.get-prototype-of */ "./node_modules/core-js/library/modules/es6.object.get-prototype-of.js");
 module.exports = __webpack_require__(/*! ../../modules/_core */ "./node_modules/core-js/library/modules/_core.js").Object.getPrototypeOf;
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/fn/object/keys.js":
-/*!********************************************************!*\
-  !*** ./node_modules/core-js/library/fn/object/keys.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! ../../modules/es6.object.keys */ "./node_modules/core-js/library/modules/es6.object.keys.js");
-module.exports = __webpack_require__(/*! ../../modules/_core */ "./node_modules/core-js/library/modules/_core.js").Object.keys;
 
 
 /***/ }),
@@ -3322,26 +2692,6 @@ $export($export.S + $export.F * !__webpack_require__(/*! ./_descriptors */ "./no
 
 /***/ }),
 
-/***/ "./node_modules/core-js/library/modules/es6.object.get-own-property-descriptor.js":
-/*!****************************************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/es6.object.get-own-property-descriptor.js ***!
-  \****************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
-var toIObject = __webpack_require__(/*! ./_to-iobject */ "./node_modules/core-js/library/modules/_to-iobject.js");
-var $getOwnPropertyDescriptor = __webpack_require__(/*! ./_object-gopd */ "./node_modules/core-js/library/modules/_object-gopd.js").f;
-
-__webpack_require__(/*! ./_object-sap */ "./node_modules/core-js/library/modules/_object-sap.js")('getOwnPropertyDescriptor', function () {
-  return function getOwnPropertyDescriptor(it, key) {
-    return $getOwnPropertyDescriptor(toIObject(it), key);
-  };
-});
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/library/modules/es6.object.get-prototype-of.js":
 /*!*****************************************************************************!*\
   !*** ./node_modules/core-js/library/modules/es6.object.get-prototype-of.js ***!
@@ -3356,26 +2706,6 @@ var $getPrototypeOf = __webpack_require__(/*! ./_object-gpo */ "./node_modules/c
 __webpack_require__(/*! ./_object-sap */ "./node_modules/core-js/library/modules/_object-sap.js")('getPrototypeOf', function () {
   return function getPrototypeOf(it) {
     return $getPrototypeOf(toObject(it));
-  };
-});
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/es6.object.keys.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/es6.object.keys.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 19.1.2.14 Object.keys(O)
-var toObject = __webpack_require__(/*! ./_to-object */ "./node_modules/core-js/library/modules/_to-object.js");
-var $keys = __webpack_require__(/*! ./_object-keys */ "./node_modules/core-js/library/modules/_object-keys.js");
-
-__webpack_require__(/*! ./_object-sap */ "./node_modules/core-js/library/modules/_object-sap.js")('keys', function () {
-  return function keys(it) {
-    return $keys(toObject(it));
   };
 });
 
@@ -3815,19 +3145,6 @@ for (var i = 0; i < DOMIterables.length; i++) {
 
 /***/ }),
 
-/***/ "./node_modules/next-server/amp.js":
-/*!*****************************************!*\
-  !*** ./node_modules/next-server/amp.js ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-const { useAmp } = __webpack_require__(/*! ./dist/lib/amp */ "./node_modules/next-server/dist/lib/amp.js")
-module.exports = { useAmp }
-
-
-/***/ }),
-
 /***/ "./node_modules/next-server/dist/lib/amp-context.js":
 /*!**********************************************************!*\
   !*** ./node_modules/next-server/dist/lib/amp-context.js ***!
@@ -4234,38 +3551,164 @@ exports["default"] = function () {
 
 /***/ }),
 
-/***/ "./node_modules/next/amp.js":
-/*!**********************************!*\
-  !*** ./node_modules/next/amp.js ***!
-  \**********************************/
+/***/ "./node_modules/next-server/head.js":
+/*!******************************************!*\
+  !*** ./node_modules/next-server/head.js ***!
+  \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-server/amp */ "./node_modules/next-server/amp.js")
+module.exports = __webpack_require__(/*! ./dist/lib/head */ "./node_modules/next-server/dist/lib/head.js")
 
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fjessekatsumata%2F.ghq%2Fgithub.com%2FNaturalclar%2Fnaturalclar.dev%2Fpages%2Findex.tsx!./":
-/*!**************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fjessekatsumata%2F.ghq%2Fgithub.com%2FNaturalclar%2Fnaturalclar.dev%2Fpages%2Findex.tsx ***!
-  \**************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2FUsers%2Fjessekatsumata%2F.ghq%2Fgithub.com%2FNaturalclar%2Fnaturalclar.dev%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js!./":
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2FUsers%2Fjessekatsumata%2F.ghq%2Fgithub.com%2FNaturalclar%2Fnaturalclar.dev%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/", function() {
-      var page = __webpack_require__(/*! ./pages/index.tsx */ "./pages/index.tsx")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/next/dist/pages/_error", function() {
+      var page = __webpack_require__(/*! ./node_modules/next/dist/pages/_error.js */ "./node_modules/next/dist/pages/_error.js")
       if(true) {
-        module.hot.accept(/*! ./pages/index.tsx */ "./pages/index.tsx", function() {
-          if(!next.router.components["/"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/index.tsx */ "./pages/index.tsx")
-          next.router.update("/", updatedPage.default || updatedPage)
+        module.hot.accept(/*! ./node_modules/next/dist/pages/_error.js */ "./node_modules/next/dist/pages/_error.js", function() {
+          if(!next.router.components["/next/dist/pages/_error"]) return
+          var updatedPage = __webpack_require__(/*! ./node_modules/next/dist/pages/_error.js */ "./node_modules/next/dist/pages/_error.js")
+          next.router.update("/next/dist/pages/_error", updatedPage.default || updatedPage)
         })
       }
       return { page: page.default || page }
     }]);
   
+
+/***/ }),
+
+/***/ "./node_modules/next/dist/pages/_error.js":
+/*!************************************************!*\
+  !*** ./node_modules/next/dist/pages/_error.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault2 = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
+
+var _classCallCheck2 = _interopRequireDefault2(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js"));
+
+var _createClass2 = _interopRequireDefault2(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault2(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js"));
+
+var _getPrototypeOf2 = _interopRequireDefault2(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js"));
+
+var _inherits2 = _interopRequireDefault2(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js"));
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
+
+exports.__esModule = true;
+exports["default"] = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _head = _interopRequireDefault(__webpack_require__(/*! next-server/head */ "./node_modules/next-server/head.js"));
+
+var statusCodes = {
+  400: 'Bad Request',
+  404: 'This page could not be found',
+  405: 'Method Not Allowed',
+  500: 'Internal Server Error'
+};
+/**
+* `Error` component used for handling errors.
+*/
+
+var Error =
+/*#__PURE__*/
+function (_react$default$Compon) {
+  (0, _inherits2["default"])(Error, _react$default$Compon);
+
+  function Error() {
+    (0, _classCallCheck2["default"])(this, Error);
+    return (0, _possibleConstructorReturn2["default"])(this, (0, _getPrototypeOf2["default"])(Error).apply(this, arguments));
+  }
+
+  (0, _createClass2["default"])(Error, [{
+    key: "render",
+    value: function render() {
+      var statusCode = this.props.statusCode;
+      var title = this.props.title || statusCodes[statusCode] || 'An unexpected error has occurred';
+      return _react["default"].createElement("div", {
+        style: styles.error
+      }, _react["default"].createElement(_head["default"], null, _react["default"].createElement("title", null, statusCode, ": ", title)), _react["default"].createElement("div", null, _react["default"].createElement("style", {
+        dangerouslySetInnerHTML: {
+          __html: 'body { margin: 0 }'
+        }
+      }), statusCode ? _react["default"].createElement("h1", {
+        style: styles.h1
+      }, statusCode) : null, _react["default"].createElement("div", {
+        style: styles.desc
+      }, _react["default"].createElement("h2", {
+        style: styles.h2
+      }, title, "."))));
+    }
+  }], [{
+    key: "getInitialProps",
+    value: function getInitialProps(_ref) {
+      var res = _ref.res,
+          err = _ref.err;
+      var statusCode = res && res.statusCode ? res.statusCode : err ? err.statusCode : 404;
+      return {
+        statusCode: statusCode
+      };
+    }
+  }]);
+  return Error;
+}(_react["default"].Component);
+
+exports["default"] = Error;
+Error.displayName = 'ErrorPage';
+var styles = {
+  error: {
+    color: '#000',
+    background: '#fff',
+    fontFamily: '-apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Fira Sans", Avenir, "Helvetica Neue", "Lucida Grande", sans-serif',
+    height: '100vh',
+    textAlign: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  desc: {
+    display: 'inline-block',
+    textAlign: 'left',
+    lineHeight: '49px',
+    height: '49px',
+    verticalAlign: 'middle'
+  },
+  h1: {
+    display: 'inline-block',
+    borderRight: '1px solid rgba(0, 0, 0,.3)',
+    margin: 0,
+    marginRight: '20px',
+    padding: '10px 23px 10px 0',
+    fontSize: '24px',
+    fontWeight: 500,
+    verticalAlign: 'top'
+  },
+  h2: {
+    fontSize: '14px',
+    fontWeight: 'normal',
+    lineHeight: 'inherit',
+    margin: 0,
+    padding: 0
+  }
+};
 
 /***/ }),
 
@@ -4280,129 +3723,14 @@ module.exports = (__webpack_require__(/*! dll-reference dll_829b10deddf10e1653a8
 
 /***/ }),
 
-/***/ "./pages/index.tsx":
-/*!*************************!*\
-  !*** ./pages/index.tsx ***!
-  \*************************/
-/*! exports provided: config, default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "config", function() { return config; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_amp__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/amp */ "./node_modules/next/amp.js");
-/* harmony import */ var next_amp__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_amp__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_atoms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/atoms */ "./components/atoms/index.ts");
-/* harmony import */ var _components_templates__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/templates */ "./components/templates/index.ts");
-/* harmony import */ var _head__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../head */ "./head/index.ts");
-var _jsxFileName = "/Users/jessekatsumata/.ghq/github.com/Naturalclar/naturalclar.dev/pages/index.tsx";
-
-
-
-
-
-var config = {
-  amp: "amp"
-};
-
-var Index = function Index() {
-  var isAmp = Object(next_amp__WEBPACK_IMPORTED_MODULE_1__["useAmp"])();
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_templates__WEBPACK_IMPORTED_MODULE_3__["Page"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_head__WEBPACK_IMPORTED_MODULE_4__["Meta"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-    style: {
-      display: "flex",
-      justifyContent: "center",
-      flexDirection: "column",
-      alignItems: "center",
-      padding: 48
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_atoms__WEBPACK_IMPORTED_MODULE_2__["Avatar"], {
-    src: "/static/cat_square.jpg",
-    isAmp: isAmp,
-    alt: "MyIcon",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_atoms__WEBPACK_IMPORTED_MODULE_2__["Heading"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  }, "Naturalclar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_atoms__WEBPACK_IMPORTED_MODULE_2__["Paragraph"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: this
-  }, "Front-end Developer at CureApp, Inc."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_atoms__WEBPACK_IMPORTED_MODULE_2__["Paragraph"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
-  }, "Node.js, TypeScript, React, React-Native"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: {
-      display: "flex"
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_atoms__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
-    name: "twitter",
-    href: "https://twitter.com/natural_clar",
-    description: "Link to Naturalclar's twitter account",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_atoms__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
-    name: "github",
-    href: "https://github.com/Naturalclar",
-    description: "Link to Naturalclar's github account",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37
-    },
-    __self: this
-  }))));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Index);
-
-/***/ }),
-
-/***/ 0:
-/*!******************************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fjessekatsumata%2F.ghq%2Fgithub.com%2FNaturalclar%2Fnaturalclar.dev%2Fpages%2Findex.tsx ***!
-  \******************************************************************************************************************************************************************/
+/***/ 1:
+/*!***************************************************************************************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2FUsers%2Fjessekatsumata%2F.ghq%2Fgithub.com%2FNaturalclar%2Fnaturalclar.dev%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js ***!
+  \***************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fjessekatsumata%2F.ghq%2Fgithub.com%2FNaturalclar%2Fnaturalclar.dev%2Fpages%2Findex.tsx! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fjessekatsumata%2F.ghq%2Fgithub.com%2FNaturalclar%2Fnaturalclar.dev%2Fpages%2Findex.tsx!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2FUsers%2Fjessekatsumata%2F.ghq%2Fgithub.com%2FNaturalclar%2Fnaturalclar.dev%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2FUsers%2Fjessekatsumata%2F.ghq%2Fgithub.com%2FNaturalclar%2Fnaturalclar.dev%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js!./");
 
 
 /***/ }),
@@ -4418,5 +3746,5 @@ module.exports = dll_829b10deddf10e1653a8;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
-//# sourceMappingURL=index.js.map
+},[[1,"static/runtime/webpack.js"]]]);
+//# sourceMappingURL=_error.js.map
