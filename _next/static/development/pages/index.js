@@ -11,7 +11,7 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/jessekatsumata/.ghq/github.com/Naturalclar/naturalclar.dev/components/atoms/Avatar.tsx";
+var _jsxFileName = "/Users/jesse/.ghq/github.com/Naturalclar/naturalclar.dev/components/atoms/Avatar.tsx";
 
 
 var Avatar = function Avatar(_ref) {
@@ -65,7 +65,7 @@ var Avatar = function Avatar(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/jessekatsumata/.ghq/github.com/Naturalclar/naturalclar.dev/components/atoms/Heading.tsx";
+var _jsxFileName = "/Users/jesse/.ghq/github.com/Naturalclar/naturalclar.dev/components/atoms/Heading.tsx";
 
 
 var Heading = function Heading(_ref) {
@@ -107,7 +107,7 @@ var Heading = function Heading(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/jessekatsumata/.ghq/github.com/Naturalclar/naturalclar.dev/components/atoms/Icon.tsx";
+var _jsxFileName = "/Users/jesse/.ghq/github.com/Naturalclar/naturalclar.dev/components/atoms/Icon.tsx";
 
 
 var Heading = function Heading(_ref) {
@@ -162,7 +162,7 @@ var Heading = function Heading(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/jessekatsumata/.ghq/github.com/Naturalclar/naturalclar.dev/components/atoms/Paragraph.tsx";
+var _jsxFileName = "/Users/jesse/.ghq/github.com/Naturalclar/naturalclar.dev/components/atoms/Paragraph.tsx";
 
 
 var Paragraph = function Paragraph(_ref) {
@@ -234,7 +234,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 
-var _jsxFileName = "/Users/jessekatsumata/.ghq/github.com/Naturalclar/naturalclar.dev/components/templates/Page.tsx";
+var _jsxFileName = "/Users/jesse/.ghq/github.com/Naturalclar/naturalclar.dev/components/templates/Page.tsx";
 
 var style = {
   container: {
@@ -296,7 +296,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "./node_modules/next-server/dist/lib/head.js");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/jessekatsumata/.ghq/github.com/Naturalclar/naturalclar.dev/head/Meta.tsx";
+var _jsxFileName = "/Users/jesse/.ghq/github.com/Naturalclar/naturalclar.dev/head/Meta.tsx";
 
 
 
@@ -4246,10 +4246,10 @@ module.exports = __webpack_require__(/*! next-server/amp */ "./node_modules/next
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fjessekatsumata%2F.ghq%2Fgithub.com%2FNaturalclar%2Fnaturalclar.dev%2Fpages%2Findex.tsx!./":
-/*!**************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fjessekatsumata%2F.ghq%2Fgithub.com%2FNaturalclar%2Fnaturalclar.dev%2Fpages%2Findex.tsx ***!
-  \**************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fjesse%2F.ghq%2Fgithub.com%2FNaturalclar%2Fnaturalclar.dev%2Fpages%2Findex.tsx!./":
+/*!*****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fjesse%2F.ghq%2Fgithub.com%2FNaturalclar%2Fnaturalclar.dev%2Fpages%2Findex.tsx ***!
+  \*****************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4271,12 +4271,12 @@ module.exports = __webpack_require__(/*! next-server/amp */ "./node_modules/next
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_829b10deddf10e1653a8 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_7aff549c98b978433226 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_829b10deddf10e1653a8 */ "dll-reference dll_829b10deddf10e1653a8"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -4297,7 +4297,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_atoms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/atoms */ "./components/atoms/index.ts");
 /* harmony import */ var _components_templates__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/templates */ "./components/templates/index.ts");
 /* harmony import */ var _head__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../head */ "./head/index.ts");
-var _jsxFileName = "/Users/jessekatsumata/.ghq/github.com/Naturalclar/naturalclar.dev/pages/index.tsx";
+var _jsxFileName = "/Users/jesse/.ghq/github.com/Naturalclar/naturalclar.dev/pages/index.tsx";
 
 
 
@@ -4371,12 +4371,21 @@ var Index = function Index() {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_atoms__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+    name: "pencil",
+    href: "https://blog.naturalclar.dev",
+    description: "Link to Naturalclar's blog",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_atoms__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
     name: "twitter",
     href: "https://twitter.com/natural_clar",
     description: "Link to Naturalclar's twitter account",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 37
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_atoms__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
@@ -4385,7 +4394,7 @@ var Index = function Index() {
     description: "Link to Naturalclar's github account",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 42
     },
     __self: this
   }))));
@@ -4396,25 +4405,25 @@ var Index = function Index() {
 /***/ }),
 
 /***/ 0:
-/*!******************************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fjessekatsumata%2F.ghq%2Fgithub.com%2FNaturalclar%2Fnaturalclar.dev%2Fpages%2Findex.tsx ***!
-  \******************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fjesse%2F.ghq%2Fgithub.com%2FNaturalclar%2Fnaturalclar.dev%2Fpages%2Findex.tsx ***!
+  \*********************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fjessekatsumata%2F.ghq%2Fgithub.com%2FNaturalclar%2Fnaturalclar.dev%2Fpages%2Findex.tsx! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fjessekatsumata%2F.ghq%2Fgithub.com%2FNaturalclar%2Fnaturalclar.dev%2Fpages%2Findex.tsx!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fjesse%2F.ghq%2Fgithub.com%2FNaturalclar%2Fnaturalclar.dev%2Fpages%2Findex.tsx! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fjesse%2F.ghq%2Fgithub.com%2FNaturalclar%2Fnaturalclar.dev%2Fpages%2Findex.tsx!./");
 
 
 /***/ }),
 
-/***/ "dll-reference dll_829b10deddf10e1653a8":
+/***/ "dll-reference dll_7aff549c98b978433226":
 /*!*******************************************!*\
-  !*** external "dll_829b10deddf10e1653a8" ***!
+  !*** external "dll_7aff549c98b978433226" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_829b10deddf10e1653a8;
+module.exports = dll_7aff549c98b978433226;
 
 /***/ })
 
